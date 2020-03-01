@@ -1,0 +1,182 @@
+@CHARSET "UTF-8";
+body{
+            background: #fff;
+        }
+        .weui-tab__content{
+            /* width: 100%; */
+            padding: 12px 36px;
+        }
+        .weui-navbar__item{
+            padding-bottom: 0;
+            border-bottom: none;
+            font-size: 16px;
+            color: #666;
+        }
+        .weui-navbar__item.weui-bar__item_on{
+            border-bottom-color: #fff;
+            background: #fff;
+            color: #666;
+        }
+        .weui-navbar__item span{
+            display: inline-block;
+            border-bottom: 2px solid #fff;
+            /*padding-left: 14px;
+            padding-right: 14px;*/
+            min-width:107px;
+            padding-bottom:11px;
+            background: #fff;
+            color: #666;
+        }
+        .weui-navbar__item.weui-bar__item_on span{
+            border-bottom-color: #cfba93;
+            background: #fff;
+            color: #cfba93;
+        }
+        /*内容块*/
+        .favorites_box{
+            position: relative;
+            margin-bottom:12px;
+            border-radius:10px;
+            width:100%;
+            /*height:96px;*/
+            transition: all 0.2s ease-in-out;
+        }
+        .favorites_box .weui-panel{
+            overflow: hidden;
+            margin-bottom:12px;
+            border-radius:10px;
+            width:100%;
+            /*height:96px;*/
+            background: #fff;
+            box-shadow: 1px 6px 20px rgba(212,190,150,.2);
+            transition: all 0.2s ease-in-out;
+        }
+        .favorites_box .del_box{
+            position: absolute;
+            right:-82px;
+            top:0;
+            overflow: hidden;
+            margin-bottom:0px;
+            display: inline-block;
+            width:68px;
+            height:102px;
+            line-height:102px;
+            text-align: center;
+            border-radius:10px;
+            background: #e94d3e;
+            color: #fff;
+            font-size:16px;
+            font-style: normal;
+            /*height:96px;*/
+        }
+        .weui-media-box_appmsg .weui-media-box__hd{
+            margin-right: 1.5em;
+            width: 72px;
+            height: 72px;
+            line-height: 72px;
+            text-align: center;
+        }
+        .weui-media-box__desc{
+            line-height: 28px;
+        }
+        .favorites_shop .weui-media-box__title {
+            margin-top: -5px;
+            color: #333;
+        }
+        .favorites_shop .weui-media-box_appmsg .weui-media-box__bd{
+            height: 72px;
+            line-height: 30px;
+            color: #666;
+        }
+        .favorites_shop .weui-media-box__desc {
+            line-height: 24px;
+        }
+        .weui-panel:after{
+            border-bottom:none;
+        }
+        .weui-media-box_appmsg .weui-media-box__thumb{
+            border-radius:6px;
+        }
+        .favorites_box .address{
+            padding-left:18px;
+            background: url("../images/position_icon.png") no-repeat 3px 6px;
+        }
+
+        /* 轮播 */
+        .slick{
+            padding-bottom: 12px;
+            max-width: 351px;
+        }
+
+        /* 卡片 */
+        .card{
+            position: relative;
+            padding-left:20px;
+            padding-right:20px;
+            margin-bottom:12px;
+            overflow: hidden;
+            width:100%;
+            height:189px;
+            border-radius:15px;
+            background: url("../images/card_ispa.png") no-repeat;
+            background-size: 100%;
+            box-sizing: border-box;
+            /* box-shadow: 1px 6px 10px rgba(212,190,150,.2); */
+            font-size: 14px;
+            color: #c0a42d;
+        }
+        .card_escapespa{
+            background: url("../images/card_pay_escapespa.png") no-repeat;
+            background-size: 100%;
+            color: #fff;
+        }
+        .card_ispa{
+            background: url("../images/card_pay_ispa.png") no-repeat;
+            background-size: 100%;
+            text-align: right;
+            color: #c0a42d;
+        }
+        .card .card_name{
+            margin-top: 70px;
+            line-height: 1.2em;
+            font-size: 18px;
+            font-weight: normal;
+        }
+        .card .card_name span{
+            font-size: 14px;
+            font-weight: normal;
+
+        }
+        .card .card_money_year{
+            margin-top: 30px;
+            font-size: 14px;
+            font-weight: normal;
+
+        }
+        .card .card_money_year span{
+            margin-left: 15px;
+        }
+        .card_item{
+            margin-top: 12px;
+            padding-left: 25px;
+            background: url("../images/card_list_icon.png") no-repeat 0px 5px;
+        }
+        .card_item h3{
+            font-size: 16px;
+            font-weight: normal;
+        }
+        .card_item p{
+            margin-top: 5px;
+            color: #666;
+            font-size: 14px;
+        }
+		.btn_wrap{
+		    padding: 12px 36px;
+		}
+        .btn_big{
+            width: 100%;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            border-radius: 10px;
+            font-size: 16px;
+        }

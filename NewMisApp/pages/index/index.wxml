@@ -1,0 +1,521 @@
+<!--index.wxml-->
+<view class="p12">
+    <view class="con_box head_info" data-toggle="{{list.appopenid}}"  bindtap="goToInfoView">
+      <image class="user_pic" src="{{userInfo.avatarUrl}}" ></image>
+      <view class="user_name" >
+        <text>Hi，\r\n</text>{{list.info.nickname}}
+      </view>
+      <view class="user_operat">
+        <text href="javascript:;" class="user_set" style='background:url("https:///public/img/set_icon.png") no-repeat'></text>
+      </view>
+    </view>
+    <view class="table-responsive statistical" bindtap="powerDrawer" data-bid="{{list.uid}}" data-role="{{list.role}}" data-statu="open" data-datetype="1">
+        <view class="table table-striped" id="performanceSort">
+            <view class="table-tr">
+                <view class="table-th th4">类型</view>
+                <view class="table-th th4">数额</view>
+                <view class="table-th th4">门店排名</view>
+                <view class="table-th th4">品牌排名</view>
+            </view>
+            <block wx:if="{{performanceSort}}">
+              <view class="table-row-group"  wx:if="{{list.role=='beautician'}}"   id="consultantsortinfo">
+                  <view class="table-tr">
+                      <view class="table-td">{{performanceSort.Sumtime.name}}</view>
+                      <view class="table-td">{{performanceSort.Sumtime.SumTime}}</view>
+                      <view class="table-td">{{performanceSort.Sumtime.store}}</view>
+                      <view class="table-td">{{performanceSort.Sumtime.brand}}</view>
+                  </view>
+                  <view class="table-tr">
+                      <view class="table-td">{{performanceSort.card.name}}</view>
+                      <view class="table-td">{{performanceSort.card.money}}</view>
+                      <view class="table-td">{{performanceSort.card.store}}</view>
+                      <view class="table-td">{{performanceSort.card.brand}}</view>
+                  </view>
+                  <view class="table-tr">
+                      <view class="table-td">{{performanceSort.lMoney.name}}</view>
+                      <view class="table-td">{{performanceSort.lMoney.money}}</view>
+                      <view class="table-td">{{performanceSort.lMoney.store}}</view>
+                      <view class="table-td">{{performanceSort.lMoney.brand}}</view>
+                  </view>
+              </view>
+              <view class="table-row-group"  wx:elif="{{list.role=='consultant'}}"   id="consultantsortinfo">
+                  <view class="table-tr">
+                      <view class="table-td">{{performanceSort.waterMoney.name}}</view>
+                      <view class="table-td">{{performanceSort.waterMoney.waterMoney}}</view>
+                      <view class="table-td">{{performanceSort.waterMoney.store}}</view>
+                      <view class="table-td">{{performanceSort.waterMoney.brand}}</view>
+                  </view>
+                  <view class="table-tr">
+                      <view class="table-td">{{performanceSort.serviceMoney.name}}</view>
+                      <view class="table-td">{{performanceSort.serviceMoney.sMoney}}</view>
+                      <view class="table-td">{{performanceSort.serviceMoney.store}}</view>
+                      <view class="table-td">{{performanceSort.serviceMoney.brand}}</view>
+                  </view>
+                  <view class="table-tr">
+                      <view class="table-td">{{performanceSort.lMoney.name}}</view>
+                      <view class="table-td">{{performanceSort.lMoney.money}}</view>
+                      <view class="table-td">{{performanceSort.lMoney.store}}</view>
+                      <view class="table-td">{{performanceSort.lMoney.brand}}</view>
+                  </view>
+                  <view class="table-tr">
+                      <view class="table-td">{{performanceSort.card.name}}</view>
+                      <view class="table-td">{{performanceSort.card.money}}</view>
+                      <view class="table-td">{{performanceSort.card.store}}</view>
+                      <view class="table-td">{{performanceSort.card.brand}}</view>
+                  </view>
+                  <view class="table-tr">
+                      <view class="table-td">{{performanceSort.receptionNum.name}}</view>
+                      <view class="table-td">{{performanceSort.receptionNum.num}}</view>
+                      <view class="table-td">{{performanceSort.receptionNum.store}}</view>
+                      <view class="table-td">{{performanceSort.receptionNum.brand}}</view>
+                  </view>
+
+              </view>
+            </block>
+            <block wx:else>
+              <view class="caption" id="consultantsortinfo">
+                <image src='https:///public/img/loading.gif' style='width:100rpx; height:100rpx;padding:40rpx;'></image>
+                <view style='font-size:28rpx;'>数据加载中......</view>
+              </view>
+            </block>
+        </view>
+    </view>
+    <view class="con_box menu_list">
+      <view wx:if="{{list.role=='consultant'}}">
+        <view  class="menu_one" data-toggle="{{list.uid}}" data-role="{{list.role}}" bindtap="goTomyReservation">
+            <view class="s_icon icon_calendar" style='background:url("https:///public/img/calendar_icon.png") no-repeat center;'></view>
+            <text>我的预约</text>
+        </view>
+        <view class="menu_one" data-toggle="{{list.uid}}" data-role="{{list.role}}" bindtap="goTomyOrder">
+            <view class="s_icon icon_calendar" style='background:url("https:///public/img/order_icon.png") no-repeat center;'></view>
+            <text>我的订单</text>
+        </view>
+        <view class="menu_one" data-toggle="{{list.uid}}" data-type='my' data-sname='{{list.info.sname}}' bindtap="goToUsercard">
+            <view class="s_icon icon_calendar" style='background:url("https:///public/img/diamond_icon.png") no-repeat center;'></view>
+            <text>我的会员</text>
+        </view>
+        <view class="menu_one" data-sid="{{list.info.sid}}"  bindtap="goToStoreOrder">
+            <view class="s_icon icon_calendar" style='background:url("https:///public/img/book_icon.png") no-repeat center;'></view>
+            <text>订单信息</text>
+        </view>
+        
+        <view class="menu_one" data-toggle="{{list.uid}}" data-type='list' data-sname='{{list.info.sname}}'bindtap="goToUsercard">
+            <view class="s_icon icon_calendar" style='background:url("https:///public/img/info_icon.png") no-repeat center;'></view>
+            <text>会员信息</text>
+        </view>
+        <view class="menu_one" data-toggle="{{list.uid}}" data-role="{{list.role}}"  bindtap="goTomyGradeStaff">
+            <view class="s_icon icon_calendar" style='background:url("https:///public/img/chart_icon.png") no-repeat center;'></view>
+            <text>我的绩效</text>
+        </view>
+        <view class="menu_one" data-toggle="{{list.uid}}" data-role="{{list.role}}" bindtap="goToOneBidInfo">
+            <view class="s_icon icon_calendar" style='background:url("https:///public/img/time_icon.png") no-repeat center;'></view>
+            <text>我的加班</text>
+        </view>
+      </view>
+      <view wx:elif="{{list.role=='beautician'}}">
+        <view  class="menu_one" data-toggle="{{list.uid}}" data-role="{{list.role}}" bindtap="goTomyReservation">
+            <view class="s_icon icon_calendar" style='background:url("https:///public/img/calendar_icon.png") no-repeat center;'></view>
+            <text>我的预约</text>
+        </view>
+        <view class="menu_one" data-toggle="{{list.uid}}" data-role="{{list.role}}" bindtap="goTomyOrder">
+            <view class="s_icon icon_calendar" style='background:url("https:///public/img/order_icon.png") no-repeat center;'></view>
+            <text>我的订单</text>
+        </view>
+        <view class="menu_one" data-toggle="{{list.uid}}" data-role="{{list.role}}" bindtap="goTomyGradeBeautician">
+            <view class="s_icon icon_calendar" style='background:url("https:///public/img/chart_icon.png") no-repeat center;'></view>
+            <text>我的绩效</text>
+        </view>
+        <view class="menu_one" data-toggle="{{list.uid}}" data-role="{{list.role}}" bindtap="goToOneBidInfo">
+            <view class="s_icon icon_calendar" style='background:url("https:///public/img/time_icon.png") no-repeat center;'></view>
+            <text>我的加班</text>
+        </view>
+        <view class="menu_one" data-toggle="{{list.uid}}"  bindtap="goToScheduling">
+            <view class="s_icon icon_calendar" style='background:url("https:///public/img/date_icon.png") no-repeat center;'></view>
+            <text>我的排班</text>
+        </view>
+        <view class="menu_one" data-toggle="{{list.info.sid}}"  bindtap="goToBidHoursSort">
+            <view class="s_icon icon_calendar" style='background:url("https:///public/img/time_icon.png") no-repeat center;'></view>
+            <text>工时排序</text>
+        </view>
+
+      </view>
+      <view wx:elif="{{list.role=='manage'}}">
+        <view class="menu_one" data-toggle="{{list.uid}}" data-type="list" bindtap="goToUsercard">
+            <view class="s_icon icon_calendar" style='background:url("https:///public/img/calendar_icon.png") no-repeat center;'></view>
+            <text>会员信息</text>
+        </view>
+        <view class="menu_one" data-sid="{{list.info.sid}}"  bindtap="goToStoreOrder">
+            <view class="s_icon icon_calendar" style='background:url("https:///public/img/calendar_icon.png") no-repeat center;'></view>
+            <text>订单列表</text>
+        </view>
+      </view>
+    </view>
+</view>
+
+
+<view class="drawer_screen"  data-statu="close" wx:if="{{showModalStatus}}" catchtouchmove="ture"></view>
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+    <view class="drawer_title">绩效信息</view>
+    <view class="drawer_content" style="height:72vh;overflow: hidden;">
+      <tabs weui-navbar__title="weui-navbar__title" weui-navbar__item="weui-navbar__item" weui-bar__item_on="weui-bar__item_on" weui-navbar="weui-navbar" bind:change="tabChange" infoid="{{list.uid}}" role="{{list.role}}">
+          <tab title='今天'>
+              <view class="weui-tab__content" wx:if="{{list.role=='beautician'}}">
+                  <view class="con_box" id="day">
+                      <view class="statistical_title">工时信息</view>
+                      <view class="table-responsive statistical">
+                          <view class="table table-striped" id="performanceSort">
+                              <view class="table-tr">
+                                  <view class="table-th th3">工时类型</view>
+                                  <view class="table-th th3">时长(h)</view>
+                                  <view class="table-th th3">人数</view>
+                              </view>
+                              <view class="table-tr">
+                                  <view class="table-td">排钟</view>
+                                  <view class="table-td">{{performance.rowTime}}</view>
+                                  <view class="table-td">{{performance.rowNum}}</view>
+                              </view>
+                              <view class="table-tr">
+                                  <view class="table-td">加钟</view>
+                                  <view class="table-td">{{performance.add_bell_time}}</view>
+                                  <view class="table-td">{{performance.bell_num}}</view>
+                              </view>
+                              <view class="table-tr">
+                                  <view class="table-td">点钟</view>
+                                  <view class="table-td">{{performance.spotTime}}</view>
+                                  <view class="table-td">{{performance.spotNum}}</view>
+                              </view>
+                              <view class="table-tr">
+                                  <view class="table-td">加钟奖励</view>
+                                  <view class="table-td">{{performance.abtime}}</view>
+                                  <view class="table-td">{{performance.numab}}</view>
+                              </view>
+                              <view class="table-tr">
+                                  <view class="table-td">加班奖励</view>
+                                  <view class="table-td">{{performance.overtime}}</view>
+                                  <view class="table-td">{{performance.num_over}}</view>
+                              </view>
+                          </view>
+                      </view>
+
+                      <view class="statistical_title">评价信息</view>
+                      <view class="table-responsive statistical">
+                          <view class="table table-striped" id="performanceSort">
+                              <view class="table-tr">
+                                  <view class="table-th th7">E4</view>
+                                  <view class="table-th th7">E3</view>
+                                  <view class="table-th th7">E2</view>
+                                  <view class="table-th th7">E1</view>
+                                  <view class="table-th th7">G</view>
+                                  <view class="table-th th7">A</view>
+                                  <view class="table-th th7">P</view>
+                              </view>
+                              <view class="table-tr">
+                                  <view class="table-td">{{performance.levlNumE4}}</view>
+                                  <view class="table-td">{{performance.levlNumE3}}</view>
+                                  <view class="table-td">{{performance.levlNumE2}}</view>
+                                  <view class="table-td">{{performance.levlNumE1}}</view>
+                                  <view class="table-td">{{performance.levlNumG}}</view>
+                                  <view class="table-td">{{performance.levlNumA}}</view>
+                                  <view class="table-td">{{performance.levlNumP}}</view>
+                              </view>
+                          </view>
+                      </view>
+
+                      <view class="statistical_title">销售信息</view>
+                      <view class="table-responsive statistical">
+                          <view class="table table-striped" id="performanceSort">
+                              <view class="table-tr">
+                                  <view class="table-th th2">项目类型</view>
+                                  <view class="table-th th2">金额</view>
+                              </view>
+                              <view class="table-tr">
+                                  <view class="table-td">产品</view>
+                                  <view class="table-td">{{performance.selldata.pMoney}}</view>
+                              </view>
+                              <view class="table-tr">
+                                  <view class="table-td">储值卡</view>
+                                  <view class="table-td">{{performance.selldata.balanceMoney}}
+                                  </view>
+                              </view>
+                              <view class="table-tr">
+                                  <view class="table-td">常规金</view>
+                                  <view class="table-td">{{performance.selldata.commonMoney}}
+                                  </view>
+                              </view>
+                              <view class="table-tr">
+                                  <view class="table-td">疗程卡</view>
+                                  <view class="table-td">{{performance.selldata.otherMoney}}
+                                  </view>
+                              </view>
+                              <view class="table-tr">
+                                  <view class="table-td">礼券卡</view>
+                                  <view class="table-td">{{performance.selldata.ucardGiftMoney}}
+                                  </view>
+                              </view>
+                          </view>
+                      </view>
+                  </view>
+              </view>
+              <view class="weui-tab__content" wx:if="{{list.role=='consultant'}}">
+                  <view class="con_box" id="day">
+                      <view class="statistical_title">流水收入信息</view>
+                      <view class="table-responsive statistical">
+                          <view class="table table-striped" >
+                              <view class="table-tr">
+                                  <view class="table-th th3">项目类型</view>
+                                  <view class="table-th th3">金额</view>
+                              </view>
+                              <view class="table-tr">
+                                  <view class="table-td">储值卡</view>
+                                  <view class="table-td">{{performance.selldata.balanceMoney}}
+                                  </view>
+                              </view>
+                              <view class="table-tr">
+                                  <view class="table-td">常规金</view>
+                                  <view class="table-td">{{performance.selldata.commonMoney}}
+                                  </view>
+                              </view>
+                              <view class="table-tr">
+                                  <view class="table-td">疗程卡</view>
+                                  <view class="table-td">{{performance.selldata.otherMoney}}
+                                  </view>
+                              </view>
+                              <view class="table-tr">
+                                  <view class="table-td">礼券卡</view>
+                                  <view class="table-td">{{performance.selldata.ucardGiftMoney}}
+                                  </view>
+                              </view>
+                          </view>
+                      </view>
+
+                      <view class="statistical_title">销售信息</view>
+                      <view class="table-responsive statistical">
+                          <view class="table table-striped">
+                              <view class="table-tr">
+                                  <view class="table-th th2">项目类型</view>
+                                  <view class="table-th th2">金额</view>
+                              </view>
+                              <view class="table-tr">
+                                  <view class="table-td">流水</view>
+                                  <view class="table-td">{{performance.selldata.waterMoney}}
+                                  </view>
+                              </view>
+                              <view class="table-tr">
+                                  <view class="table-td">服务收入</view>
+                                  <view class="table-td">{{performance.sMoney}}</view>
+                              </view>
+                              <view class="table-tr">
+                                  <view class="table-td">零售收入</view>
+                                  <view class="table-td">{{performance.lMoney}}</view>
+                              </view>
+                          </view>
+                      </view>
+                  </view>
+              </view>
+          </tab>
+          <tab title='本月' bindtap="powerDrawer" data-bid="{{list.uid}}" data-role="{{list.role}}" data-statu="open" data-datetype="2">
+              <view class="weui-tab__content"  wx:if="{{list.role=='beautician'}}">
+                  <view class="con_box" id="mon">
+                      <view class="statistical_title">工时信息</view>
+                      <view class="table-responsive statistical">
+                          <view class="table table-striped" id="performanceSort">
+                              <view class="table-tr">
+                                  <view class="table-th th3">工时类型</view>
+                                  <view class="table-th th3">时长(h)</view>
+                                  <view class="table-th th3">人数</view>
+                              </view>
+                              <view class="table-tr">
+                                  <view class="table-td">排钟</view>
+                                  <view class="table-td">{{performance.rowTime}}</view>
+                                  <view class="table-td">{{performance.rowNum}}</view>
+                              </view>
+                              <view class="table-tr">
+                                  <view class="table-td">加钟</view>
+                                  <view class="table-td">{{performance.add_bell_time}}</view>
+                                  <view class="table-td">{{performance.bell_num}}</view>
+                              </view>
+                              <view class="table-tr">
+                                  <view class="table-td">点钟</view>
+                                  <view class="table-td">{{performance.spotTime}}</view>
+                                  <view class="table-td">{{performance.spotNum}}</view>
+                              </view>
+                              <view class="table-tr">
+                                  <view class="table-td">加钟奖励</view>
+                                  <view class="table-td">{{performance.abtime}}</view>
+                                  <view class="table-td">{{performance.numab}}</view>
+                              </view>
+                              <view class="table-tr">
+                                  <view class="table-td">加班奖励</view>
+                                  <view class="table-td">{{performance.overtime}}</view>
+                                  <view class="table-td">{{performance.num_over}}</view>
+                              </view>
+                          </view>
+                      </view>
+                      <view style='font-size:24rpx;'>虚拟工时:0{{performance.thrown_time}}
+                      </view>
+                      <view class="statistical_title">评价信息</view>
+                      <view class="table-responsive statistical">
+                          <view class="table table-striped" id="performanceSort">
+                              <view class="table-tr">
+                                  <view class="table-th th7">E4</view>
+                                  <view class="table-th th7">E3</view>
+                                  <view class="table-th th7">E2</view>
+                                  <view class="table-th th7">E1</view>
+                                  <view class="table-th th7">G</view>
+                                  <view class="table-th th7">A</view>
+                                  <view class="table-th th7">P</view>
+                              </view>
+                              <view class="table-tr">
+                                  <view class="table-td">{{performance.levlNumE4}}</view>
+                                  <view class="table-td">{{performance.levlNumE3}}</view>
+                                  <view class="table-td">{{performance.levlNumE2}}</view>
+                                  <view class="table-td">{{performance.levlNumE1}}</view>
+                                  <view class="table-td">{{performance.levlNumG}}</view>
+                                  <view class="table-td">{{performance.levlNumA}}</view>
+                                  <view class="table-td">{{performance.levlNumP}}</view>
+                              </view>
+                          </view>
+                      </view>
+
+                      <view class="statistical_title">销售信息</view>
+                      <view class="table-responsive statistical">
+                          <view class="table table-striped" id="performanceSort">
+                              <view class="table-tr">
+                                  <view class="table-th th2">项目类型</view>
+                                  <view class="table-th th2">金额</view>
+                              </view>
+                              <view class="table-tr">
+                                  <view class="table-td">产品</view>
+                                  <view class="table-td">{{performance.selldata.pMoney}}</view>
+                              </view>
+                              <view class="table-tr">
+                                  <view class="table-td">储值卡</view>
+                                  <view class="table-td">{{performance.selldata.balanceMoney}}
+                                  </view>
+                              </view>
+                              <view class="table-tr">
+                                  <view class="table-td">常规金</view>
+                                  <view class="table-td">{{performance.selldata.commonMoney}}
+                                  </view>
+                              </view>
+                              <view class="table-tr">
+                                  <view class="table-td">疗程卡</view>
+                                  <view class="table-td">{{performance.selldata.otherMoney}}
+                                  </view>
+                              </view>
+                              <view class="table-tr">
+                                  <view class="table-td">礼券卡</view>
+                                  <view class="table-td">{{performance.selldata.ucardGiftMoney}}
+                                  </view>
+                              </view>
+                          </view>
+                      </view>
+
+                      <view class="statistical_title">目标信息</view>
+                      <view class="table-responsive statistical">
+                          <view class="table table-striped" id="performanceSort">
+                              <view class="table-tr">
+                                  <view class="table-th th2">工时类型</view>
+                                  <view class="table-th th2">完成工时</view>
+                                  <view class="table-th th2">目标工时</view>
+                                  <view class="table-th th2">完成度</view>
+                              </view>
+                              <view class="table-tr">
+                                  <view class="table-th th2">总工时</view>
+                                  <view class="table-th th2">{{performance.sumtime}}</view>
+                                  <view class="table-th th2"><block wx:if="{{performance.thrown_time}}">{{performance.thrown_time}}</block>
+                                  </view>
+                                  <view class="table-th th2">{{performance.percent}}%</view>
+                              </view>
+                          </view>
+                      </view>
+                  </view>
+              </view>
+              <view class="weui-tab__content" wx:if="{{list.role=='consultant'}}">
+                  <view class="con_box" id="mon">
+                      <view class="statistical_title">基础信息</view>
+                      <view style='font-size:24rpx;'>
+                          服务人数: {{performance.reception}}
+                      </view> 
+                      <view class="statistical_title">流水收入信息</view>
+                      <view class="table-responsive statistical">
+                          <view class="table table-striped" >
+                              <view class="table-tr">
+                                  <view class="table-th th3">项目类型</view>
+                                  <view class="table-th th3">金额</view>
+                              </view>
+                              <view class="table-tr">
+                                  <view class="table-td">储值卡</view>
+                                  <view class="table-td">{{performance.selldata.balanceMoney}}
+                                  </view>
+                              </view>
+                              <view class="table-tr">
+                                  <view class="table-td">常规金</view>
+                                  <view class="table-td">{{performance.selldata.commonMoney}}
+                                  </view>
+                              </view>
+                              <view class="table-tr">
+                                  <view class="table-td">疗程卡</view>
+                                  <view class="table-td">{{performance.selldata.otherMoney}}
+                                  </view>
+                              </view>
+                              <view class="table-tr">
+                                  <view class="table-td">礼券卡</view>
+                                  <view class="table-td">{{performance.selldata.ucardGiftMoney}}
+                                  </view>
+                              </view>
+                          </view>
+                      </view>
+
+                      <view class="statistical_title">销售信息</view>
+                      <view class="table-responsive statistical">
+                          <view class="table table-striped">
+                              <view class="table-tr">
+                                  <view class="table-th th2">项目类型</view>
+                                  <view class="table-th th2">金额</view>
+                                  <view class="table-th th2">目标</view>
+                                  <view class="table-th th2">完成度</view>
+                              </view>
+                              <view class="table-tr">
+                                  <view class="table-td">流水</view>
+                                  <view class="table-td">{{performance.selldata.waterMoney}}
+                                  </view>
+                                  <view class="table-td"><block wx:if="{{performance.flowing}}">{{performance.flowing}}</block></view>
+                                  <view class="table-td">{{performance.fpercent}}%</view>
+                              </view>
+                              <view class="table-tr">
+                                  <view class="table-td">服务收入</view>
+                                  <view class="table-td">{{performance.sMoney}}</view>
+                                  <view class="table-td"><block wx:if="{{performance.server}}">{{performance.server}}</block></view>
+                                  <view class="table-td">{{performance.spercent}}%</view>
+                              </view>
+                              <view class="table-tr">
+                                  <view class="table-td">零售收入</view>
+                                  <view class="table-td">{{performance.lMoney}}</view>
+                                  <view class="table-td"><block wx:if="{{performance.retail}}">{{performance.retail}}</block></view>
+                                  <view class="table-td">{{performance.rpercent}}%</view>
+                              </view>
+                          </view>
+                      </view>
+                  </view>
+              </view>
+          </tab>
+      </tabs>
+    </view>
+<view class="paid_btn_wrap con_box" bindtap="powerDrawer" data-statu="close"><text class="btn btn_big paid_btn a">知道了</text></view>
+</view>
+
+
+<view class="container" hidden="{{!hasUserInfo && canIUse}}">
+  <view class="hd-dialog">
+    <view class="weui-mask"></view>
+    <view class="weui-dialog">
+      <view class="weui-dialog__hd"><view class="weui-dialog__title">{{title}}</view></view>
+      <view class="weui-dialog__bd">{{ content }}</view>
+      <view class="weui-dialog__ft">
+        <button class="weui-dialog__btn weui-dialog__btn_default" bindtap='cancelEvent'>{{ cancelText }}</button>
+        <button class="weui-dialog__btn weui-dialog__btn_primary" open-type="getUserInfo" bindgetuserinfo="bindgetuserinfo">{{ confirmText }}</button>
+      </view>
+    </view>
+  </view>
+</view>

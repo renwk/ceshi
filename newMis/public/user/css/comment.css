@@ -1,0 +1,208 @@
+@CHARSET "UTF-8";
+.weui-cells_checkbox .weui-check:checked+.weui-icon-checked:before{
+            content: '\EA06';
+            color: #cfba93;
+        }
+        .weui-cells_checkbox .weui-icon-checked:before{
+            color: #cfba93;
+        }
+
+        .review_box{
+            color: #333;
+            font-size:14px;
+        }
+        .review_box h2{
+            font-size:16px;
+            font-weight:normal;
+            color: #333;
+        }
+        .review_box .row_from{
+            height:48px;
+            line-height:48px;
+            overflow: hidden;
+            font-size:16px;
+            font-weight:normal;
+            color: #333;
+        }
+        .review_box .row_from .row_radio{
+            float: left;
+            width:40%;
+        }
+        .review_box .row_from .row_radio i,
+        .review_box .row_from .row_radio span{
+            vertical-align: middle;
+        }
+        .review_box .row_from .row_radio .iradio{
+            margin-right:3px;
+            display: inline-block;
+            width:16px;
+            height:16px;
+            line-height:16px;
+            border:1px solid #cfba93;
+            border-radius:99px;
+        }
+        .review_box .row_from .row_radio .iradio.radio_curr{
+            position: relative;
+            background: #cfba93;
+        }
+        .review_box .row_from .row_radio .iradio.radio_curr:before{
+            position: absolute;
+            left: 3px;
+            top: 4px;
+            display: block;
+            width:10px;
+            height:8px;
+            background: url("../images/hook_white.png") no-repeat;
+            content: ' ';
+            color: #fff;
+        }
+        .review_box .row_from .row_radio:last-child{
+            width:60%;
+        }
+        .review_box .total_sore{
+            margin-top:20px;
+            overflow: hidden;
+            height: 28px;
+            line-height: 28px;
+        }
+        .review_box ul{
+            margin-bottom:12px;
+        }
+        .review_box li{
+            overflow: hidden;
+            height:28px;
+            line-height:28px;
+            list-style: none;
+        }
+        .star_wrap{
+            float: right;
+            margin-top: 2px;
+            width: 100px;
+            height: 24px;
+            line-height: 28px;
+            text-align: right;
+            list-style: none;
+        }
+        .star_wrap img{
+            margin-left: -2px;
+        }
+        .tree_hole{
+
+        }
+        .tree_hole textarea{
+            display: block;
+            margin-top: 12px;
+            width: 100%;
+            height: 145px;
+            border: 1px solid #999;
+            border-radius: 5px;
+            padding: 5px;
+            line-height: 1.6em;
+            box-sizing: border-box;
+            outline:none
+        }
+        /*问卷调查*/
+        .survey{
+            position: absolute;
+            bottom:0;
+            left:0;
+            padding:12px 12px;
+            width:100%;
+            background: #fff;
+            font-size:14px;
+            color:#333;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            z-index:999;
+        }
+        .survey h2{
+            text-align: center;
+            font-size:18px;
+        }
+        .survey .close{
+            position: absolute;
+            right:12px;
+            top:12px;
+            display: inline-block;
+            width:12px;
+            height:12px;
+            background: url("../images/close_icon.png") no-repeat;
+        }
+        .survey .tips{
+            margin-top:3px;
+            margin-bottom:10px;
+            height:15px;
+            line-height: 15px;
+            text-align: center;
+            font-size:12px;
+            color: #cfba93;
+        }
+        .survey .main{
+            overflow: hidden;
+        }
+        .survey .main .bookmark{
+            float: left;
+            margin-top:-10px;
+            width:11%;
+        }
+        .survey .main .bookmark span{
+            font-size:24px;
+        }
+        .survey .main .txt{
+            float: left;
+            width:89%;
+        }
+        .survey .select{
+            margin:15px 0 5px;
+            overflow: hidden;
+        }
+        .survey .select .box{
+            float: left;
+            width:50%;
+            text-align: center;
+        }
+        .survey .select .btn{
+            padding-left:51px;
+            padding-right:51px;
+            border:1px solid #cfba93;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        .survey .select .btn_no{
+            background: #fff;
+            color: #cfba93;
+        }
+        .clearfix:after{
+            visibility: hidden;
+            display: block;
+            font-size: 0;
+            content: " ";
+            clear: both;
+            height: 0;
+        }
+        .mask_layer{
+            position: fixed;
+            left:0;
+            top:0;
+            display: block;
+            width:100%;
+            height:100%;
+            background: rgba(0,0,0,0.5);
+            z-index:99;
+        }
+
+        @media screen and (max-width: 374px) {
+            .review_box{
+                font-size:12px;
+            }
+            .star_wrap{
+                width:90px;
+            }
+            .star_wrap img{
+                width:14px;
+            }
+            .star_wrap .star{
+                width:90px !important;
+            }
+        }

@@ -1,0 +1,109 @@
+
+<view class='orderlist_date_select'>
+  <text class="time_icon"></text>
+  <picker mode="date" class="date_end" value="{{endDate}}" start="2017-01-01" end="2029-12-31" bindchange="bindEndDateChange">
+    <view class="picker">
+        {{Datetime}}
+    </view>
+  </picker>
+  <text class='interval' bindtap="getperformance" data-bid='{{datainfo.bid}}' data-role='{{datainfo.role}}' data-time='{{Datetime}}'>查询</text>
+</view>
+
+      <view class="weui-tab__content">
+          <view class="con_box" id="day">
+              <view class="statistical_title">工时信息</view>
+              <view class="table-responsive statistical">
+                  <view class="table table-striped">
+                      <view class="table-tr">
+                          <view class="table-th th3">工时类型</view>
+                          <view class="table-th th3">时长(h)</view>
+                          <view class="table-th th3">人数</view>
+                      </view>
+                      <view class="table-tr">
+                                <view class="table-td">排钟</view>
+                                <view class="table-td">{{performance.rowTime}}</view>
+                                <view class="table-td">{{performance.rowNum}}</view>
+                            </view>
+                            <view class="table-tr">
+                                <view class="table-td">加钟</view>
+                                <view class="table-td">{{performance.add_bell_time}}</view>
+                                <view class="table-td">{{performance.bell_num}}</view>
+                            </view>
+                            <view class="table-tr">
+                                <view class="table-td">点钟</view>
+                                <view class="table-td">{{performance.spotTime}}</view>
+                                <view class="table-td">{{performance.spotNum}}</view>
+                            </view>
+                            <view class="table-tr">
+                                <view class="table-td">加钟奖励</view>
+                                <view class="table-td">{{performance.abtime}}</view>
+                                <view class="table-td">{{performance.numab}}</view>
+                            </view>
+                            <view class="table-tr">
+                                <view class="table-td">加班奖励</view>
+                                <view class="table-td">{{performance.overtime}}</view>
+                                <view class="table-td">{{performance.num_over}}</view>
+                            </view>
+                  </view>
+              </view>
+
+              <view class="statistical_title">评价信息</view>
+              <view class="table-responsive statistical">
+                  <view class="table table-striped">
+                      <view class="table-tr">
+                          <view class="table-th th7">E4</view>
+                          <view class="table-th th7">E3</view>
+                          <view class="table-th th7">E3</view>
+                          <view class="table-th th7">E3</view>
+                          <view class="table-th th7">G</view>
+                          <view class="table-th th7">A</view>
+                          <view class="table-th th7">P</view>
+                      </view>
+                      <view class="table-tr">
+                          <view class="table-td">{{performance.levlNumE4}}</view>
+                          <view class="table-td">{{performance.levlNumE3}}</view>
+                          <view class="table-td">{{performance.levlNumE2}}</view>
+                          <view class="table-td">{{performance.levlNumE1}}</view>
+                          <view class="table-td">{{performance.levlNumG}}</view>
+                          <view class="table-td">{{performance.levlNumA}}</view>
+                          <view class="table-td">{{performance.levlNumP}}</view>
+                      </view>
+                  </view>
+              </view>
+
+              <view class="statistical_title">销售信息</view>
+              <view class="table-responsive statistical">
+                  <view class="table table-striped">
+                      <view class="table-tr">
+                          <view class="table-th th2">项目类型</view>
+                          <view class="table-th th2">金额</view>
+                      </view>
+                      <view class="table-tr">
+                          <view class="table-td">产品</view>
+                          <view class="table-td">{{performance.selldata.pMoney}}</view>
+                      </view>
+                      <view class="table-tr">
+                          <view class="table-td">储值卡</view>
+                          <view class="table-td">{{performance.selldata.balanceMoney}}
+                          </view>
+                      </view>
+                      <view class="table-tr">
+                          <view class="table-td">常规金</view>
+                          <view class="table-td">{{performance.selldata.commonMoney}}
+                          </view>
+                      </view>
+                      <view class="table-tr">
+                          <view class="table-td">疗程卡</view>
+                          <view class="table-td">{{performance.selldata.otherMoney}}
+                          </view>
+                      </view>
+                      <view class="table-tr">
+                          <view class="table-td">礼券卡</view>
+                          <view class="table-td">{{performance.selldata.ucardGiftMoney}}
+                          </view>
+                      </view>
+                  </view>
+              </view>
+          </view>
+      </view>
+

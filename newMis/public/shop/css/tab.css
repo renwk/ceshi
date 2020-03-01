@@ -1,0 +1,35 @@
+.weui-navbar-wrap{
+    padding:0 12px;
+    /*background: #fff;*/
+}
+.weui-navbar{
+    background: #fff;
+    border-color: #fff;
+}
+.weui-navbar:after{
+    border-bottom:none;
+}
+.weui-navbar__item{
+    padding-bottom:11px;
+    border-bottom:2px solid #fff;
+    font-size:16px;
+    color: #666;
+}
+.weui-navbar__item:after{
+    border-color: #fff;
+}
+.weui-navbar__item:first-child{
+    margin-left:12px;
+}
+.weui-navbar__item:last-child{
+    margin-right:12px;
+}
+.weui-navbar__item.weui-bar__item_on{
+    border-bottom-color: #cfba93;
+    background: #fff;
+    color: #cfba93;
+}
+.weui-tab__content{
+    padding:12px;
+    transition: all 10s;
+}

@@ -1,0 +1,162 @@
+@charset "utf-8";
+        .h1, .h2, .h3, h1, h2, h3{
+             margin-top: 0;
+             margin-bottom: 0;
+        }
+        .card{
+            position: relative;
+            padding:12px;
+            margin-bottom:12px;
+            overflow: hidden;
+            width:100%;
+            height:169px;
+            border-radius:15px;
+            background: url("../images/card_bg_part.jpg") no-repeat bottom right #d4b98e;
+            box-sizing: border-box;
+            color: #fff;
+        }
+        .card h2{
+            overflow: hidden;
+            line-height:1em;
+            font-size:18px;
+            font-weight: normal;
+        }
+        .card h2 img{
+            display: inline-block;
+            width:34px;
+            vertical-align: middle;
+        }
+        .card h2 .card_no{
+            float: right;
+            font-size:12px;
+            color: #7d5916;
+        }
+        .card h3{
+            margin-top:10px;
+            line-height:1em;
+            font-size:16px;
+            font-weight:normal;
+        }
+        .card .card_info{
+            overflow: hidden;
+            margin-top:20px;
+        }
+        .card .card_info .money{
+            float: left;
+            width:50%;
+            padding-right:24px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        .card .card_info .discount{
+            float: left;
+            width:50%;
+        }
+        .card .time{
+            margin-top:10px;
+            font-size:12px;
+        }
+        .card .card_status{
+            position: absolute;
+            bottom: 14px;
+            right: -17px;
+            width:80px;
+            line-height:1.8em;
+            text-align: center;
+            background: #79e294;
+            font-size:12px;
+            transform:rotate(-45deg);
+        }
+        .card .card_status{
+            position: absolute;
+            bottom: 14px;
+            right: -26px;
+            width:100px;
+            line-height:1.8em;
+            text-align: center;
+            background: #79e294;
+            font-size:12px;
+            transform:rotate(-45deg);
+        }
+        /***coupon_expired 已失效class****/
+        .card .card_status.status_fail{
+            background: #bfbebe;
+        }
+        /***coupon_expired 冻结class****/
+        .card .card_status.status_freeze{
+            background: #7a99f4;
+        }
+        /***coupon_expired 待开卡class****/
+        .card .card_status.status_ready{
+            background: #f4887a;
+        }
+        .fmodal_body h2{
+            margin-bottom:12px;
+            font-size: 16px;
+        }
+        .fmodal_body p{
+            margin-bottom:20px;
+        }
+        .transfer_con{
+
+        }
+        .transfer_con input{
+            float: left;
+            margin:0 12px 0 8px;
+            padding-left:3px;
+            border:1px solid #999;
+            border-radius:5px;
+            vertical-align: middle;
+        }
+        .transfer_con span{
+            float: left;
+            vertical-align: middle;
+        }
+        .transfer_con .ib_phone{
+            width:100px;
+        }
+        .transfer_con .ib_money{
+            width:50px;
+        }
+        .transfer_con .ib_row{
+            margin-bottom:16px;
+            overflow: hidden;
+            clear: both;
+        }
+        .transfer_con .ib_row:last-child{
+            margin-bottom:0;
+        }
+        .transfer_con .ib_btn_add{
+            margin-top:4px;
+            margin-left:-4px;
+            display: inline-block;
+            width:16px;
+            height:16px;
+            background: url("../images/ib_btn_add.png") no-repeat;
+            vertical-align: middle;
+        }
+        .transfer_con .ib_btn_del{
+            margin-top:4px;
+            margin-left:-4px;
+            display: inline-block;
+            width:16px;
+            height:16px;
+            background: url("../images/ib_btn_del.png") no-repeat;
+            vertical-align: middle;
+        }
+        .btn:hover,
+        .btn:active{
+            color: #fff;
+        }
+        .modal-dialog{
+            margin-top:60px;
+        }
+        .modal-content{
+            border-radius:12px;
+        }
+        .modal-footer {
+            padding: 15px;
+            text-align: right;
+            padding-top: 8px;
+            border-top: none;
+        }

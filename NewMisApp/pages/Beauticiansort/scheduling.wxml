@@ -1,0 +1,41 @@
+<view class="container p12">
+    <view class="con_box">
+        <view class="scheduling_check">
+            <picker class="date_scheduling" mode="date" fields="month" value="{{initDate}}"  bindchange="bindInitDateChange">
+                <view class="picker">
+                    {{initDate}}
+                </view>
+
+            </picker>
+            <view href="javascript:;" class="btn" bindtap="bindSearchInfo" data-time="{{initDate}}" data-bid="{{bid}}">查询</view>
+        </view>
+    </view>
+
+    <view class="table-responsive statistical">
+        <view class="table table-striped">
+            <view class="table-tr">
+                <view class="table-th th7">星期日</view>
+                <view class="table-th th7">星期一</view>
+                <view class="table-th th7">星期二</view>
+                <view class="table-th th7">星期三</view>
+                <view class="table-th th7">星期四</view>
+                <view class="table-th th7">星期五</view>
+                <view class="table-th th7">星期六</view>
+            </view>
+            <view class="table-row-group" id="consultantsortinfo">
+                <view class="table-tr" wx:for="{{initCalendar}}" wx:for-item="value" wx:key="unique">
+                    <view class="table-td" wx:for="{{value}}" wx:for-item="val" wx:key="unique">
+                        <text class="early" style="{{val.colors == '' ? 'color:#000;' : 'color:#fff; background-color : ' + val.colors + ';' }}">{{val.dayname}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="status_list">
+
+        <view class="color-colorful" style=' float: left' wx:for="{{schedultype}}" wx:key="unique">
+            <view class="color-font" style='height: 30rpx; width: 80rpx;  float: left;display: block ; margin-top: -4rpx; padding-bottom: 60rpx;font-size:28rpx;'>{{item.config_description}}</view>
+            <view  style="height: 30rpx; width: 60rpx;float: left; margin-right:40rpx; background-color:{{item.config_note}}"></view>
+        </view>
+    </view>
+</view>

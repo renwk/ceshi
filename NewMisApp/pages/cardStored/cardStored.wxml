@@ -1,0 +1,64 @@
+ <view class='body'>
+ 
+  <view class='select_card_wrap'>
+
+    <picker bindchange='bindPickerChange' data-tid='{{cardInfo[index].mycardid}}' value="{{index}}" range="{{cardInfo}}" range-key="{{'label'}}" class='select_card' >
+      <view class='picker'>{{init ? '选择会员卡' : cardInfo[index].label}}</view>
+      <i class="arrow_down"></i>
+    </picker>
+
+
+  </view>
+
+      <view class="con_box me_list">
+        <view>
+          <view>
+              <text class="span row_title">可用余额</text>
+              <text class="span roow_con">{{mycard_info.money_available}}</text>
+          </view>
+          <view>
+              <text class="span row_title">会员卡状态</text>
+              <text class="span roow_con">{{mycard_info.status}}</text>
+          </view>
+          <view>
+              <text class="span row_title">归属门店</text>
+              <text class="span roow_con">{{mycard_info.sname}}</text>
+          </view>
+          <view>
+              <text class="span row_title">购卡时间</text>
+              <text class="span roow_con">{{mycard_info.time_pay}}</text>
+          </view>
+          <view>
+              <text class="span row_title">激活时间</text>
+              <text class="span roow_con">{{mycard_info.time_active}}</text>
+          </view>
+          <view>
+              <text class="span row_title">到期时间</text>
+              <text class="span roow_con">{{mycard_info.time_validity}}</text>
+          </view>
+          <view>
+              <text class="span row_title">专属顾问</text>
+              <text class="span roow_con">{{mycard_info.cname}}</text>
+          </view>
+        </view>
+      </view>
+          
+            <view class="table-responsive statistical">
+              <view class="table table-striped">
+                  <view class="table-tr">
+                      <view class="table-th th2">门店</view>
+                      <view class="table-th th2">日期</view>
+                      <view class="table-th th2">消费前金额</view>
+                      <view class="table-th th2">消费金额</view>
+                      <view class="table-th th2">消费后金额</view>
+                  </view>
+                  <view class="table-tr" wx:key="keys" wx:for="{{mycard_log}}" wx:for-index="index" wx:for-item="val">
+                      <view class="table-td">{{val.sname}}</view>
+                      <view class="table-td"><text>{{val.ctime}}</text></view>
+                      <view class="table-td">{{val.oldbalance}}</view>
+                      <view class="table-td">{{val.costmoney}}</view>
+                      <view class="table-td">{{val.newbalance}}</view>
+                  </view>
+              </view>
+          </view>
+ </view>

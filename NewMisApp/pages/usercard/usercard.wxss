@@ -1,0 +1,207 @@
+page {
+    background: #f9f9f9;
+}
+.body {
+    padding: 24rpx;
+}
+.table {  
+    border: 2rpx solid #cfba93;
+    border-radius: 26rpx;
+    background: #fff;
+}
+.orderlist_date_select{
+    overflow: hidden;
+    margin-bottom: 18rpx;
+    padding-left: 6rpx;
+    height: 84rpx;
+    line-height: 68rpx;
+    color: #999;
+    /* background:url("http://public.shopzcy.com/shop/img/orderlist_date_select.png") no-repeat left center; */
+}
+
+.statistical {
+  border-radius:24rpx;
+}
+.interval{
+    padding-bottom: 26rpx;
+    width: 120rpx;
+    height: 70rpx;
+    float: left;
+    margin-left: 20rpx;
+    margin-right: 20rpx;
+    font-size: 28rpx;
+    text-align: center;
+    border-bottom-color: #cfba93 !important;
+    background: #cfba93 !important;
+    color: #fff !important;
+    border-radius:33rpx;
+}
+.orderlist_date_select .picker{
+    float: left;
+    display: inline-block;
+    /* width: calc(50% - 40rpx); */
+    height: 60rpx;
+    line-height: 60rpx;
+    padding-left: 22rpx;
+    /* border: 2rpx solid #a6a6a6; */
+    border-radius: 12rpx;
+    font-size: 28rpx;
+    outline: none;
+    color: #333;
+}
+
+.btn-group, .btn-group-vertical {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 12rpx;
+    margin-right: 12rpx;
+    vertical-align: middle;
+    border-top: 16rpx dashed;
+    /* border-top: 8rpx solid\9; */
+    border-right: 12rpx solid transparent;
+    border-left: 12rpx solid transparent;
+}
+.dropdown-backdrop{
+    background: rgba(0,0,0,.2);
+    z-index: 555;
+}
+.dropdown-menu{
+    position: absolute;
+    top: 8%;
+    left: 28rpx;
+    min-width: 241rpx;
+    padding: 10rpx 0;
+    margin: 4rpx 0 0;
+    font-size: 28rpx;
+    text-align: left;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: none;
+    box-shadow: 0 24rpx 48rpx rgba(0,0,0,.175);
+
+}
+.dropdown-menu>.li{
+    padding-top: 5rpx;
+    padding-bottom: 5rpx;
+}
+.dropdown-menu>.li>.a{
+    padding-left: 38rpx;
+    padding-right: 78rpx;
+}
+dropdown-toggle {
+
+display:flex;
+display:-webkit-box;
+display:-webkit-flex;
+min-width:256rpx;
+font-size:26rpx;
+text-align:left;
+border-radius:15rpx;
+background:#cfba93;
+align-items:center;
+-webkit-align-items:center;
+-webkit-box-align:center;
+z-index:556;
+zoom:1;
+float:left;
+
+}
+.dropdown-toggle:active{
+  width:310rpx;
+font-size:26rpx;
+height:75rpx;
+line-height:28rpx;
+}
+
+.orderlist_select_input{
+    position: relative;
+    float: left;
+    width: calc(100% - 490rpx);
+    height: 100%;
+    margin-left:20rpx;
+}
+.orderlist_select_input input{
+    font-size:28rpx;
+    padding-left: 24rpx;
+    width: 90%;
+    height: 68rpx;
+    border: 2rpx solid #a6a6a6;
+    border-radius: 12rpx;
+    outline: none;
+    box-shadow: 0 2rpx 3rpx rgba(0,0,0,.175) inset;
+}
+.orderlist_select_input text{
+    position: absolute;
+    right: 0rpx;
+    top: 0rpx;
+    display: inline-block;
+    width: 84rpx;
+    height: 68rpx;
+    text-align: center;
+    /* background: url("../../image/icon/select_icon.png") no-repeat right 24rpx top 12rpx; */
+    /*background-color: #1aad19;*/
+}
+.dropdown-toggle{
+    position: relative;
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    min-width: 200rpx;
+    font-size: 29rpx;
+    text-align: right;
+    border-radius: 15rpx;
+    background: #cfba93;
+    align-items: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    z-index: 556;
+    zoom: 1;
+
+    float: left;
+
+}
+/* .dropdown-toggle .date_txt{
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    text-align: left;
+} */
+.dropdown-toggle,
+.dropdown-toggle:visited,
+.dropdown-toggle:hover,
+.dropdown-toggle:active{
+    background: #cfba93;
+    color: #fff;
+}
+.btn-default.active.focus,
+.btn-default.active:focus,
+.btn-default.active:hover,
+.btn-default:active.focus,
+.btn-default:active:focus,
+.btn-default:active:hover,
+.open>.dropdown-toggle.btn-default.focus,
+.open>.dropdown-toggle.btn-default:focus,
+.open>.dropdown-toggle.btn-default:hover {
+    color: #fff;
+    background-color: #cfba93;
+    border-color: #cfba93;
+    box-shadow: none;
+    border-radius: 12rpx 12rpx 0 0;
+}
+.btn-group.open .dropdown-toggle {
+    box-shadow: none;
+}
+.btn-default.active,
+.btn-default:active,
+.open>.dropdown-toggle.btn-default{
+    background-color: #cfba93;
+    border-color: #cfba93;
+    color: #fff;
+    z-index: 556;
+}

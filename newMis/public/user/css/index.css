@@ -1,0 +1,191 @@
+@CHARSET "UTF-8";
+.index_head{
+            overflow: hidden;
+            padding-top:20px;
+            padding-bottom:18px;
+        }
+        .index_head .user_img{
+            float: left;
+            margin-bottom: 15px;
+            padding-top:8px;
+            width:35%;
+            padding-right:25px;
+            box-sizing: border-box;
+            text-align: right;
+        }
+        .index_head .user_img img{
+            width:65px;
+            border-radius: 999px;
+        }
+        .index_head .user_info{
+            float: left;
+            margin-bottom: 15px;
+            width:65%;
+        }
+        .index_head .user_info .user_name{
+            line-height:1.3em;
+            font-size:18px;
+            color: #333;
+        }
+        .index_head .user_info .love_money{
+            margin-top:20px;
+            line-height:1em;
+            font-size:18px;
+            color: #333;
+        }
+        .index_head .rights_info{
+            clear: both;
+            overflow: hidden;
+            padding-top:11px;
+            border-top:1px solid #dedede;
+            width:100%;
+            text-align: center;
+            color: #cfba93;
+            font-size:16px;
+        }
+        .index_head .rights_info a{
+            color: #cfba93;
+            font-size:18px;
+        }
+        .index_head .rights_info .mycard{
+            display: block;
+            float: left;
+            width:50%;
+        }
+        .index_head .rights_info .coupon{
+            display: block;
+            float: left;
+            width:50%;
+        }
+        .index_btn_list{
+            display: flex;
+        }
+        .index_btn_list .btn{
+            /*margin:0 12px;*/
+            border-radius:30px;
+            font-size: 16px;
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            flex: 1;
+        }
+        .index_btn_list .btn:first-child{
+            margin-right:12px;
+        }
+        .index_btn_list .btn_icon_money{
+            /*background-image: url("./img/money_add_icon.png");
+            background-repeat: no-repeat;
+            background-position: 35px 6px;*/
+        }
+        .index_btn_list .btn_icon_money span{
+            background-image: url("../images/money_add_icon.png");
+            background-repeat: no-repeat;
+            background-position: 0 1px;
+            padding: 2px 0 2px 30px;
+        }
+        .index_btn_list .btn_icon_friend {
+            /*background-image: url("./img/me_add_icon.png");
+            background-repeat: no-repeat;
+            background-position: 32px 6px;*/
+        }
+        .index_btn_list .btn_icon_friend span{
+            background-image: url("../images/me_add_icon.png");
+            background-repeat: no-repeat;
+            background-position: 0 1px;
+            padding: 2px 0 2px 30px;
+        }
+        .icon_star{
+            padding-left:5px;
+            font-size:0px;
+        }
+        .icon_star b{
+            display: inline-block;
+            width:13px;
+            height:12px;
+            background: url("../images/star_icon.png") no-repeat;
+        }
+        .icon_about{
+            display: inline-block;
+            width:12px;
+            height:12px;
+            background: url("../images/about_icon.png") no-repeat;
+            vertical-align: top;
+        }
+        .grid_list{
+            overflow: hidden;
+        }
+        .grid_list .grid_label{
+            float: left;
+            margin-bottom:12px;
+            padding-top:10px;
+            padding-bottom:15px;
+            width:calc(50% - 6px);
+            border-radius:10px;
+            background: #fff;
+            text-align: center;
+        }
+        .grid_list .grid_label:nth-child(2n){
+            margin-left:12px;
+        }
+        .grid_list .grid_label .grid_img {
+            height:67px;
+            line-height:67px;
+        }
+        .grid_list .grid_label .grid_img img{
+            vertical-align: middle;
+        }
+        .ib_aount_box{
+            position: absolute;
+            left:0;
+            top:132px;
+            z-index:999;
+            margin:0 12px;
+            padding-top:12px;
+            padding-left:24px;
+            padding-right:23px;
+            padding-bottom:18px;
+            width:calc(100% - 24px);
+            box-sizing:border-box;
+            background: #fff;
+            border-radius:10px;
+            color: #666;
+        }
+        .ib_aount_box .icon_arrow{
+            position: absolute;
+            top: -28px;
+            left: 17px;
+            display: block;
+            width: 0;
+            height: 0;
+            border-width: 0 18px 30px;
+            border-style: solid;
+            border-color: transparent transparent #fff;
+        }
+        .ib_aount_box h3{
+            text-align: center;
+        }
+        .ib_aount_box h3 span{
+            display: inline-block;
+            position: relative;
+        }
+        .ib_aount_box p{
+            margin-top: 12px;
+            margin-bottom:20px;
+        }
+        .ib_aount_box .btn_wrap{
+            text-align: right;
+        }
+        .ib_aount_box .btn{
+            border-radius: 20px;
+            font-size:16px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        .mask_layer{
+            position: fixed;
+            left:0;
+            top:0;
+            z-index:99;
+            width:100%;
+            height:100%;
+            background: rgba(0,0,0,.5);
+        }

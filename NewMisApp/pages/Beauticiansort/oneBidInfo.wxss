@@ -1,0 +1,77 @@
+/* pages/beauticiansort/oneBidInfo.wxss */
+page{
+    background: #f9f9f9;
+}
+.scheduling_check{
+    overflow: hidden;
+}
+.scheduling_check .date_scheduling{
+    float: left;
+    border: 2rpx solid #a6a6a6;
+    padding:0 24rpx;
+    height: 70rpx;
+    width: calc(100% - 220rpx);/*72 + 10*/
+    line-height: 68rpx;
+    border-radius: 12rpx;
+}
+.picker{
+    font-size: 28rpx;
+}
+.scheduling_check .btn{
+    float: right;
+    padding: 0;
+    display: inline-block;
+    width: 142rpx;
+    line-height: 72rpx;
+    border: none;
+    background: #cfba93;
+    border-radius: 12rpx;
+    font-size: 32rpx;
+    text-align: center;
+    color: #ffffff;
+}
+
+
+.statistical .table>.table_tr>.table_th,
+.statistical .table>.table_tr>.table_td{
+    padding-left: 0;
+    padding-right: 0;
+}
+.statistical{
+  margin-bottom:130rpx;
+}
+.table-tr:nth-child(odd){
+    background-color: #FFFFFF;
+}
+.Pltd{
+    padding-top: 15rpx;
+    padding-bottom: 15rpx;
+}
+
+
+.ott_ckeck_out{
+    position: fixed;
+    bottom: 24rpx;
+    left: 24rpx;
+    width: calc(100% - 96rpx);
+    padding: 10rpx 24rpx 12rpx;
+    border-radius: 24rpx;
+    background: #cfba93;
+    font-size: 28rpx;
+    color: #fff;
+}
+.ott_ckeck_out .ott_list{
+    margin-top: 6rpx;
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+}
+.ott_ckeck_out .ott_list .p{
+    position: relative;
+    display: block;
+    margin-bottom: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    font-size: 24rpx;
+}

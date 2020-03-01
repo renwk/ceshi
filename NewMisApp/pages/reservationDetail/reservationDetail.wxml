@@ -1,0 +1,51 @@
+<view class='body'>
+  <view class="con_box">
+      <view class="list_box">
+          <view class='li' wx:if="{{role=='consultant'}}">
+              <text class='span'>手机号</text>
+              <block wx:if="{{list.info.mobile}}">{{list.info.mobile}}</block>
+          </view>
+          <view class='li'>
+              <text class='span'>姓名</text>
+              <block wx:if="{{list.info.nickname}}">{{list.info.nickname}}</block>
+          </view>
+          <view class='li'>
+              <text class='span'>性别</text>
+              <text wx:if="{{list.info.sex=='user_sex_man'}}">男</text>
+              <text wx:else>女</text>
+          </view>
+      </view>
+  </view>
+  <view class="con_box">
+      <view class="list_box">
+          <view class='li'>
+              <text class='span'>预约单号</text>
+              <block wx:if="{{list.info.order_code}}">{{list.info.order_code}}</block>
+          </view>
+          <view class='li'>
+              <text class='span'>预约时间</text>
+              <block wx:if="{{list.info.y_time}}">{{list.info.y_time}}</block>
+          </view>
+          <view class='li'>
+              <text class='span'>预约时长</text>
+              <block wx:if="{{list.info.iusetime}}">{{list.info.iusetime}}</block>分钟
+          </view>
+          <view class='li'>
+              <text class='span'>服务顾问</text>
+              <block wx:if="{{list.info.a_name}}">{{list.info.a_name}}</block>
+          </view>
+          <view class='li'>
+              <text class='span'>服务理疗师</text>
+              <block wx:if="{{list.info.b_name}}">{{list.info.b_name}}</block>
+          </view>
+          <view class='li'>
+              <text class='span'>预约房间</text>
+              <block wx:if="{{list.info.s_name}}">{{list.info.s_name}}</block>
+          </view>
+          <view class='li'>
+              <text class='span'>客户来源</text>
+              <text class='source'><block wx:if="{{list.info.ssource}}">{{list.info.ssource}}({{list.info.ssource_detail}})</block></text>
+          </view>
+      </view>
+  </view>
+</view>

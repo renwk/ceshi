@@ -1,0 +1,133 @@
+<tabs>
+    <tab title="未使用">
+        
+          <view class="weui-tab__content">
+              <view class="reservation_box" wx:if="{{giveInfo.on}}" wx:key="keys" wx:for="{{giveInfo.on}}" wx:for-index="index" wx:for-item="val">
+                  <view class='dt'>
+                      赠送门店: {{val.sname}}
+                      <text class='span'>赠送顾问：{{val.nickname}}</text>
+                  </view>
+                  <view class='dd'>
+                      <text class='span'>开始时间：</text>
+                      {{val.gtime}}
+                  </view>
+                  <view class='dd'>
+                      <text class='span'>到期时间：</text>
+                      {{val.long}}
+                  </view>
+                  <view class="table_wrap">
+                    <view class="table-responsive statistical">
+                      <view class="table table-striped">
+                          <view class="table-tr">
+                              <view class="table-td">项目名称</view>
+                              <view class="table-td">数量</view>
+                              <view class="table-td">价格</view>
+                          </view>
+                          <view class="table-tr">
+                              <view class="table-td">{{val.service_name}}</view>
+                              <view class="table-td">{{val.count}}</view>
+                              <view class="table-td">{{val.price}}</view>
+                          </view>
+                      </view>
+                    </view>
+                  </view>
+              </view>
+              <view wx:if="{{!giveInfo.on}}">
+                  <view class="nothing_box" style="margin-top:65px;text-align: center;">
+                    <view>
+                    <image style="width:60%;height:50vw" src="http://public.ispa.cn/shop/img/nothing.png"></image>
+                    </view>
+                    <view class="nothing_txt" style="margin-top:70px;font-size:18px;color: #333;">找不到内容</view>
+                  </view>
+              </view>
+          </view>
+    </tab>
+    <tab title="使用记录">
+        <view>
+          <view class="weui-tab__content rechargelist">
+              <view class="reservation_box" wx:if="{{giveInfo.use}}" wx:key="keys" wx:for="{{giveInfo.use}}" wx:for-index="index" wx:for-item="vv">
+                  <view class='dt'>
+                      赠送门店: {{vv.sname}}
+                      <text class='span'>赠送顾问：{{vv.nickname}}</text>
+                  </view>
+                  <view class='dd'>
+                      <text class='span'>开始时间：</text>
+                      {{vv.gtime}}
+                  </view>
+                  <view class='dd'>
+                      <text class='span'>到期时间：</text>
+                      {{vv.long}}
+                  </view>
+                  <view class="table_wrap">
+                    <view class="table-responsive statistical">
+                      <view class="table table-striped">
+                          <view class="table-tr">
+                              <view class="table-td">项目名称</view>
+                              <view class="table-td">数量</view>
+                              <view class="table-td">价格</view>
+                          </view>
+                          <view class="table-tr">
+                              <view class="table-td">{{vv.service_name}}</view>
+                              <view class="table-td">{{vv.count}}</view>
+                              <view class="table-td">{{vv.price}}</view>
+                          </view>
+                      </view>
+                    </view>
+                  </view>
+              </view>
+              <view wx:if="{{!giveInfo.use}}">
+                <view class="nothing_box" style="margin-top:65px;text-align: center;">
+                    <view>
+                    <image style="width:60%;height:50vw" src="http://public.ispa.cn/shop/img/nothing.png"></image>
+                    </view>
+                    <view class="nothing_txt" style="margin-top:70px;font-size:18px;color: #333;">找不到内容</view>
+                  </view>
+              </view>
+          </view>
+        </view>
+    </tab>
+    <tab title="已过期">
+        <view>
+          <view class="weui-tab__content rechargelist">
+              <view class="reservation_box" wx:if="{{giveInfo.expired}}" wx:key="keys" wx:for="{{giveInfo.expired}}" wx:for-index="index" wx:for-item="vv">
+                  <view class='dt'>
+                      赠送门店: {{vv.sname}}
+                      <text class='span'>赠送顾问：{{vv.nickname}}</text>
+                  </view>
+                  <view class='dd'>
+                      <text class='span'>开始时间：</text>
+                      {{vv.gtime}}
+                  </view>
+                  <view class='dd'>
+                      <text class='span'>到期时间：</text>
+                      {{vv.long}}
+                  </view>
+                  <view class="table_wrap">
+                    <view class="table-responsive statistical">
+                      <view class="table table-striped">
+                          <view class="table-tr">
+                              <view class="table-td">项目名称</view>
+                              <view class="table-td">数量</view>
+                              <view class="table-td">价格</view>
+                          </view>
+                          <view class="table-tr">
+                              <view class="table-td">{{vv.service_name}}</view>
+                              <view class="table-td">{{vv.count}}</view>
+                              <view class="table-td">{{vv.price}}</view>
+                          </view>
+                      </view>
+                    </view>
+                  </view>
+              </view>
+              <view wx:if="{{!giveInfo.expired}}">
+                <view class="nothing_box" style="margin-top:65px;text-align: center;">
+                    <view>
+                    <image style="width:60%;height:50vw" src="http://public.ispa.cn/shop/img/nothing.png"></image>
+                    </view>
+                    <view class="nothing_txt" style="margin-top:70px;font-size:18px;color: #333;">找不到内容</view>
+                  </view>
+              </view>
+          </view>
+        </view>
+    </tab>
+</tabs>

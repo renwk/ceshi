@@ -1,0 +1,190 @@
+@CHARSET "UTF-8";
+ .weui-navbar__item{
+            padding-bottom: 0;
+            border-bottom: none;
+            font-size: 16px;
+            color: #666;
+        }
+        .weui-navbar__item:active{
+            background: #fff;
+        }
+        .weui-navbar__item.weui-bar__item_on{
+            border-bottom-color: #fff;
+            background: #fff;
+            color: #666;
+        }
+        .weui-navbar__item span{
+            display: inline-block;
+            border-bottom: 2px solid #fff;
+            /*padding-left: 14px;
+            padding-right: 14px;*/
+            min-width:107px;
+            padding-bottom:11px;
+            background: #fff;
+            color: #666;
+        }
+        .weui-navbar__item.weui-bar__item_on span{
+            border-bottom-color: #cfba93;
+            background: #fff;
+            color: #cfba93;
+        }
+        /*内容块*/
+        .paidinfo_box{
+            overflow: hidden;
+            margin-bottom:12px;
+            border-radius:10px;
+            width:100%;
+            border:1px solid #cfba93;
+            /*height:96px;*/
+            background: #fff;
+            box-shadow: 1px 6px 20px rgba(212,190,150,.2);
+        }
+        .paidinfo_box .paid_head{
+            overflow: hidden;
+            padding-left:12px;
+            height:36px;
+            line-height:36px;
+            font-size: 16px;
+        }
+        .paidinfo_box .paid_head span{
+            float: right;
+            padding-left:12px;
+            padding-right:12px;
+            height:36px;
+            line-height:36px;
+            font-size: 16px;
+        }
+        .paidinfo_box .paid_head span i{
+            vertical-align: middle;
+            font-style: normal;
+            font-size: 12px;
+        }
+        .paidinfo_box .paid_head span i.status{
+            display: inline-block;
+            border-radius: 5px;
+            line-height: 22px;
+            padding: 0 5px;
+            margin-left:12px;
+            background: #9396cf;
+            color: #fff
+        }
+        .paidinfo_box.renewal .paid_head span i.status{
+            background: #93cf9a;
+        }
+        .paidinfo_box .paid_head .paid_star{
+            float: right;
+            display: inline-block;
+            margin-right:12px;
+            width:20px;
+            height:100%;
+            background: url("../images/paid_star.png") no-repeat  0px center;
+            vertical-align: middle;
+        }
+        .paidinfo_box .paid_body{
+            padding-left:12px;
+            padding-right:12px;
+            background: #f6f6f6;
+        }
+        .paidinfo_box .paid_body .paid_row{
+            height:28px;
+            line-height:28px;
+            overflow: hidden;
+            text-align: center;
+        }
+        .paidinfo_box .paid_body .paid_row_title{
+            float: left;
+            width:60%;
+            text-align: left;
+        }
+        .paidinfo_box .paid_body .paid_row_money{
+            float: right;
+        }
+        .paidinfo_box .paid_foot{
+            padding-left:12px;
+            height:36px;
+            line-height:36px;
+            font-size: 16px;
+        }
+
+        .favorites_modal .modal-content{
+            border-radius: 15px;
+        }
+        .fmodal_header{
+            border-bottom:none;
+        }
+        .fmodal_body{
+            overflow: hidden;
+            padding-top:0;
+            background: #f6f6f6;
+        }
+        .fmodal_footer{
+            padding-top:5px;
+            padding-bottom:5px;
+            border-top:none;
+        }
+        .fmodal_body .weui-check__label{
+            padding-top:0;
+            padding-bottom:0;
+        }
+        .fmodal_body .weui-cell:before{
+            border-top:0;
+        }
+        .fmodal_body .weui-cells:before{
+            border-top:0;
+        }
+        .fmodal_body .weui-cells:after{
+            border-bottom:0;
+        }
+        .fmodal_body .weui-cells{
+            overflow: hidden;
+            padding-top:0;
+            background: #f6f6f6;
+        }
+        .fmodal_body .weui-cells__title{
+            font-size:16px;
+            color: #333;
+        }
+        .fmodal_body .weui-media-box_appmsg .weui-media-box__hd{
+            width:36px;
+            height:36px;
+        }
+        .fmodal_body .weui-media-box__title{
+            font-size:16px;
+        }
+        .fmodal_body .weui-media-box__desc{
+            font-size:12px;
+        }
+        .fmodal_body .weui-media-box_appmsg{
+            padding-left:0;
+            padding-top:0;
+            padding-bottom:0;
+        }
+        .fmodal_body .weui-media-box_appmsg .weui-media-box__thumb{
+            border-radius:5px;
+        }
+        .fmodal_body .weui-cells_checkbox .weui-check:checked+.weui-icon-checked:before{
+            content: '\EA06';
+            color: #cfba93;
+        }
+        .fmodal_body .weui-cells_checkbox .weui-icon-checked:before{
+            color: #cfba93;
+        }
+        .fmodal_body .address{
+            padding-left:15px;
+            background: url("../images/position_icon.png") no-repeat 3px 1px;
+        }
+        .fmodal_footer .btn_yellow,
+        .fmodal_footer .btn_yellow:hover,
+        .fmodal_footer .btn_yellow:active,
+        .fmodal_footer .btn_yellow:visited{
+            background: #cfba93;
+            border-color: #cfba93;
+            color: #fff;
+        }
+        .fmodal_footer .btn_yellow:hover{
+            background: #dac49c;
+        }
+        .fmodal_footer .row{
+            padding-left:12px;
+            padding-right:12px;
+        }
