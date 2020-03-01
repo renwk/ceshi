@@ -1,0 +1,64 @@
+
+.body {
+    background: #f9f9f9;
+    padding: 24rpx;
+    font-size:14px;
+}
+.con_box{
+    margin-bottom: 20rpx;
+    padding: 24rpx;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 20rpx;
+    background: #fff;
+    line-height: 60rpx;
+}
+
+.list_box{
+    margin: 10rpx;
+    list-style: none;
+    /* font-size: 14px; */
+    color: #333;
+}
+.list_box .span {
+    display: inline-block;
+    width: 230rpx;
+}
+.list_coupon{
+    text-align: right;
+}
+.list_coupon .span{
+  float: left;
+}
+.list_coupon .result {
+    padding: 6px 12px 8px;
+    background: #e3e3e3;
+    border-radius: 0 0 10px 10px;
+    margin: 0 -12px -12px;
+}
+.table {
+  border: 0px solid darkgray;
+}
+.table .tab_title{
+  float: left;
+  height: 195rpx;
+  text-align: center;
+  line-height: 195rpx;
+}
+.tr {
+  float: right;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 65rpx;
+  align-items: center;
+  font-size: 26rpx;
+}
+.td,.th {
+    width:100%;
+    justify-content: center;
+    text-align: center;
+}
+.th {
+  font-size: 15px;
+}

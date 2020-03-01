@@ -1,0 +1,196 @@
+/**index.wxss**/
+page{
+    background: #f9f9f9;
+}
+.body{
+  padding: 24rpx;
+}
+.con_box{
+    margin-bottom: 24rpx;
+    padding: 24rpx;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 20rpx;
+    background: #fff;
+}
+.user_img{
+    float: left;
+    margin-bottom: 30rpx;
+    padding-top: 8rpx;
+    width: 35%;
+    padding-right: 50rpx;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.user_img .user_pic{
+    float: left;
+    width: 176rpx;
+    height: 176rpx;
+    border-radius: 99rpx;
+}
+.head_info {
+    position: relative;
+    overflow: hidden;
+    padding-top: 40rpx;
+    padding-bottom: 36rpx;
+}
+.head_info .user_pic {
+    float: left;
+    width: 176rpx;
+    height: 176rpx;
+    border-radius: 99rpx;
+}
+.head_info .user_name {
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+    margin-left: 46rpx;
+    float: left;
+    font-size: 36rpx;
+}
+.head_info .rights_info {
+    clear: both;
+    overflow: hidden;
+    padding-top: 30rpx;
+    border-top: 2rpx solid #dedede;
+    width: 100%;
+    text-align: center;
+    color: #cfba93;
+    font-size: 32rpx;
+}
+.head_info .rights_info .mycard {
+    display: block;
+    float: left;
+    width: 50%;
+}
+.head_info .rights_info .coupon {
+    display: block;
+    float: left;
+    width: 50%;
+}
+.head_info .rights_info a {
+    color: #cfba93;
+    font-size: 36rpx;
+}
+..grid_list{
+  overflow: hidden;
+}
+.grid_list .grid_label {
+    float: left;
+    margin-bottom: 12px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    width: calc(50% - 6px);
+    border-radius: 10px;
+    background: #fff;
+    text-align: center;
+}
+.menu_list{
+    overflow: hidden;
+    width: 100%;
+    padding-left: 16rpx;
+    padding-right: 16rpx;
+    padding-bottom: 0;
+}
+.menu_list .menu_one{
+    float: left;
+    display: block;
+    width: 46%;
+    margin: 0 2% 24rpx;
+    padding: 20rpx 0 10rpx;
+    text-align: center;
+    color: #333;
+    border-radius: 10rpx;
+    box-shadow: 0px 6rpx 20rpx rgba(0,0,0,.1);
+}
+.menu_one text{
+    font-size: 28rpx;
+}
+.s_icon{
+    margin: 0 auto 12rpx;
+    display: block;
+    width: 110rpx;
+    height: 110rpx;
+}
+.drawer_screen {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.5;
+    overflow: hidden;
+}
+/*content*/
+.drawer_box {
+    width: 95%;
+    position: fixed;
+    top: 2%;
+    left: 2.5%;
+    z-index: 1001;
+    overflow: hidden;
+    background: #ffffff;
+    border-radius: 30rpx;
+}
+.remarks_pcon {
+    padding-top:10rpx;
+    padding-bottom:10rpx;
+    overflow-y: scroll;
+}
+.remarks_pcon .h2{
+    margin: 0;
+    text-align: center;
+    font-size: 36rpx;
+    margin-bottom:20rpx;
+}
+.modal-body {
+    position: relative;
+    padding: 30rpx;
+}
+
+.btn_white{
+    /*width:200rpx;*/
+    /*float:right;*/
+    margin:20rpx;
+    color:#fff;
+}
+.btn {
+
+    display: block;
+    padding: 10rpx 20rpx;
+    border-radius: 12rpx;
+    text-align: center;
+    background: #cfba93;
+    font-size: 24rpx;
+    box-sizing: border-box;
+}
+.index_btn_list{
+    display: flex;
+    height:100rpx;
+}
+.index_btn_list .btn {
+    border-radius: 60rpx;
+    font-size: 24rpx;
+    -webkit-box-flex: 1;
+    line-height:0;
+    width:46%;
+}
+.index_btn_list .btn:first-child {
+    margin-right: 24rpx;
+}
+.index_btn_list .btn_icon_money .span {
+    /*background-image: url(../images/money_add_icon.png);*/
+    background-repeat: no-repeat;
+    background-position: 0 1px;
+    padding: 2rpx 0 2rpx 20rpx;
+    color: #fff;
+}
+.btn image{
+    margin: 0 auto 10rpx;
+    display: inline-block;
+    width: 40rpx;
+    height: 40rpx;
+}

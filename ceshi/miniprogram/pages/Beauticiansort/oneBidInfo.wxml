@@ -1,0 +1,94 @@
+<tabs id='tabs' bind:change="tabChange" infoid="{{infoid}}" role="{{role}}">
+    <tab title="我的加班">
+        <view>
+            <view class="weui-tab__content">
+                <view class="con_box">
+                  <form bindsubmit="formSubmit">
+                    <view class="scheduling_check">
+                        <picker class="date_scheduling" mode="date" name='timedate' value="{{overtimeInitDate}}" fields="month"  bindchange="bindOvertimeInitDateChange">
+                            <view class="picker">
+                                {{overtimeInitDate}}
+                            </view>
+                        </picker>
+                        <button formType="submit" class='btn'  data-bid="{{infoid}}" data-role="{{role}}">查询</button>
+                    </view>
+                  </form>
+                </view>
+                <view class="table-responsive statistical">
+                    <view class="table table-striped">
+                        <view class="table-tr">
+                            <view class="table-th th4">加班日期</view>
+                            <view class="table-th th4">OTT</view>
+                            <view class="table-th th4">OTM</view>
+                            <view class="table-th th4">操作人</view>
+                        </view>
+                        <view class="table-row-group " wx:if="{{overtime.info}}" >
+                              <view class="table-tr"wx:key="unique" wx:for="{{overtime.info}}" wx:for-index="index" wx:for-item="val">
+                                  <view class="table-td Pltd">{{val.otime_date}}</view>
+                                  <view class="table-td Pltd">{{val.ott_time}}</view>
+                                  <view class="table-td Pltd">{{val.otm_time}}</view>
+                                  <view class="table-td Pltd">{{val.username}}</view>
+                              </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="ott_ckeck_out">
+                    总计
+                    <view class="ott_list">
+                        <view class="ott_time p">OTM：{{overtime.total_time.OTM}}小时</view>
+                        <view class="otm_time p">OTT：{{overtime.total_time.OTT}}小时</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </tab>
+    <tab title="我的P/L">
+        <view>
+            <view class="weui-tab__content">
+                <view class="con_box">
+                  <form bindsubmit="formSearch">
+                    <view class="scheduling_check">
+                        <picker class="date_scheduling" mode="date" name='timedate' value="{{plInitDate}}" fields="month"  bindchange="bindPlInitDateChange">
+                            <view class="picker">
+                                {{plInitDate}}
+                            </view>
+
+                        </picker>
+                        <button formType="submit" class='btn'  data-bid="{{infoid}}" data-role="{{role}}">查询</button>
+                    </view>
+                  </form>
+                </view>
+                <view class="table-responsive statistical">
+                    <view class="table table-striped">
+                        <view class="table-tr">
+                            <view class="table-th th7">请假类型</view>
+                            <view class="table-th th7">开始时间</view>
+                            <view class="table-th th7">时长</view>
+                            <view class="table-th th7">消耗OTT</view>
+                            <view class="table-th th7">消耗OTM</view>
+                            <view class="table-th th7">操作人</view>
+                        </view>
+                        <view class="table-row-group "  wx:if="{{pltime.info}}" >
+                            <view class="table-tr" wx:key="unique" wx:for="{{pltime.info}}" wx:for-index="index" wx:for-item="val">
+                                <view class="table-td Pltd">{{val.type}}</view>
+                                <view class="table-td Pltd">{{val.stime}}</view>
+                                <view class="table-td Pltd">{{val.time}}</view>
+                                <view class="table-td Pltd">{{val.ott}}</view>
+                                <view class="table-td Pltd">{{val.otm}}</view>
+                                <view class="table-td Pltd">{{val.username}}</view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="ott_ckeck_out">
+                    总计
+                    <view class="ott_list">
+                        <view class="bid_lever_time p">总时长：{{overtime.total_time.ltime}}小时</view>
+                        <view class="bid_lever_otm p">OTM：{{overtime.total_time.OTM}}小时</view>
+                        <view class="bid_lever_ott p">OTT：{{overtime.total_time.OTT}}小时</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </tab>
+</tabs>

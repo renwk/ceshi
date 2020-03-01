@@ -1,0 +1,18 @@
+<view class='body'>
+  <view class='con_box'>
+    <view class="table-responsive statistical">
+        <view class="table table-striped" >
+            <view class="table-tr">
+                <view class="table-th th3">姓名</view>
+                <view class="table-th th3">上钟工时(h)</view>
+                <view class="table-th th3">排名</view>
+            </view>
+            <view class="table-tr" wx:key="keys" wx:for="{{timesort.info}}" wx:for-index="index" wx:for-item="val">
+                <view class="table-td">{{val.name}}</view>
+                <view class="table-td">{{val.total}}</view>
+                <view class="table-td">{{index+1}}</view>
+            </view>
+        </view>
+    </view>
+  </view>
+</view>

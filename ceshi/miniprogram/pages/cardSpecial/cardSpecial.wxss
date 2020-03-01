@@ -1,0 +1,64 @@
+@import '../../weui.wxss';
+page{
+    background: #f9f9f9;
+}
+.weui-tab__content{
+    padding-left: 24rpx;
+    padding-right: 24rpx;
+    padding-top: 12rpx;
+    padding-bottom: 12rpx;
+    min-height:1000rpx;
+}
+.reservation_box{
+    overflow: hidden;
+    margin-right: 12px;
+    margin-bottom: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #cfba93;
+    border-radius:10px;
+    background: #fff;
+    font-size: 14px;
+}
+.reservation_box .dt{
+    overflow: hidden;
+    padding-left:12px;
+    padding-right: 12px;
+    height: 30px;
+    border-bottom: 1px solid #cfba93;
+    border-radius:10px 10px 0 0;
+    line-height:30px;
+    background: #e3e3e3;
+    font-weight: normal;
+    vertical-align: middle;
+}
+.reservation_box .dt .span{
+    float: right;
+    vertical-align: middle;
+}
+.reservation_box .dd{
+    overflow: hidden;
+    padding-left:12px;
+    padding-right: 12px;
+    height: 28px;
+    line-height:28px;
+    vertical-align: middle;
+}
+.reservation_box .dd .span{
+    display: inline-block;
+    min-width: 70px;
+    color: #666;
+}
+.statistical {
+    border:2rpx solid #cfba93;
+    border-radius:0rpx;
+}
+.table-tr:first-child {
+    width: 101%;
+    border-bottom:1rpx solid #cfba93;
+    background-color: #fff;
+}
+.table-tr:first-child .table-td{
+    border-right:1rpx solid #cfba93;
+    background-color: #fff;
+}

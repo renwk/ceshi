@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "我的加班",
+  "usingComponents": {
+    "tabs": "/component/tabs/tabs",
+    "tab": "/component/tabs/tab/tab"
+  }
+}

@@ -1,0 +1,13 @@
+<view class="weui-tab">
+  <view class="weui-navbar">
+    <block wx:for="{{listTitles}}" wx:for-index="idx" wx:for-item="item" wx:key="*this">
+
+      <view data-idx="{{idx}}" data-infoid="{{infoid}}" data-role="{{role}}" bindtap="action" class="weui-navbar__item {{activeIndex == idx ? 'weui-bar__item_on' : ''}}">
+        <text class="weui-navbar__title">{{item}}</text>
+      </view>
+    </block>
+  </view>
+  <view class="weui-tab__panel">
+      <slot></slot>
+  </view>
+</view>

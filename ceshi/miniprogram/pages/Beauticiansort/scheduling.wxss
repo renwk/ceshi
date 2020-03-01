@@ -1,0 +1,89 @@
+/* pages/beauticiansort/scheduling.wxss */
+page{
+    background: #f9f9f9;
+}
+/* 搜索框 */
+.scheduling_check{
+    overflow: hidden;
+}
+.scheduling_check .date_scheduling{
+    float: left;
+    border: 2rpx solid #a6a6a6;
+    padding:0 24rpx;
+    height: 70rpx;
+    width: calc(100% - 220rpx);/*72 + 10*/
+    line-height: 68rpx;
+    border-radius: 12rpx;
+}
+.picker{
+    font-size: 28rpx;
+}
+.scheduling_check .btn{
+    float: right;
+    padding: 0;
+    display: inline-block;
+    width: 142rpx;
+    line-height: 72rpx;
+    border: none;
+    background: #cfba93;
+    border-radius: 12rpx;
+    font-size: 32rpx;
+    text-align: center;
+    color: #ffffff;
+}
+.th7{
+    width: calc(100% / 7);
+}
+.statistical{
+    width: 100%;
+}
+.bgw{
+    background-color: #ffffff;
+}
+
+.statistical .table{
+    border-radius: 30rpx;
+}
+.statistical .table>.table_tr>.table_th,
+.statistical .table>.table_tr>.table_td{
+    padding-left: 0;
+    padding-right: 0;
+}
+.statistical .table>.table_tr>.table_th{
+    border-right: none;
+}
+.table-tr:nth-child(odd){
+    background-color: #FFFFFF;
+}
+.table-td{
+    padding-top: 15rpx;
+    padding-bottom: 15rpx;
+}
+.table-striped>.table_tr:nth-of-type(odd) {
+    background-color: #fff;
+}
+
+
+/* 排班列表 */
+.status_list{
+    overflow: hidden;
+}
+.status_list>view{
+    float: right;
+    margin-left: 48rpx;
+}
+.status_list i{
+    display: inline-block;
+    margin-right: 48rpx;
+    width: 40rpx;
+    height: 24rpx;
+}
+.early{
+    display: block;
+    width: 80rpx;
+    padding-top: 2rpx;
+    padding-bottom: 2rpx;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 198rpx;
+}

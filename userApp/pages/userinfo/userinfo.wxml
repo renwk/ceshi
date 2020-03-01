@@ -1,0 +1,41 @@
+<view class="p12">
+    <view class="con_box mu_head">
+        <view class="user_img">
+            <image src="{{userInfo.wechat.headimgurl}}"></image>
+        </view>
+        <view class="user_name">
+            {{userInfo.wechat.nickname}}<block wx:if="{{userInfo.wechat.sex == 1}}">(男)</block><block wx:elif="{{userInfo.wechat.sex == 2}}">(女)</block><block wx:else> </block>
+        </view>
+    </view>
+    <view class="con_box me_list">
+        <view class="listLi">
+            <text class="row_title">手机号码</text>
+            <text class="roow_con">{{userInfo.user.mobile}}</text>
+        </view>
+        <view class="listLi">
+            <text class="row_title">亲情手机1</text>
+            <text class="roow_con">{{userInfo.user.backup_mobile1}}</text>
+        </view>
+        <view class="listLi">
+            <text class="row_title">亲情手机2</text>
+            <text class="roow_con">{{userInfo.user.backup_mobile2}}</text>
+        </view>
+        <view class="listLi">
+            <text class="row_title">生日</text>
+            <text class="roow_con">{{userInfo.user.birthday}}</text>
+        </view>
+        <view class="listLi">
+            <text class="row_title">邮箱</text>
+            <text class="roow_con">{{userInfo.user.email}}</text>
+        </view>
+        <view class="listLi">
+            <text class="row_title">专属顾问</text>
+            <text class="roow_con">{{userInfo.user.by_consultant}}</text>
+        </view>
+        <view class="listLi">
+            <text class="row_title">专属理疗师</text>
+            <text class="roow_con">{{userInfo.user.bid}}</text>
+        </view>
+    </view>
+  
+</view>

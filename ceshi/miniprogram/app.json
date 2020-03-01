@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/usercardinfo/usercardinfo",
+    "pages/summaryNotes/summaryNotes",
+    "pages/usercard/usercard",
+    "pages/cardSpecial/cardSpecial",
+    "pages/cardNostorage/cardNostorage",
+    "pages/cardCoupon/cardCoupon",
+    "pages/order/index",
+    "pages/cardStored/cardStored",
+    "pages/orderRecharge/orderRecharge",
+    "pages/orderService/orderService",
+    "pages/historyGradeBeautician/historyGradeBeautician",
+    "pages/myGradeBeautician/myGradeBeautician",
+    "pages/info/info",
+    "component/tabs/tabs",
+    "component/tabs/tab/tab",
+    "pages/myReservation/myReservation",
+    "pages/reservationDetail/reservationDetail",
+    "pages/login/login",
+    "pages/myGradeStaff/myGradeStaff",
+    "pages/historyGradeStaff/historyGradeStaff",
+    "pages/cardPower/cardPower",
+    "pages/Beauticiansort/scheduling",
+    "pages/Beauticiansort/oneBidInfo",
+    "pages/logs/logs",
+    "pages/bidHoursSort/bidHoursSort"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#333",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "#fff"
+  }
+}

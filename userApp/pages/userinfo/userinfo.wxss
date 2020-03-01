@@ -1,0 +1,78 @@
+/* pages/userinfo/userinfo.wxss */
+/* pages/info/info.wxss */
+page{
+    background: #f9f9f9;
+}
+.con_box{
+    margin-bottom:24rpx;
+    padding:24rpx;
+    width:100%;
+    box-sizing:border-box;
+    border-radius: 20rpx;
+    background: #fff;
+}
+.user_img{
+    text-align: center;
+}
+.user_img image{
+    display: inline-block;
+    width:182rpx;
+    height: 182rpx;
+    border-radius: 1998rpx;
+}
+.user_name{
+    margin-top:10rpx;
+    text-align: center;
+    font-size: 28rpx;
+}
+
+.me_list .listLi{
+    position: relative;
+    overflow: hidden;
+    padding-left: 0;
+    color: #333;
+    text-align: left;
+    line-height: 86rpx;
+}
+.me_list_last .listLi{
+    text-align: left;
+    padding-left: 36rpx;
+}
+.me_list .listLi{
+    border-bottom: 1px solid #e3e3e3;
+}
+.me_list .listLi:last-child {
+    border-bottom: none;
+}
+.me_list .listLi .row_title{
+    display: inline-block;
+    left: 0rpx;
+    padding-right: 0;
+    width: 188rpx;
+    text-align: left;
+    color: #999;
+    font-size: 32rpx;
+}
+.me_list .listLi .arrow{
+    position: absolute;
+    right:28rpx;
+    top:32rpx;
+    display: inline-block;
+    width:24rpx;
+    height:24rpx;
+    border: 2rpx solid #9d9d9d;
+    border-left:none;
+    border-bottom:none;
+    transform:rotate(45deg);
+}
+.me_list .listLi:after{
+    display: none;
+}
+.mu_head{
+    padding-top:40rpx;
+}
+.roow_con{
+    font-size: 32rpx;
+}
+
+

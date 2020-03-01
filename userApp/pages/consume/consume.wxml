@@ -1,0 +1,115 @@
+    <!--pages/consume/consume.wxml-->
+<tabs id='tabs' bind:change="tabChange" data-userid="{{userid}}" data-uid="{{uid}}" >
+  <tab title="消费订单">
+    <view class='body'>
+      <view class='con_box' wx:if="{{order}}" wx:key="keys" wx:for="{{order}}" wx:for-index="index" wx:for-item="val">
+        <view class="order_list">
+          <view class="reservation_box">
+            <view class="dl" data-toggle="" bindtap="">
+            <!-- <view class="dt">手机号:  <text class="tag_add_icon"></text>
+            <text  class="span">姓名:</text></view> -->
+              <view class="dd">
+                <text>{{val.time}}</text>
+                <text  class='not_collect' style='background:url("http://public.ispa.cn/user/images/paid_star.png") no-repeat center;' bindtap="powerDrawer" data-statu="open" data-title="收 藏" data-oid="{{val.oid}}"> </text>
+                <text class='collect' style='display:none;background:url("http://public.ispa.cn/user/images/star_icon.png") no-repeat center;'> </text>
+              </view>
+              <block wx:key="keys" wx:for="{{val.details}}" wx:for-index="kk" wx:for-item="vv">
+                <view class="dd text_bgk" bindtap="getOrderDetails" data-oid="{{val.oid}}">
+                  <text class='text_one'>{{vv.iname}}</text>
+                  <text class='text_tow'>{{vv.count}}</text>
+                  <text class='text_three'>{{vv.money}}</text>
+                </view>
+              </block>
+              <view class="dd" bindtap="getOrderDetails" data-oid="{{val.oid}}"><text>实际金额: ¥ {{val.total}}</text></view>
+            </view>
+          </view>
+        </view>  
+      </view>
+      <view wx:if="{{!order}}">
+        <view class="nothing_box" style="margin-top:65px;text-align: center;">
+          <view><image style="width:60%;height:50vw" src="http://public.ispa.cn/shop/img/nothing.png"></image></view>
+          <view class="nothing_txt" style="margin-top:70px;font-size:18px;color: #333;">找不到内容</view>
+        </view>
+      </view>
+    </view>
+  </tab>
+  <tab title="充值订单">
+   <view class='body'>
+      <view class='con_box' wx:if="{{order}}" wx:key="keys" wx:for="{{order}}" wx:for-index="index" wx:for-item="val">
+        <view class="order_list">
+          <view class="reservation_box">
+            <view class="dl" data-toggle="" bindtap="">
+              <view class="dd">
+                <text class='text_o'>{{val.time}}</text>
+                <text class='text_t'>{{val.ucard_no}}</text>
+                <block wx:if="{{val.type == 0}}">
+                  <text class='text_th' style='background: #9396cf;'>购</text>
+                </block>
+                <block wx:else>
+                  <text class='text_th' style='background: #93cf9a;'>续</text>
+                </block>
+              </view>
+                 <block wx:key="keys" wx:for="{{val.details}}" wx:for-index="kk" wx:for-item="vv">
+              <view class="dd text_bgk" bindtap="getRechargeOrderDetails" data-oid="{{val.oid}}">
+                <text class='text_one'>{{vv.cardname}}</text>
+                <text class='text_tow'>{{vv.count}} 张</text>
+                <text class='text_three'>{{vv.d_money}}</text>
+              </view>
+              </block>
+              <view class="dd" bindtap="getRechargeOrderDetails" data-oid="{{val.oid}}"><text>实际金额: ¥ {{val.money_true}}</text></view>
+            </view>
+          </view>
+        </view>  
+      </view>
+      <view wx:if="{{!order}}">
+        <view class="nothing_box" style="margin-top:65px;text-align: center;">
+          <view><image style="width:60%;height:50vw" src="http://public.ispa.cn/shop/img/nothing.png"></image></view>
+          <view class="nothing_txt" style="margin-top:70px;font-size:18px;color: #333;">找不到内容</view>
+        </view>
+      </view>
+    </view>
+  </tab>
+</tabs>
+<view class="drawer_screen"  data-statu="close" wx:if="{{showModalStatus}}" catchtouchmove="ture"></view>
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+<view class='modal-body tag_select_box'>
+    <!--<form bindsubmit="formSubmit">-->
+        <view class='remarks_pcon'>
+            <view class='h2'>{{currentTitle}}</view>
+               <view class='con_box_1'>
+                  <view class='title_d tab_title'><text class='t_det_content settlement'>请选择收藏的内容</text></view>
+                  <view class='title'>门店<text class='tit_text'></text></view>
+
+                      <label>
+                          <checkbox name="codes" data-id="{{order_col.storeid}}" checked="{{order_col.is_collect}}" style="width: 100%;" data-action="{{val.is_collect ?'delete':'add'}}" bindtap="checkboxChange">
+                              <image class="user_image" src="" ></image>
+                              <view style="float:left">
+                                  <text name='code' class='con_info' decode="{{true}}">&emsp;{{order_col.sname}}</text>
+                                  <text style='font-size:20rpx;color:#666'  decode="{{true}}">\n &emsp;{{order_col.adress}}</text>
+                              </view>
+                          </checkbox>
+                      </label>
+
+                  <view class='title'>顾问<text class='tit_text'></text></view>
+
+                      <label  wx:key="keys" wx:for="{{order_col.aid_info}}" wx:for-index="key" wx:for-item="val">
+                          <checkbox name="codes1" data-id="{{val.aid}}" checked="{{val.is_collect}}" style="width: 100%;" data-action="{{val.is_collect ? 'delete': 'add'}}" bindtap="checkboxChange1">
+                              <image class="user_image" src="" ></image>
+                              <view style="float:left">
+                                  <text class='con_info' decode="{{true}}">&emsp;{{val.nickname}}</text>
+                                  <text style='font-size:20rpx;color:#666' decode="{{true}}">\n \r &emsp; {{val.nickname}}</text>
+                              </view>
+                          </checkbox>
+
+                      </label>
+
+                  </view>
+        </view>
+        <view class="fun_btn_wrap" bindtap="powerDrawer" data-statu="close" data-title="" data-showtype='' data-text=''>
+            <button class="btn btn-default btn_white">取消</button>
+            <button class="btn btn-default"   data-uid='{{order_col.user_id}}' data-aid="{{aid}}" data-sid="{{sid}}">确定</button>
+        </view>
+    <!--</form>-->
+</view>
+</view>
+

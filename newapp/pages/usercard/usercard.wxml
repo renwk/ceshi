@@ -1,0 +1,47 @@
+<view class='body'>
+
+    <view>
+<view class='orderlist_date_select'>
+  <form bindsubmit="formSubmit">
+            <view class="btn btn-default dropdown-toggle" style='width:310rpx;font-size:26rpx;height:75rpx;line-height:14px;'>
+            <picker bindchange='bindPickerChange' data-tid='' value="{{index}}" range="{{stores}}" range-key="{{'sname'}}"  style="width: 100%;border: 0;">
+              <view class='picker'style="width: 100%;text-align: left;">{{init ? sname : stores[index].sname}}</view>
+              <i class="arrow_down"></i>
+            </picker>
+              <text class="caret"></text>
+            </view>
+ 
+      <view class="orderlist_select_input">
+          <input type="text" placeholder="昵称或手机号" placeholder-class="inputPla" id="condition1" name='search'/>
+          <text bindtap="searchConsumption"></text>
+      </view>
+
+    <button formType="submit" data-bid="{{bid}}" data-sname="{{init ? sname : stores[index].sname}}" data-type='{{type}}' class='interval'>查询</button>
+  </form>
+</view>
+    </view>
+    <view class="order_list mymember_table">
+    <view class='table-responsive statistical'>
+        <view class="table table-striped">
+            <view class='table-tr'>
+                <view class='table-th'>手机号</view>
+                <view class='table-th'>姓名</view>
+                <view class='table-th'>状态</view>
+            </view>
+
+            <view class='table-tr' wx:key="unique" wx:for="{{list}}" wx:for-index="index" wx:for-item="val">
+                <view class='table-td'>
+                    <a data-uid="{{val.userid}}" bindtap="toUserinfo">{{val.mobile}}</a>
+                </view>
+                <view class='table-td' data-uid="{{val.userid}}" bindtap="toUserinfo">{{val.name}}</view>
+                <view class='table-td' data-uid="{{val.userid}}" bindtap="toUserinfo">
+                  <text wx:if="{{val.state=='0'}}">正常</text>
+                  <text wx:elif="{{val.state=='1'}}">锁定</text>
+                  <text wx:else>失效</text>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    </view>
+</view>

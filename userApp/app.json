@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/consume/consume",
+    "pages/rechargedetails/rechargedetails",
+    "pages/orderdetails/orderdetails",
+    "pages/collect/collect",
+    "pages/mycard/mycard",
+    "pages/bespeak/bespeak",
+    "pages/userinfo/userinfo",
+    "pages/coupon/coupon",
+    "pages/login/login",
+    "pages/invite/index",
+    "pages/buy/index",
+    "pages/gotopay/gotopay"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#cfba93",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  }
+}

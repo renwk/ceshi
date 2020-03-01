@@ -1,0 +1,108 @@
+/* pages/custom/custom.wxss */
+page{
+    background: #f0f0f0;
+}
+.circleBar{
+    padding: 24rpx 24rpx 0;
+}
+.tab_card{
+    margin-bottom:0;
+    background: #fff;
+    padding-bottom:40rpx;
+    -webkit-border-radius: 30rpx 30rpx 0 0;
+    -moz-border-radius: 30rpx 30rpx 0 0;
+    border-radius: 30rpx 30rpx 0 0;
+}
+.tab_card .tab_con{
+    padding-left: 60rpx;
+    padding-right: 54rpx;
+}
+.tab_card .tab_con text{
+    margin: 32rpx 0;
+    color: #333;
+    font-size:34rpx;
+    font-weight:normal;
+}
+.nutrition_con{
+    margin: 30rpx auto;
+    padding: 30rpx 0;
+    background: #fff;
+    color: #484848;
+    -webkit-border-radius:30rpx 30rpx;
+    -moz-border-radius:30rpx 30rpx;
+    border-radius:30rpx 30rpx;
+}
+.nutrition_con{
+    margin: 40rpx 0;
+    padding-top: 32rpx;
+    padding-bottom: 24rpx;
+    padding-left: 60rpx;
+    padding-right: 60rpx;
+    color: #626262;
+}
+.nutrition_con.tips{
+    margin-top:-20rpx;
+}
+.nutrition_con .title{
+    text-indent:0;
+    border-bottom: 2rpx solid #9fa0a0;
+    text-align: center;
+}
+.nutrition_con .title{
+    margin-top: 0px;
+    padding-bottom: 18rpx;
+    /*text-indent: 2em;*/
+    font-size: 36rpx;
+    font-weight:normal;
+    color: #333333;
+}
+.nutrition_con .tips_tag text{
+    margin-top:20rpx;
+    margin-right: -webkit-calc(5% - 18rpx);
+    margin-right: -moz-calc(5% - 18rpx);
+    margin-right: calc(5% - 18rpx);
+    display: inline-block;
+    padding:2rpx 0 0;
+    background: #fffad8;
+    border: 2rpx solid #b4b4b4;
+    width: 30%;
+    text-align: center;
+    color: #626262;
+    font-size:26rpx;
+    -webkit-border-radius:40rpx 40rpx;
+    -moz-border-radius:40rpx 40rpx;
+    border-radius:40rpx 40rpx;
+}
+.nutrition_con .tips_tag text:nth-child(3n){
+    margin-right: 0;
+}
+.nutrition_con.tips{
+    /*border: 2px solid #67d6ed;*/
+    background: #fffad8;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    color: #626262;
+}
+.nutrition_con.tips .title{
+    border-color: #b4b4b4;
+}
+.nutrition_con.tips .tips_tag{
+    overflow: hidden;
+    min-height: 198rpx;
+}
+.btn_online_big_green{/*btn_online_big*/
+    display: inline-block;
+    padding: 20rpx 0;
+    width: 100%;
+    background: #ff4b32;
+    font-size: 32rpx;
+    color: #fff;
+    -webkit-border-radius: 60rpx 60rpx;
+    -moz-border-radius: 60rpx 60rpx;
+    border-radius: 60rpx 60rpx;
+}
+.detailreport_foot{
+    margin: 26rpx 0 30rpx;
+    text-align: center;
+}

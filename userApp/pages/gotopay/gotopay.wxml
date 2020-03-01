@@ -1,0 +1,63 @@
+<view class="body">
+    <view class="con_box">
+        <view class="box_title">
+            <text>会员卡信息</text>
+        </view>
+        <block wx:if="{{cardinfo.card.kind == 'easy'}}">
+            <view class="card_img" style='background:url("http://public.ispa.cn/user/images/card_payment_escapespa.png") no-repeat center;background-size:100% 100%;'>
+                <text class="card_name">{{cardinfo.card.cardname}}</text><text class="card_money">{{cardinfo.card.money}}</text>
+            </view>
+        </block>
+        <block wx:else>
+            <view class="card_img" style='background:url("http://public.ispa.cn/user/images/card_payment_ispa.png") no-repeat center;background-size:100% 100%;'>
+                <text class="card_name" style="color:#c0a42d">{{cardinfo.card.cardname}}</text><text class="card_money" style="color:#c0a42d">{{cardinfo.card.money}}</text>
+            </view>
+        </block>
+
+    </view>
+    <view class="con_box">
+        <view class="box_title">
+            <text>收货信息</text><text class="title_explain">(礼包收取地址)</text>
+        </view>
+        <tabs id='tabs' bind:change="tabChange" infoid="{{infoid}}" role="{{role}}">
+            <tab title="到店自取">
+                <view class="payment" style="padding: 12px 0;">
+                    <view class="lifting_self" style="">
+                        <text class="h4">提货码\n</text>
+                        <text class="span">下单成功后提货码会以短信的形式发送到你手机。</text>
+                    </view>
+                </view>
+            </tab>
+            <tab title="快递收货">
+                <view class="payment" style="padding: 12px 0;">
+                    <view class="lifting_other" style=""  wx:if="{{cardinfo.address.address}}">
+                        <view class="titleline">
+                            <text class="h2">{{cardinfo.address.receiver_name}}</text><text class="phone">{{cardinfo.address.receiver_mobile}}</text>
+                        </view>
+                        <view>
+                            <text class="span" wx:if="{{cardinfo.address.is_default == 'yes'}}">默认</text><text class="address">{{cardinfo.address.address}}</text>
+                        </view>
+                        <i class="icon_payment_arrow" style="background: url(http://public.ispa.cn/user/images/payment_arrow_icon.png) no-repeat center;" bindtap="address" data-uid="{{}}" data-cardid="{{}}"></i>
+                    </view>
+                    <view class="lifting_other" style=""  wx:else>
+                        <view class="titleline">
+                            <text class="h2"></text><text class="phone"></text>
+                        </view>
+                        <view>
+                            <text>您还没有添加收货地址，请添加地址</text>
+                        </view>
+                        <i class="icon_payment_arrow" style="background: url(http://public.ispa.cn/user/images/payment_arrow_icon.png) no-repeat center;" bindtap="address" data-uid="{{}}" data-cardid="{{}}"></i>
+                    </view>
+                </view>
+            </tab>
+        </tabs>
+    </view>
+    <view class="con_box">
+        <view class="box_title">
+            <text>应付金额 : \r {{cardinfo.card.money}}</text>
+        </view>
+        <view>
+            <button class="btn btn_icon_money">立即支付</button>
+        </view>
+    </view>
+</view>

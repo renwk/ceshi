@@ -1,0 +1,28 @@
+<view class="login_page">
+    <view class="head">
+        <image src="http://thirdwx.qlogo.cn/mmopen/aoNW5hSibKurZK99Hzia5jxJDTxBHjWveTIgCRSX4flKl6lS6wv3TibDuLGLNiaicaZUrCFW4l2jIRzicb8akFjUPqN80gp0AWNd7H/132"></image>
+    </view>
+
+    <form bindsubmit="formlogin">
+        <view class="line_row">
+            <span class="line_name">手机号：</span>
+            <view class="line_input">
+                <input class='input' type="input" placeholder='请输入手机号' bindinput="phoneInput" name="mobile"></input>
+            </view>
+        </view>
+        <view class="line_row">
+            <span class="line_name">验证码：</span>
+            <view class="line_input ">
+                <input type="input" placeholder="请输入验证码" class="input_min" name="code"></input>
+                <view class="send_code" >
+                    <button class='btn right yanzheng_btn' bindtap="bindButtonTap" disabled='{{disabled}}' style="background-color:{{color}}">{{time}}</button>
+                </view>
+
+            </view>
+        </view>
+        <view class="btn_wrap">
+            <button class="btn btn_big" formType="submit" disabled='{{formdisabled}}'>确认</button>
+        </view>
+
+    </form>
+</view>

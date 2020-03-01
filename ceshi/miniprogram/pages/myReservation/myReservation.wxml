@@ -1,0 +1,63 @@
+<view class='body'>
+<view wx:if="{{list.bespeak}}">
+  <view  wx:key="unique" wx:for="{{list.bespeak}}" wx:for-index="index" wx:for-item="item">
+    <view class="con_box">
+        <span class="reservation_dateicon" style="background-image: url('../../image/icon/air_date_icon.png')">
+            {{index}}
+        </span>
+        <view class="reservation_box" wx:key="unique" wx:for="{{item}}" wx:for-index="key" wx:for-item="val">
+            <view class='dl'>
+                <view  wx:if="{{list.role =='consultant'}}" class='dt'>
+                    手机号：{{val.mobile}}
+                    <a href="javascript:;" class="card_btn" style="background-image: url('../../image/icon/vip_icon.png')">
+                        <i class="icon_vip"></i>
+                    </a>
+                    <span>姓名：{{val.nickname}}</span>
+                </view>
+                <view  wx:if="{{list.role =='beautician'}}" class='dt'>
+                    姓名：{{val.nickname}}
+                    <a href="javascript:;" class="card_btn" style="background-image: url('../../image/icon/vip_icon.png')">
+                        <i class="icon_vip"></i>
+                    </a>
+                
+                </view>
+                <view class='dd' data-toggle="{{val.order_code}}" data-role="{{list.role}}" bindtap="reservationinfo">
+                    <span>预约单号</span>
+                    {{val.order_code}}
+                </view>
+                <view class='dd' data-toggle="{{val.order_code}}" data-role="{{list.role}}"  bindtap="reservationinfo">
+                    <span>预约单状态</span>
+                    {{val.state}}
+                </view>
+                <view class='dd' data-toggle="{{val.order_code}}" data-role="{{list.role}}"  bindtap="reservationinfo">
+                    <span>预约时间</span>
+                    {{val.y_time}}
+                </view>
+                <view class='dd' data-toggle="{{val.order_code}}" data-role="{{list.role}}"  bindtap="reservationinfo">
+                    <span>预约时长</span>
+                    {{val.iusetime}}分钟
+                </view>
+                <view class='dd' data-toggle="{{val.order_code}}" data-role="{{list.role}}"  bindtap="reservationinfo">
+                    <span>预约房间</span>
+                    {{val.s_name}}
+                </view>
+                <view class='dd' data-toggle="{{val.order_code}}" data-role="{{list.role}}"  bindtap="reservationinfo">
+                    <span>理疗师</span>
+                    {{val.b_name}}
+                </view>
+            </view>
+        </view>
+          
+    </view>
+  </view>
+</view>
+<view wx:else>
+  <view class="nothing_box" style="margin-top:65px;text-align: center;">
+      <view>
+      <image style="width:60%;height:50vw" src="http://public.ispa.cn/shop/img/nothing.png"></image>
+      </view>               
+        <view class="nothing_txt" style="margin-top:70px;font-size:18px;color: #333;">找不到订单内容</view>
+    </view>
+</view>
+</view>
+

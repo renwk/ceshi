@@ -1,0 +1,51 @@
+<view class='body'>
+  <view class="con_box">
+      <view class="list_box">
+          <view class='li' wx:if="{{role=='consultant'}}">
+              <text class='span'>手机号</text>
+              {{list.info.mobile}}
+          </view>
+          <view class='li'>
+              <text class='span'>姓名</text>
+              {{list.info.nickname}}
+          </view>
+          <view class='li'>
+              <text class='span'>性别</text>
+              <text wx:if="{{list.info.sex=='user_sex_man'}}">男</text>
+              <text wx:else>女</text>
+          </view>
+      </view>
+  </view>
+  <view class="con_box">
+      <view class="list_box">
+          <view class='li'>
+              <text class='span'>预约单号</text>
+              {{list.info.order_code}}
+          </view>
+          <view class='li'>
+              <text class='span'>预约时间</text>
+              {{list.info.y_time}}
+          </view>
+          <view class='li'>
+              <text class='span'>预约时长</text>
+              {{list.info.iusetime}}分钟
+          </view>
+          <view class='li'>
+              <text class='span'>服务顾问</text>
+              {{list.info.a_name}}
+          </view>
+          <view class='li'>
+              <text class='span'>服务理疗师</text>
+              {{list.info.b_name}}
+          </view>
+          <view class='li'>
+              <text class='span'>预约房间</text>
+              {{list.info.s_name}}
+          </view>
+          <!-- <view class='li'>
+              <text class='span'>备注信息</text>
+              {{list.info.s_name}}
+          </view> -->
+      </view>
+  </view>
+</view>

@@ -1,0 +1,50 @@
+<!--最外层盒子-->
+<view class='circleBar'>
+    <view class="nutrition_main">
+        <view class="user_info">
+            <view class="header_img">
+                <image src="{{userinfo.avatarUrl}}"></image>
+            </view>
+            <view class="header_detail">
+                <view class="h2"><text>Hello，\r\n</text>{{userinfo.nickName}}</view>
+                <view class="p">
+                    记住你已经照顾了全世界，别忘了照顾你自己。
+                </view>
+                <view class="history" bindtap="toHistory">历史报告</view>
+            </view>
+        </view>
+        <view class="target_con">
+            <view class="title">
+                <image src="https://api.sanduoyuncai.com/public/wechartApp/image/img/blue_robe_icon.png"></image>
+                <text>检测结果:</text>
+            </view>
+            <view class="target_list">
+                本次总共检测67项指标，其中：
+                <view class="indicators">重度异常：<text class="cor-red">{{targetUnusual.level_3}}</text>项</view>
+                <view class="indicators">中度异常：<text class="cor-red">{{targetUnusual.level_2}}</text>项</view>
+                <view class="indicators">轻度异常：<text class="cor-red">{{targetUnusual.level_1}}</text>项</view>
+            </view>
+        </view>
+        <view class="target_detail">
+            <view class="tips">
+                <text >
+                    支付即可查看\r\n9大系统67项指标健康评估及专家建议
+                </text>
+            </view>
+            <view class="body_check">
+                <image src="https://api.sanduoyuncai.com/public/wechartApp/image/img/body_check.png"></image>
+            </view>
+        </view>
+    </view>
+    <view class="wxpay_guide">
+        <view class="pay_txt">
+                原价：<text class="original_price">100元</text>，优惠价：<text class="realpay"><text>{{total_fee}}</text> 元\r\n</text><text class="b_label">爱生活，爱自己</text>
+        </view>
+    </view>
+    <view class="nutrition_main pay_btn">
+        <view bindtap="goToPay">支付查看详细报告</view>
+    </view>
+    <view class="common_foot">
+        三朵云彩@数字生命引擎
+    </view>
+</view>

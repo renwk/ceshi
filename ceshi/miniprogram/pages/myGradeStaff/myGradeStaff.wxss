@@ -1,0 +1,69 @@
+/* pages/myGradeStaff/myGradeStaff.wxss */
+
+
+.con_box {
+    margin-top: 75rpx;
+    margin-bottom: 24rpx;
+    padding: 24rpx;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 20rpx;
+    background: #fff;
+}
+.weui-navbar__item .slidown{
+  border-bottom:4rpx solid #cfba93;
+  color:#cfba93;
+}
+.weui-navbar {
+    background: #fff;
+    border-color: #fff;
+}
+
+.weui-navbar {
+    display: flex;
+    position: absolute;
+    z-index: 500;
+    top: 0;
+    width: 100%;
+}
+.weui-navbar__item:first-child {
+    margin-left: 12px;
+}
+
+.weui-navbar__item {
+    padding-bottom: 0;
+    border-bottom: none;
+    font-size: 16px;
+    color: #666;
+} 
+.weui-navbar__item {
+    position: relative;
+    display: block;
+    -webkit-box-flex: 1;
+    flex: 1;
+    padding: 13px 0;
+    text-align: center;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.weui-navbar__item view{
+      display:inline;
+}
+.weui-navbar__item text {
+    display: inline-block;
+    border-bottom: 2px solid #fff;
+    width: 25%;
+    background: #fff;
+    color: #666;
+    font-size: 14px;
+}
+.weui-navbar__item button {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    min-width: 70px;
+    border-radius: 30px;
+    border-bottom-color: #cfba93 !important;
+    background: #cfba93 !important;
+    color: #fff !important;
+    font-size: 12px;
+    display:inline;
+}

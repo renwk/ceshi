@@ -1,0 +1,36 @@
+<tabs id='tabs' bind:change="tabChange" infoid="{{uid}}">
+    <tab title="门店">
+        <view class="container">
+            <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{items}}" wx:key="">
+                <view class="content weui-media-box_appmsg">
+                    <view>
+                        <image class="weui-media-box__hd" src="{{item.photo}}">
+                        </image>
+                    </view>
+                    <view>
+                        <text class="weui-media-box__title">{{item.name}}\n</text>
+                        <text class="weui-media-box__desc">电话:{{item.mobile}}\n</text>
+                        <text class="weui-media-box__desc address"><image src=""></image>{{item.address}}</text>
+                    </view>
+                </view>
+                <view class="del" catchtap="del" data-id="{{item.id}}">删除</view>
+            </view>
+        </view>
+    </tab>
+    <tab title="顾问和理疗师">
+        <view class="container">
+            <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{items}}" wx:key="">
+                <view class="content weui-media-box_appmsg">
+                    <view>
+                        <image class="weui-media-box__hd" src="{{item.photo}}">
+                        </image>
+                    </view>
+                    <view>
+                        <text class="weui-media-box__title">{{item.name}}({{item.store_name}})\n</text>
+                        <text class="weui-media-box__desc">类型: {{item.utype}}\n</text></view>
+                </view>
+                <view class="del" catchtap="del" data-id="{{item.id}}">删除</view>
+            </view>
+        </view>
+    </tab>
+</tabs>

@@ -1,0 +1,25 @@
+<view class='circleBar'>
+    <view class="tab_card">
+        <view class="tab_con">
+            <text>
+                发现你的 {{inspectNameStr}} 等元素异常，特别推荐如下食材以实现营养均衡。
+            </text>
+        </view>
+    </view>
+    <view>
+        <view class="nutrition_con tips">
+            <view class="title">您的专属营养食材</view>
+            <view class="tips_tag">
+                <text wx:for="{{recipe}}" wx:key="*this">{{item}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="detailreport_foot" data-trade_state="{{trade_state}}" data-inspectid="{{report_id}}" bindtap="comprehensive">
+        <view class="btn_online_big_green">
+            全面了解自己的身体状况
+        </view>
+    </view>
+    <view class="common_foot">
+        三朵云彩@数字生命引擎
+    </view>
+</view>

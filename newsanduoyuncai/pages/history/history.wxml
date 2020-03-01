@@ -1,0 +1,12 @@
+<!--最外层盒子-->
+<wxs module="filter" src="../../utils/numbertofix.wxs" />
+<view class='circleBar'>
+    <view class="allBox">
+        <view class="list-block">
+            <view class="item-inner history_to_index" wx:for="{{reportList}}" wx:key="*this"  data-show_type="{{item.show_type}}" data-report_id="{{item.inspect_id}}" data-trade_state="{{item.trade_state}}" bindtap="toHomePage">
+                <text class="fl item-time">{{item.inspect_date}}</text>
+                <text class="fr item_score">{{item.total_score}}分</text>
+            </view>
+        </view>
+    </view>
+</view>

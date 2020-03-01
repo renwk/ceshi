@@ -1,0 +1,101 @@
+<tabs id='tabs' bind:change="tabChange" infoid="{{uid}}">
+    <tab title="购卡">
+        <view class="swiper-container">
+            <swiper autoplay="{{autoplay}}"
+                    interval="{{interval}}"
+                    duration="{{duration}}"
+                    indicator-dots="{{indicatorDots}}"
+                    indicator-color="{{indicatorCo}}"
+                    indicator-active-color="{{indicatoraAC}}"
+                    circular="{{circular}}"
+                    bindchange="swiperChange" class="swiper">
+                <block wx:for="{{cardlist}}" wx:key="unique">
+                    <swiper-item style="height:90%">
+                        <block wx:if="{{item.kind == 'easy'}}">
+                            <view class="img card_escapespa" style='background:url("http://public.ispa.cn/user/images/card_pay_escapespa.png") no-repeat center;background-size:100% 100%;'>
+                                <view class="card_name">
+                                    <text class="h2">{{item.cardname}}\n</text>
+                                    <text class="span">{{item.policy}}</text>
+
+                                </view>
+                                <view class="card_money_year ">
+                                    <text>金额: {{item.money}}</text>
+                                    <text style="padding-left: 30rpx;">有效期: {{item.validity_day}}天</text>
+                                </view>
+                            </view>
+                        </block>
+                        <block wx:else>
+                            <view class="img card_ispa" style='background:url("http://public.ispa.cn/user/images/card_pay_ispa.png") no-repeat center; background-size:100% 100%;'>
+                                <view class="card_name">
+                                    <text class="h2">{{item.cardname}}\n</text>
+                                    <text class="span">{{item.policy}}</text>
+
+                                </view>
+                                <view class="card_money_year ">
+                                    <text>金额: {{item.money}}</text>
+                                    <text style="padding-left: 30rpx;">有效期: {{item.validity_day}}天</text>
+                                </view>
+                            </view>
+                        </block>
+                    </swiper-item>
+                </block>
+            </swiper>
+        </view>
+        <view class="index_btn_list">
+            <button class="btn btn_icon_money" bindtap="gotopay" data-uid="{{uid}}"><text class="span">立即下单</text></button>
+        </view>
+    </tab>
+    <tab title="续费">
+        <view class="con_box" wx:if="{{cards}}">
+            <view class="" >
+                <swiper autoplay="{{autoplay}}"
+                        circular="{{circular}}"
+                        bindchange="swiperChange1" class="swiper">
+                    <block wx:for="{{cards}}" wx:key="unique" wx:for-index="index" wx:for-item="val">
+                        <swiper-item style="height:90%">
+                            <view class="">
+                                <view class="card" style="background: url(http://public.ispa.cn/user/images/card_bg_part.jpg) no-repeat bottom right #d4b98e;">
+                                    <view class="title">
+                                        <image class="img" src="http://public.ispa.cn/user/images/card_ispa.png"></image><text>   储值卡</text>
+                                        <text class="card_no">NO.{{val.ucard_no}}</text>
+                                    </view>
+                                    <view class='h3'>{{val.cardname}}</view>
+                                    <view class='card_info'>
+                                        <view class='money' wx:if="{{val.accounts == 'balance'}}"><text>{{val.money_available}}\n</text>剩余余额</view>
+                                        <view class='money' wx:else><text>{{val.left_nums}}/{{val.total_nums}}\n</text>剩余次数</view>
+                                        <view class='discount'><text>iSpa折扣: {{val.serviceDiscountIspa}}% \n 隐逸折扣: {{val.serviceDiscountEasy}}%</text>
+                                        </view>
+                                    </view>
+                                    <view class="time">有效期至: {{val.validitytime}}</view>
+                                    <view class="time" wx:if="{{val.store_type =='9202'}}">{{val.sname}}</view>
+                                </view>
+                            </view>
+                        </swiper-item>
+                    </block>
+                </swiper>
+            </view>
+            <view class="panel-group tab_con">
+                <view class="tab_title">
+                    充值信息
+                </view>
+                <view class="list_box">
+                    <view class="li"><text>充值金额:</text>{{cardsinfo.money}}</view>
+                    <view class="li"><text>爱币金额:</text>{{cardsinfo.money}}</view>
+                    <view class="li"><text>有效期:</text>{{cardsinfo.validitytime}}</view>
+                    <view class="li def_paymoney"><text>应付金额:</text>{{cardsinfo.money}}</view>
+                </view>
+            </view>
+            <view class="btn_wrap">
+                <button class="btn" bindtap="pay">支付</button>
+            </view>
+        </view>
+        <view wx:else >
+            <view class="nothing_box" style="margin-top:65px;text-align: center;">
+                <view>
+                    <image style="width:60%;height:50vw" src="http://public.ispa.cn/shop/img/nothing.png"></image>
+                </view>
+                <view class="nothing_txt" style="margin-top:70px;font-size:18px;color: #333;">找不到内容</view>
+            </view>
+        </view>
+    </tab>
+</tabs>

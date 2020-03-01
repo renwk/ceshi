@@ -1,0 +1,64 @@
+/* pages/tankuang/tankuang.wxss */
+/*mask*/
+.drawer_screen {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.5;
+    overflow: hidden;
+}
+/*content*/
+.drawer_box {
+    width: 95%;
+    position: fixed;
+    top: 2%;
+    left: 2.5%;
+    z-index: 1001;
+    overflow: hidden;
+    background: #ffffff;
+    border-radius: 30rpx;
+}
+.remarks_pcon {
+    padding-top:10rpx;
+    padding-bottom:10rpx;
+    overflow-y: scroll;
+}
+.remarks_pcon .h2{
+    margin: 0;
+    text-align: center;
+    font-size: 36rpx;
+    margin-bottom:50rpx;
+}
+.modal-body {
+    position: relative;
+    padding: 30rpx;
+}
+.fun_btn_wrap button {
+    /* float: right; */
+    display: block;
+    padding: 8rpx 0;
+    width: calc(50% - 12rpx);
+    border: 2rpx solid #cfba93;
+    border-radius: 16rpx;
+    font-size: 36rpx;
+    color: #fff;
+}
+.fun_btn_wrap button.btn_white {
+    float: left;
+    background: #fff;
+    color: #cfba93;
+}
+.btn  {
+    text-align: center;
+    background: #cfba93;
+}
+.bc_white{
+    float: left;
+    width: 175rpx;
+    margin: 25rpx;
+}

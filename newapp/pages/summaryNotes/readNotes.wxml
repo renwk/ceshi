@@ -1,0 +1,99 @@
+<view class='body'>
+    <view class='con_box summary_tag'>
+
+        <view class='h2'>
+            标签
+            <a href="javascript:;" class="icon_add icon_add_btn" id="create_tag_btn" style='background:url("https://api.ispa.cn/public/img/add_icon.png") no-repeat center;background-size:100%;float:right' ></a>
+        </view>
+        <view class="tag_con" id="tag_pool" >
+            <a href="javascript:;" wx:key="unique" wx:for="{{usertag}}" wx:for-index="index" wx:for-item="val"><text >{{val.tag_name}}</text></a>
+        </view>
+        <!--<view class="tips">注：双击标签可以进行删除操作。</view>-->
+
+    </view>
+
+    <view class='con_box '>
+        <tabs>
+            <tab title="护理汇总">
+                <view>
+                    <view class="weui-tab__content">
+                        <view class='view_pic'>
+
+                            <block wx:if="{{user.userphoto != 'uploads/picture/defaultphoto.png' && !user.userphoto}}" >
+                                <image class="user_pic" src="https://shop.ispa.cn/{{user.userphoto}}"></image>
+                            </block>
+                            <block wx:else>
+                                <image class="user_pic" src="./user-unlogin.png"></image>
+                            </block>
+                            <view class="info_main">
+                                <text>{{user.name}}</text>
+                            </view>
+                        </view>
+                        <view>
+                            <view class="reservation_box" data-toggle="{{s}}1" >
+                                <view class="dl">
+                                    <view class="dt"> {{user.sname}}
+                                        <a href="javascript:;" class="icon_add icon_add_btn" style='background:url("https://api.ispa.cn/public/img/edit_icon.png") no-repeat center;float:right' ></a>
+                                        <text>{{user.sttime}}
+                                        </text>
+                                    </view>
+                                    <view class="dd">
+                                        <text>{{user.remark}}</text>
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </tab>
+            <tab title="护理日志">
+                <view>
+                    <view class="weui-tab__content rechargelist">
+
+                        <view style="height: 184rpx;" wx:key="unique" wx:for="{{usercontent}}" wx:for-index="index" wx:for-item="val">
+                            <view style='width:16%; float:left;font-size: 24rpx;text-align:center'>
+                                <block wx:if="{{user.userphoto != 'uploads/picture/defaultphoto.png' && !user.userphoto}}" >
+                                    <image class="user_pic" src="https://shop.ispa.cn/{{user.userphoto}}"style='width:90rpx;height:90rpx;' ></image>
+                                </block>
+                                <block wx:else>
+                                    <image class="user_pic" src="./user-unlogin.png" style='width:90rpx;height:90rpx;'></image>
+                                </block>{{val.nickname}}
+                            </view>
+                            <view class="reservation_box" data-toggle="{{s}}1"  style="width: 83%;float:right;">
+                                <view class="dl">
+                                    <view class="dt"><text style="width: 174rpx;float: left;font-size: 11px;">{{user.sname}}</text>
+                                        <a href="javascript:;" class="icon_add icon_add_btn" style='background:url("https://api.ispa.cn/public/img/edit_icon.png") no-repeat center;float:right'></a>
+                                        <text>{{val.visit_time}}
+                                        </text>
+
+                                    </view>
+                                    <view class="dd">
+                                        <text>{{val.content}}
+                                        </text>
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </tab>
+            <tab title="客户评价">
+                <view>
+                    <view class="weui-tab__content rechargelist">
+                        <view class="reservation_box" wx:key="unique" wx:for="{{comment}}" wx:for-index="index" wx:for-item="val">
+                            <view class="dl" >
+                                <view class="dt">{{user.sname}}
+                                    <text>{{val.datetime}}
+                                    </text>
+                                </view>
+                                <view class="dd">
+                                    <text>{{val.content}}</text>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </tab>
+        </tabs>
+    </view>
+</view>

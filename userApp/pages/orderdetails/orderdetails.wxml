@@ -1,0 +1,35 @@
+<!--pages/orderdetails/orderdetails.wxml-->
+<view class='body'>
+ <view class='con_box'>
+  <view class='title one_tit'><text class='tit_text'>消费门店</text>{{orderdetails.sname}}</view>
+  <view class='title'><text class='tit_text'>服务时间</text>{{orderdetails.time}}</view>
+  <view class='title'><text class='tit_text'>服务顾问</text>{{orderdetails.aid_name}}</view>
+  <view class='title'><text class='tit_text'>服务理疗师</text>{{orderdetails.bid_name}}</view>
+  <view class='title'><text class='tit_text'>服务房间</text>{{orderdetails.room_name}}</view>
+ </view>
+  <view class='con_box'>
+    <view class='title_d' wx:key="keys" wx:for="{{orderdetails.details}}" wx:for-index="index" wx:for-item="val">
+      <text class='t_det_content'>{{val.iname}}</text>
+      <text class='t_det_money'>{{val.money}}</text>
+    </view>
+  </view>
+
+  <view class='con_box'>
+    <view class='title_d tab_title'>
+      <text class='t_det_content settlement'>结算信息</text>
+      <text class='t_det_money dat' bindtap='settlement_info'>查看详情</text>
+    </view>
+    <view class='title'><text class='tit_text'>订单金额</text>{{orderdetails.order_price}}</view>
+    <view class='title' hidden="{{state}}"><text class='tit_text'>优惠金额</text>{{orderdetails.discount_price}}</view>
+    <view class='title' hidden="{{state}}"><text class='tit_text'>服务费</text>{{orderdetails.cover_charge}}</view>
+    <view class='title' hidden="{{state}}"><text class='tit_text'>小费</text>{{orderdetails.tip}}</view>
+    <view class='title' hidden="{{state}}"><text class='tit_text'>实付金额</text>{{orderdetails.actual_price}}</view>
+  </view>
+  <view class='con_box'>
+    <view class='title_d tab_title'>
+      <text class='t_det_content settlement'>支付信息</text>
+    </view>
+    <view class='title' wx:key="keys" wx:for="{{orderdetails.payment}}" wx:for-index="index" wx:for-item="val"><text class='tit_text'>{{val.pay}}</text>{{val.money}}</view>
+    
+  </view>
+</view>

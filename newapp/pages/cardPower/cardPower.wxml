@@ -1,0 +1,32 @@
+<view class='body'>    
+    <view class="con_box me_list">
+        <view>
+            <text class="span row_title">会员卡名称</text>
+            <text class="span roow_con">{{mycourse_info.ucard_no}}</text>
+        </view>
+        <view>
+            <text class="span row_title">会员卡状态</text>
+            <text class="span roow_con">{{mycourse_info.status}}</text>
+        </view>
+        <view>
+            <text class="span row_title">归属门店</text>
+            <text class="span roow_con">{{mycourse_info.sname}}</text>
+        </view>
+        <view>
+            <text class="span row_title">购卡时间</text>
+            <text class="span roow_con">{{mycourse_info.time_pay}}</text>
+        </view>
+        <view>
+            <text class="span row_title">激活时间</text>
+            <text class="span roow_con">{{mycourse_info.time_active}}</text>
+        </view>
+        <view>
+            <text class="span row_title">到期时间</text>
+            <text class="span roow_con">{{mycourse_info.time_validity}}</text>
+        </view>
+        <view>
+            <text class="span row_title">专属顾问</text>
+            <text class="span roow_con">{{mycourse_info.cname}}</text>
+        </view>
+    </view>
+</view>

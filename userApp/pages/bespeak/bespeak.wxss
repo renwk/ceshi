@@ -1,0 +1,30 @@
+/**index.wxss**/
+page{
+    background: #f9f9f9;
+}
+.body{
+  padding: 24rpx;
+}
+.con_box{
+    margin-bottom: 24rpx;
+    padding: 24rpx;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 20rpx;
+    background: #fff;
+}
+.title {
+    margin-bottom: 10rpx;
+    color: #666;
+    font-size: 28rpx;
+   
+}
+.one_tit{
+    padding-bottom: 8rpx;
+    border-bottom:2rpx solid;
+    border-bottom-color:#e3e3e3;
+}
+.tit_text {
+  display:inline-block;
+  min-width:148rpx;
+}

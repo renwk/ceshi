@@ -1,0 +1,355 @@
+page {
+    background: #f9f9f9;
+}
+
+.mask_layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: rgba(0, 0, 0, .3);
+}
+
+.couponpay_con {
+    margin: 24rpx;
+    padding: 4rpx 24rpx 10rpx;
+    background: #fff;
+    border-radius: 24rpx;
+    font-size: 32rpx;
+}
+
+.couponpay_info {
+    position: relative;
+    overflow: hidden;
+    padding-top: 40rpx;
+    padding-bottom: 40rpx;
+    padding-left: 50rpx;
+    color: #333;
+}
+
+.couponpay_info text {
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.8em;
+    font-size: 36rpx;
+}
+
+.couponpay_info image {
+    position: absolute;
+    right: 48rpx;
+    top: 18rpx;
+    width: 102rpx;
+    height: 102rpx;
+}
+
+.couponpay_pay {
+    line-height: 68rpx;
+}
+
+.couponpay_pay .c_money {
+    overflow: hidden;
+    margin: 10rpx 0 rpx;
+    color: #333;
+}
+
+.couponpay_pay .c_money_monster {
+    overflow: hidden;
+    color: #fe4b32;
+}
+
+.couponpay_pay .c_money text {
+    float: right;
+    color: #333;
+}
+
+.couponpay_pay .c_money .coupontrue_select .i_label {
+    display: inline-block;
+    margin-right: 4rpx;
+    width: 64rpx;
+    text-align: center;
+    background: #37bef0;
+    border-radius: 18rpx;
+    line-height: 1.3em;
+    font-size: 28rpx;
+    color: #fff;
+    font-style: normal;
+}
+
+.couponpay_pay .c_money_monster {
+    overflow: hidden;
+}
+
+.couponpay_pay .c_money_monster text {
+    float: right;
+    color: #fe4b32;
+}
+
+.couponpay_info .couponpay_info_con {
+    float: left;
+}
+
+.couponpay_info .couponpay_info_con h2 {
+    font-size: 36rpx;
+    font-weight: normal;
+}
+
+.couponpay_info .couponpay_info_con .info_money {
+    margin-top: 7px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.couponpay_info .couponpay_info_con .info_money span {
+    float: right;
+}
+
+.c_btn {
+    margin-top: 74rpx;
+    margin-bottom: 16rpx;
+    padding: 0 24rpx;
+}
+
+.c_btn view {
+    display: inline-block;
+    padding: 12rpx 0 12rpx;
+    width: 100%;
+    border-radius: 60rpx;
+    text-align: center;
+    background: #ff9809;
+    font-size: 46rpx;
+    color: #fff;
+}
+.dialog_mask {
+    position: fixed;top: 0;left: 0;right: 0;bottom: 0;z-index: 10;background: rgba(0, 0, 0, 0.5);display: none;
+}
+.dialog_container {
+    position: fixed;bottom: 0;width: 750rpx;background: white;transform: translateY(150%);transition: all 0.4s ease;z-index: 11;
+}
+.dialog_show .dialog_container {
+    transform: translateY(0);
+}
+.dialog_show .dialog_mask {
+    display: block;
+}
+
+.dialog__mask {
+    position: fixed;top: 0;left: 0;right: 0;bottom: 0;z-index: 10;background: rgba(0, 0, 0, 0.5);display: none;
+}
+.dialog__container {
+    position: fixed;bottom: 200rpx;width: 750rpx;transform: translateY(150%);transition: all 0.4s ease;z-index: 11;height:100%;
+}
+.dialog--show .dialog__container {
+    transform: translateY(0);
+}
+.dialog--show .dialog__mask {
+    display: block;
+}
+.modal-header {
+    width: 100%;
+    height: 100rpx;
+    border-bottom: 2rpx solid #15c0e4;
+}
+.modal-header .modal_title_box{
+    width: 85%;
+    height: 100rpx;
+    text-align: center;
+    line-height: 100rpx;
+    float: left;
+    font-size: 32rpx;
+}
+.modal-header .close{
+    width: 15%;
+    height: 100rpx;
+    text-align: center;
+    line-height: 100rpx;
+    float: left;
+}
+.modal_body{
+    width: 100%;
+    height: 100rpx;
+    padding-top: 20rpx;
+    padding-bottom: 40rpx;
+}
+.modal_body_box{
+    width: 95%;
+    height: 70rpx;
+    margin: 0 auto;
+}
+.modal_body_input{
+    width: 75%;
+    height: 70rpx;
+    float: left;
+}
+.modal_body_input input{
+    width: 95%;
+    height: 70rpx;
+    border-radius: 20rpx;
+    margin: 0 auto;
+    background-color: #F5F5F5;
+}
+.modal_body_btn{
+    display: flex;
+    width: 25%;
+    height: 70rpx;
+    color: #0e90d2;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    font-size: 32rpx;
+    background-color: #ffffff;
+}
+button::after{border:none}
+.btn_hover{
+    background-color: #F5F5F5;
+}
+/*优惠券*/
+.coupontrue_module{
+    margin: 0 auto;
+}
+.coupontrue_head{
+    margin-top:-24rpx;
+    margin-bottom:24rpx;
+    padding-top:30rpx;
+    padding-left:24rpx;
+    padding-bottom:30rpx;
+    font-size:36rpx;
+}
+.coupontrue_title{
+    width: 85%;
+    float: left;
+}
+.coupontrue_close{
+    width: 15%;
+    text-align: center;
+    float: left;
+}
+scroll-view{
+    padding: 24rpx 24rpx 0 0;
+    background: #fcfaf7;
+    color: #333;
+    width: 100%;
+}
+.coupon{
+    overflow:hidden;
+    margin-bottom:24rpx;
+    width:100%;
+    height:172rpx;
+    background:#fff;
+    box-shadow:2rpx 12rpx 40rpx rgba(212,190,150,.2);
+}
+/***coupon_expired 已过期优惠券class****/
+.coupon.coupon_expired .coupon_head{
+    background: #bfbebe;
+}
+.coupon.coupon_expired  .coupon_head .icon_border{
+    background:url("https://api.sanduoyuncai.com/public/wechartApp/image/img/coupon_right_border_gray.png?v=1") no-repeat;
+}
+.coupon .coupon_head{
+    position:relative;
+    float:left;
+    width:31%;
+    height:100%;
+    background:#fe4b32;
+    text-align:center;
+    color:#fff;
+}
+.coupon .coupon_head .icon_border{
+    display:block;
+    position:absolute;
+    right:-4rpx;
+    top:0;
+    width:4rpx;
+    height:192rpx;
+    background:url("https://api.sanduoyuncai.com/public/wechartApp/image/img/coupon_right_border_red.png?v=1") no-repeat;
+}
+.coupon .coupon_head .h3_label{
+    display: inline-block;
+    margin:0;
+    padding-top:12rpx;
+    line-height:1.4em;
+    font-size:48rpx;
+    font-weight:normal;
+}
+.coupon .coupon_head .span_label{
+    font-size:32rpx;
+}
+
+.coupon .coupon_is {
+    float: left;
+    width: 80rpx;
+    height: 100%;
+    background:url("https://api.sanduoyuncai.com/public/wechartApp/image/img/select_def.png") no-repeat center #fcfaf7;
+}
+
+.coupon.curr .coupon_is {
+    background:url("https://api.sanduoyuncai.com/public/wechartApp/image/img/select_curr.png") no-repeat center #fcfaf7;
+}
+
+.coupon .coupon_info {
+    position: relative;
+    float: left;
+    padding-left: 30rpx;
+    width: calc(69% - 80rpx);
+    height: 100%;
+    line-height: 2em;
+    font-size: 24rpx;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.coupon .coupon_info .h3_label {
+    display: inline-block;
+    margin-top: 40rpx;
+    font-size: 32rpx;
+    color: #333;
+}
+
+.coupon .coupon_info .p_label {
+    display: inline-block;
+    font-size: 24rpx;
+    color: #999;
+}
+
+.mask_layer {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: rgba(0, 0, 0, .3);
+}
+
+.coupon .coupon_not_select {
+    float: left;
+    width: 80rpx;
+    height: 100%;
+}
+
+.coupontrue_module .btn_wrap {
+    width: 100%;
+    margin: 34rpx 0;
+    text-align: center;
+    font-weight: normal;
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+}
+
+.coupontrue_module .btn_wrap .coupon_confirm {
+    display:inline-block;
+    width: 464rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    background: #ff3119;
+    -webkit-border-radius: 40rpx;
+    -moz-border-radius: 40rpx;
+    border-radius: 40rpx;
+    font-size: 36rpx;
+    color: #fff;
+
+}

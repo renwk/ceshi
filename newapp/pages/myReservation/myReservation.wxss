@@ -1,0 +1,87 @@
+page {
+    background: #f9f9f9;
+}
+.body {
+    padding: 24rpx;
+}
+.con_box{
+  overflow: hidden;
+  /* position: relative; */
+    margin-bottom: 20rpx;
+    padding: 24rpx;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 20rpx;
+    background: #fff;
+    line-height: 60rpx;
+}
+.reservation_dateicon{
+    position: relative;
+    top: 24rpx;
+    display: inline-block;
+    width: 78rpx;
+    height: 64rpx;
+    line-height: 60rpx;
+    text-align: center;
+    font-size: 24rpx;
+    color: #454545;
+}
+.reservation_box{
+  float: right;
+  margin-bottom: 24rpx;
+  width: 87%;
+  border: 1rpx solid #cfba93;
+  border-radius: 20rpx;
+  line-height: 60rpx;
+  font-size: 24rpx;
+}
+.card_btn{
+    display: inline-block;
+    width: 48rpx;
+    height: 36rpx;
+    border-radius:8rpx;
+    position:relative;
+    top:6rpx;
+}
+.dt span{
+  float: right;
+}
+.reservation_box .dt{
+  overflow: hidden;
+  padding-left: 10rpx;
+  /* padding-right: 24rpx; */
+  height: 60rpx;
+  border-bottom: 1rpx solid #cfba93;
+  border-radius: 20rpx 20rpx 0 0;
+  line-height: 60rpx;
+  background: #e3e3e3;
+  font-weight: normal;
+  vertical-align: middle;
+  font-size: 24rpx;
+}
+.reservation_box .dd{
+  overflow: hidden;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  vertical-align: middle;
+  font-size: 24rpx;
+}
+.reservation_box .dd span{
+  display: inline-block;
+    left: 0rpx;
+    padding-right: 0;
+    width: 120rpx;
+    text-align: left;
+}
+.tag_add_icon{
+    position: relative;
+    z-index: 99;
+    float: right;
+    display: inline-block;
+    width: 60rpx;
+    height: 60rpx;
+    margin-left:15rpx;
+    vertical-align: middle;
+}

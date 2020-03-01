@@ -1,0 +1,16 @@
+page{
+    background: #f9f9f9;
+}
+.body {
+    padding: 24rpx;
+    font-size:26rpx;
+}
+.con_box {
+    margin-top: 25rpx;
+    margin-bottom: 24rpx;
+    padding: 24rpx;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 20rpx;
+    background: #fff;
+}

@@ -1,0 +1,22 @@
+{
+  "pages":[
+    "pages/inspectresultbaseinfo/index",
+    "pages/couponpay/couponpay",
+    "pages/circle/circle",
+    "pages/mapshow/mapshow",
+    "pages/login/login",
+    "pages/pay/pay",
+    "pages/detailreport/detailreport",
+    "pages/history/history",
+    "pages/nutrition/nutrition",
+    "pages/custom/custom",
+    "pages/norecipe/norecipe",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "智能检测机器人健康报告",
+    "navigationBarTextStyle":"black"
+  }
+}

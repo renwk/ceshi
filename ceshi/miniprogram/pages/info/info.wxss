@@ -1,0 +1,93 @@
+/* pages/info/info.wxss */
+page{
+    background: #f9f9f9;
+}
+.con_box{
+    margin-bottom:24rpx;
+    padding:24rpx;
+    width:100%;
+    box-sizing:border-box;
+    border-radius: 20rpx;
+    background: #fff;
+}
+.user_img{
+    text-align: center;
+}
+.user_img image{
+    display: inline-block;
+    width:182rpx;
+    height: 182rpx;
+    border-radius: 1998rpx;
+}
+.user_name{
+    margin-top:10rpx;
+    text-align: center;
+    font-size: 28rpx;
+}
+
+.me_list .listLi{
+    position: relative;
+    overflow: hidden;
+    padding-left: 0;
+    color: #333;
+    text-align: left;
+    line-height: 86rpx;
+}
+.me_list_last .listLi{
+    text-align: left;
+    padding-left: 36rpx;
+}
+.me_list .listLi{
+    border: none;
+}
+.me_list .listLi .row_title{
+    display: inline-block;
+    left: 0px;
+    padding-right: 0;
+    width: 188rpx;
+    text-align: left;
+    color: #999;
+    font-size: 32rpx;
+}
+.me_list .listLi .arrow{
+    position: absolute;
+    right:28rpx;
+    top:32rpx;
+    display: inline-block;
+    width:24rpx;
+    height:24rpx;
+    border: 2rpx solid #9d9d9d;
+    border-left:none;
+    border-bottom:none;
+    transform:rotate(45deg);
+}
+.me_list .listLi:after{
+    display: none;
+}
+.mu_head{
+    padding-top:40rpx;
+}
+.roow_con{
+    font-size: 32rpx;
+}
+.statistical {
+    margin-bottom: 18rpx;
+    border: 2rpx solid #cfba93;
+    border-radius: 30rpx;
+    background: #fff;
+    overflow: hidden;
+}
+.table-th{
+    border-right: 2rpx solid #cfba93;
+    border-bottom: 4rpx solid #cfba93;
+    background: #e3e3e3;
+    color: #666;
+    font-weight: normal;
+    padding-top: 15rpx;
+    padding-bottom: 15rpx;
+    font-size: 28rpx;
+}
+.table-td{
+    padding-top: 15rpx;
+    padding-bottom: 15rpx;
+}

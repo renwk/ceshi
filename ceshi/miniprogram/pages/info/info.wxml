@@ -1,0 +1,52 @@
+<view class="p12">
+    <view class="con_box mu_head">
+        <view class="user_img">
+            <image src="{{userInfo.data.headimgurl}}"></image>
+        </view>
+        <view class="user_name">
+            {{userInfo.data.info.nickname}}
+        </view>
+    </view>
+    <view class="con_box me_list">
+        <view class="listLi">
+            <text class="row_title">姓名</text>
+            <text class="roow_con">{{userInfo.data.info.nickname}}</text>
+        </view>
+        <view class="listLi">
+            <text class="row_title">手机号</text>
+            <text class="roow_con">{{userInfo.data.mobile}}</text>
+        </view>
+        <view class="listLi">
+            <text class="row_title">生日</text>
+            <text class="roow_con">{{userInfo.data.info.brithday}}</text>
+        </view>
+        <view class="listLi">
+            <text class="row_title">归属门店</text>
+            <text class="roow_con">{{userInfo.data.info.sname}}</text>
+        </view>
+        <view class="listLi">
+            <text class="row_title">入职时间</text>
+            <text class="roow_con">{{userInfo.data.info.jointime}}</text>
+        </view>
+        <view class="listLi">
+            <text class="row_title">级别</text>
+            <text class="roow_con">{{userInfo.data.level.level_name}}</text>
+        </view>
+    </view>
+    <view class="table-responsive statistical">
+        <view class="table table-striped" id="performanceSort">
+            <view class="table-tr">
+                <view class="table-th th4">日期</view>
+                <view class="table-th th4">当前等级</view>
+                <view class="table-th th4">变更前等级</view>
+                <view class="table-th th4">变更门店</view>
+            </view>
+            <view class="table-tr">
+                <view class="table-td">{{userInfo.data.level.grade_month}}</view>
+                <view class="table-td">{{userInfo.data.level.level_name}}</view>
+                <view class="table-td">{{userInfo.data.level.level_name}}</view>
+                <view class="table-td">{{userInfo.data.info.sname}}</view>
+            </view>
+        </view>
+    </view>
+</view>

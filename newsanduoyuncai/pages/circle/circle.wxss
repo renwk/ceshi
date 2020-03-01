@@ -1,0 +1,332 @@
+page {display: block;min-height: 100%;
+background-color: #F2F2F2;
+}
+.circleBar {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.wrap {
+  width: 95%;
+  margin: auto;
+
+}
+.main {
+  width: 100%;
+  border-radius: 30rpx;
+  margin-top: 20rpx;
+  background-color: #37bef0;
+}
+.top {
+  text-align: center;
+}
+.timeandhistory {
+  width: 90%;
+  margin: auto;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  display: flex;
+  flex-direction:row;
+  justify-content:flex-end;
+}
+.timeandhistoryBox {
+  color: #ffffff;
+}
+.times{
+  width: 40%;
+  font-size: 24rpx;
+}
+.historyTitle {
+  width: 30%;
+  font-size: 24rpx;
+  text-align: right;
+}
+.cirleOut {
+  display: flex;
+  width: 162rpx;
+  height: 162rpx;
+  border: 2rpx solid #ffffff;
+  border-radius: 81rpx;
+  margin: 0 auto;
+  text-align: center;
+  vertical-align: middle;
+}
+.cir {
+  display: inline-block;
+  background-color: #37bef0;
+  border-radius: 100%;
+  margin: auto;
+
+}
+.centerWord {
+  width: 100%;
+  text-align: center;
+  color: #FFFFFF;
+
+}
+.scoreTitle {
+  position: absolute;
+  top: 210rpx;
+  left: 0;
+  font-size: 20rpx;
+}
+.score {
+  position: absolute;
+  top: 156rpx;
+  left: 0;
+  font-size: 40rpx;
+}
+.moreThanBox {
+  width: 100%;
+  height: 60rpx;
+  color: #ffffff;
+  text-align: center;
+  font-size: 22rpx;
+  line-height: 60rpx;
+}
+.robotBox {
+  width: 100%;
+  height: 60rpx;
+  text-align: center;
+  padding-bottom: 20rpx;
+}
+.robotBtn {
+  width: 180rpx;
+  height: 50rpx;
+  font-size: 20rpx;
+  background-color: #fe5e0b;
+  color: #ffffff;
+  border-radius: 30rpx;
+
+}
+/*报告*/
+.reportBox {
+  width: 100%;
+  margin-top: 20rpx;
+  background-color: #ffffff;
+  border-radius: 15rpx;
+}
+/*.reportDetailBox{
+  width: 92%;
+  margin: 0 auto;
+}*/
+.clearfix{zoom:1;}
+.reportTitleBox {
+  width: 90%;
+  height:82.5rpx;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 24rpx;
+
+}
+.reportTitle {
+  width: 49.8%;
+  color: #666666;
+  font-size: 28.125rpx;
+  font-weight:300;
+  line-height: 82.5rpx;
+  float: left;
+}
+/* .healthTitleBox{
+  border-right:2rpx solid #e2e2e2;
+} */
+.curr {
+  border-bottom: 4rpx solid #0e90d2;
+  color: #0e90d2;
+}
+.show_box {
+  display: inline-block;
+}
+.hidden_box {
+  display: none;
+}
+.reportListBox {
+  width: 95%;
+  height: auto;
+  margin: 0 auto;
+}
+.healthBox {
+  width: 100%;
+}
+.reportList{
+  width: 100%;
+  height: 60rpx;
+  padding-top:22.5rpx;
+}
+.iconBox{
+  width: 10%;
+  height: 50rpx;
+}
+.iconTitle {
+  width: 20%;
+  height: 50rpx;
+  font-size: 30rpx;
+  line-height: 50rpx;
+}
+.healthScore {
+  width: 60%;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: right;
+  font-size: 30rpx;
+  color: #0e90d2;
+}
+/*箭头*/
+.arrowBox {
+  width: 10%;
+  height: 50rpx;
+}
+.arrow {
+  width:18rpx;
+  height:32rpx;
+  background:url("https://api.sanduoyuncai.com/public/wechartApp/image/icon/right-icon.png?v=1") no-repeat;
+  background-size:100% 100%;
+  -moz-background-size:100% 100%;
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+}
+/*指标标签icon*/
+.xun{
+  background:url("https://api.sanduoyuncai.com/public/wechartApp/image/icon/xunhuan-icon.png?v=1") no-repeat;
+}
+.xiao{
+  background:url("https://api.sanduoyuncai.com/public/wechartApp/image/icon/xiaohua-icon.png?v=1") no-repeat;
+}
+.hu{
+  background:url("https://api.sanduoyuncai.com/public/wechartApp/image/icon/huxi-icon.png?v=1") no-repeat;
+}
+.nei{
+  background:url("https://api.sanduoyuncai.com/public/wechartApp/image/icon/neifenmi-icon.png?v=1") no-repeat;
+}
+.gu{
+  background:url("https://api.sanduoyuncai.com/public/wechartApp/image/icon/guge-icon.png?v=1") no-repeat;
+}
+.mian{
+  background:url("https://api.sanduoyuncai.com/public/wechartApp/image/icon/mianyi-icon.png?v=1") no-repeat;
+}
+.sheng{
+  background:url("https://api.sanduoyuncai.com/public/wechartApp/image/icon/shengzhi-icon.png?v=1") no-repeat;
+}
+.pi{
+  background:url("https://api.sanduoyuncai.com/public/wechartApp/image/icon/pifu-icon.png?v=1") no-repeat;
+}
+.ying{
+  background:url("https://api.sanduoyuncai.com/public/wechartApp/image/icon/yingyang-icon.png?v=1") no-repeat;
+}
+.you{
+  background:url("https://api.sanduoyuncai.com/public/wechartApp/image/icon/youhai-icon.png?v=1") no-repeat;
+}
+.pi {
+  background: url("https://api.sanduoyuncai.com/public/wechartApp/image/icon/pifu-icon.png?v=1") no-repeat;
+}
+.fl{
+  float: left;
+}
+/*身体状况*/
+.physicalBox {
+  width: 100%;
+}
+.physicalList {
+  width: 100%;
+  height: 60rpx;
+  padding-top:22.5rpx;
+}
+.physicaiconBox {
+  width: 10%;
+  height: 50rpx;
+}
+.physicaTitle {
+  width: 20%;
+  height: 50rpx;
+  font-size: 30rpx;
+  line-height: 50rpx;
+}
+.piecewiseBox{
+  width: 70%;
+  margin-top:24rpx;
+}
+.piecewise {
+  width: 20%;
+  height: 8rpx;
+}
+.piecewise text {
+  border-radius:5px; width:85%;
+}
+.piecewiseCron {
+  width:90%;
+  display: inline-block;
+  float: left;
+  height: inherit;
+  background: #37bef0;
+}
+.disappear{
+  background:#d9d9d9;
+}
+
+.theUserInfo{
+  width: 100%;
+  height: 116rpx;
+  color:#B1B1B1;
+  line-height: 116rpx;
+  text-align: center;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+/*模态框*/
+.modals{
+  background-color:#ffffff;position:fixed; z-index: 10001; top:0; left: 0; right:0; bottom: 0;
+  font-size: 24rpx;
+  color: #6d6d72;
+}
+.bottom-dialog-body{width:90%;margin:0 auto;position:absolute; z-index:10001; bottom:0; left:0; right:0;  height:100vh; background-color: #fff;}
+/*动画前初始位置*/
+.bottom-pos{-webkit-transform:translateY(100%);transform:translateY(100%);}
+.close_box {
+  margin-top: 20rpx;
+  color: #0e90d2;
+}
+.bottom_close {
+  margin-bottom: 30rpx;
+}
+.physicaicon_icon {
+  width:50rpx;
+  height:100%;
+  background-size:100% 100%;
+  -moz-background-size:100% 100%;
+}
+.fanyinli{
+  background:url("https://api.sanduoyuncai.com/public/wechartApp/image/icon/fanyinli.png?v=1") no-repeat;
+}
+.naoli{
+  background:url("https://api.sanduoyuncai.com/public/wechartApp/image/icon/naoli.png?v=1") no-repeat;
+}
+.queshui{
+  background:url("https://api.sanduoyuncai.com/public/wechartApp/image/icon/queshui.png?v=1") no-repeat;
+}
+.queyang{
+  background:url("https://api.sanduoyuncai.com/public/wechartApp/image/icon/queyang.png?v=1") no-repeat;
+}
+.qingxuzhishu{
+  background:url("https://api.sanduoyuncai.com/public/wechartApp/image/icon/qingxuzhishu.png?v=1") no-repeat;
+}
+.jiyizhishu{
+  background:url("https://api.sanduoyuncai.com/public/wechartApp/image/icon/jiyizhishu.png?v=1") no-repeat;
+}
+.suanjiandu{
+  background:url("https://api.sanduoyuncai.com/public/wechartApp/image/icon/suanjiandu.png?v=1") no-repeat;
+}
+.ph_box{
+  width: 70%;
+  height: 50rpx;
+
+}
+.ph_piecewise{
+  font-size: 26.25rpx;
+  color: #37bef0;
+  line-height: 50rpx;
+}
+
+
+

@@ -1,0 +1,68 @@
+<view class='body'>
+  <view class="con_box head_info">
+    <image class="user_pic" src="http://thirdwx.qlogo.cn/mmopen/aoNW5hSibKurZK99Hzia5jxJDTxBHjWveTIgCRSX4flKl6lS6wv3TibDuLGLNiaicaZUrCFW4l2jIRzicb8akFjUPqN80gp0AWNd7H/132"></image>
+    <view class="info_main">
+        <text>{{userinfo.name}}（{{userinfo.sex}}）\r\n</text>
+        <text class="mobile" href="tel:12345678910">T : {{userinfo.mobile}}</text>
+    </view>
+  </view>
+  <view>
+      <view class="con_box me_list">
+        <view>
+          <view>
+              <text class="span row_title">客户生日</text>
+              <text class="span roow_con">{{userinfo.birthday}}</text>
+          </view>
+          <view>
+              <text class="span row_title">客户国籍</text>
+              <text class="span roow_con">{{userinfo.country}}</text>
+          </view>
+          <view>
+              <text class="span row_title">创建日期</text>
+              <text class="span roow_con">{{userinfo.registtime}}</text>
+          </view>
+          <view>
+              <text class="span row_title">归属顾问</text>
+              <text class="span roow_con">{{userinfo.consultant}}</text>
+          </view>
+          <view>
+              <text class="span row_title">归属理疗师</text>
+              <text class="span roow_con">{{userinfo.bid}}</text>
+          </view>
+        </view>
+      </view>
+  </view>
+    <view class="con_box menu_list">
+        <view  class="menu_one" data-toggle="{{userinfo.userid}}" bindtap="toorder">
+            <view class="s_icon icon_calendar" style='background:url("../../image/icon/m_record.png") no-repeat;'></view>
+            <text>消费记录</text>
+        </view>
+        <view class="menu_one" data-toggle="{{userinfo.userid}}"  bindtap="tocardStored">
+            <view class="s_icon icon_calendar" style='background:url("../../image/icon/m_storage.png") no-repeat;'></view>
+            <text>储值卡</text>
+        </view>
+        <view class="menu_one" data-toggle="{{userinfo.userid}}" bindtap="tocardNostorage">
+            <view class="s_icon icon_calendar" style='background:url("../../image/icon/m_nostorage.png") no-repeat;'></view>
+            <text>常规/疗程</text>
+        </view>
+        <view class="menu_one" data-toggle="{{userinfo.userid}}" bindtap="tocardPower">
+            <view class="s_icon icon_calendar" style='background:url("../../image/icon/m_power.png") no-repeat;'></view>
+            <text>资格卡</text>
+        </view>
+        <view class="menu_one" data-toggle="{{userinfo.userid}}" bindtap="tocardSpecial">
+            <view class="s_icon icon_calendar" style='background:url("../../image/icon/m_special.png") no-repeat;'></view>
+            <text>特殊礼遇</text>
+        </view>
+        <view class="menu_one" data-toggle="{{userinfo.userid}}" bindtap="tocardCoupon">
+            <view class="s_icon icon_calendar" style='background:url("../../image/icon/m_coupon.png") no-repeat;'></view>
+            <text>优惠券</text>
+        </view>
+        <view class="menu_one" data-toggle="{{userinfo.userid}}" bindtap="toSummaryNotes">
+            <view class="s_icon icon_calendar" style='background:url("../../image/icon/m_utag.png") no-repeat;'></view>
+            <text>会员标签</text>
+        </view>
+        
+    </view>
+
+
+</view>

@@ -1,0 +1,22 @@
+<view class="container">
+    <view style="margin-top: 470rpxpx;text-align: center; color: #9c9c9c;">
+        <view class="spinner" hidden="{{loading}}">
+            <view class="rect1"></view>
+            <view class="rect2"></view>
+            <view class="rect3"></view>
+            <view class="rect4"></view>
+            <view class="rect5"></view>
+        </view>
+    </view>
+    <view class="hd-dialog" hidden="{{!isShow && canIUse}}">
+        <view class="weui-mask"></view>
+        <view class="weui-dialog">
+            <view class="weui-dialog__hd"><view class="weui-dialog__title">{{title}}</view></view>
+            <view class="weui-dialog__bd">{{ content }}</view>
+            <view class="weui-dialog__ft">
+                <button class="weui-dialog__btn weui-dialog__btn_default" bindtap='cancelEvent'>{{ cancelText }}</button>
+                <button class="weui-dialog__btn weui-dialog__btn_primary" open-type="getUserInfo" bindgetuserinfo="bindgetuserinfo">{{ confirmText }}</button>
+            </view>
+        </view>
+    </view>
+</view> 

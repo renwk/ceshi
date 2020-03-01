@@ -1,0 +1,84 @@
+@import '../../weui.wxss';
+page{
+     background: #f9f9f9;
+ }
+.body{
+    padding: 12px;
+    transition: all 10s;
+}
+.card {
+    position: relative;
+    padding: 24rpx;
+    margin-bottom: 24rpx;
+    overflow: hidden;
+    width: 100%;
+    height: 338rpx;
+    border-radius: 30rpx;
+    box-sizing: border-box;
+    color: #fff;
+}
+.card .title {
+    overflow: hidden;
+    line-height: 1em;
+    font-size: 36rpx;
+    font-weight: normal;
+}
+.card .title .img{
+    display: inline-block;
+    height: 40rpx;
+    width: 68rpx;
+    vertical-align: middle;
+}
+.card .title .card_no {
+    float: right;
+    font-size: 24rpx;
+    color: #7d5916;
+}
+.card .h3{
+    margin-top: 20rpx;
+    line-height: 1em;
+    font-size: 32rpx;
+    font-weight: normal;
+}
+.card .card_info {
+    overflow: hidden;
+    margin-top: 30rpx;
+    font-size: 32rpx;
+}
+.card_info .money{
+    float: left;
+    width: 50%;
+    padding-right: 48rpx;
+    text-align: center;
+    box-sizing: border-box;
+}
+.card_info .discount{
+    float: left;
+    width: 50%;
+}
+.card .time{
+    margin-top: 20rpx;
+    font-size: 24rpx;
+}
+.card .card_status{
+    position: absolute;
+    bottom: 14px;
+    right: -26px;
+    width: 100px;
+    line-height: 1.8em;
+    text-align: center;
+    /*background: #79e294;*/
+    font-size: 12px;
+    transform: rotate(-45deg);
+}
+.status_fail{
+    background: #bfbebe;
+}
+/***coupon_expired 冻结class****/
+.status_freeze{
+    background: #7a99f4;
+}
+/***coupon_expired 待开卡class****/
+.status_ready{
+    background: #f4887a;
+}

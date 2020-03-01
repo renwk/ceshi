@@ -1,0 +1,135 @@
+<tabs id='tabs' bind:change="tabChange" infoid="{{infoid}}" role="{{role}}">
+    <tab title="消费订单">
+        <view>
+            <view class="weui-tab__content">
+                <view class="con_box">
+                  <form bindsubmit="formSubmit">
+                    <view class="orderlist_date_select" hidden="{{dataStatus}}" style='background:url("../../image/icon/orderlist_date_select.png") no-repeat left center;'>
+                        <text class="time_icon"></text>
+                        <picker class="date_begin" mode="date" name='stime' value="{{beginDate}}" start="2017-01-01" end="2028-12-31" bindchange="bindBeginDateChange">
+                            <view class="picker">
+                                {{beginDate}}
+                            </view>
+
+                        </picker>
+                        <text class="interval">至</text>
+                        <picker mode="date" name='etime' class="date_end" value="{{endDate}}" start="2017-01-01" end="2028-12-31" bindchange="bindEndDateChange">
+                            <view class="picker">
+                                {{endDate}}
+                            </view>
+                        </picker>
+                    </view>
+                    <view class="btn-group">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-slidownkey="{{slidownKey}}" bindtap="toDropdown">
+                            <text class="date_txt">{{selected_info}}</text>
+                            <text class="caret"></text>
+                        </button>
+                        <view class="dropdown-menu {{slidownKey == 1 ? 'slidown' : 'slidup'}}" hidden="{{slidownKey == 1 ? false : true}}">
+                            <view class="li" data-selected_value="1" bindtap="selectTrue"><text class="a {{today_status ? 'curr' : ''}}" href="#" >今天</text></view>
+                            <view class="li" data-selected_value="2" bindtap="selectTrue"><text class="a {{week_status ? 'curr' : ''}}" href="#" >最近一周</text></view>
+                            <view class="li" data-selected_value="3" bindtap="selectTrue"><text class="a {{custom_status ? 'curr' : ''}}" href="#" >自定义时间</text></view>
+                        </view>
+                        <view class="orderlist_select_input">
+                            <input type="text" placeholder="订单号或手机号" placeholder-class="inputPla" id="condition1" name='condition'/>
+                            <button formType="submit" data-toggle='{{selected_info}}' data-bid="{{infoid}}" data-role="{{role}}" data-ordertype='1'>查询</button>
+                        </view>
+                    </view>
+                  </form>
+                </view>
+                <view wx:if="{{order.cashier}}">
+                  <view class="order_list">
+                    <view wx:key="unique" wx:for="{{order.cashier}}" wx:for-index="index" wx:for-item="val">
+                      <view class="reservation_box">
+                          <view class="dl" data-toggle="{{val.order_code}}" bindtap="toOrderoService">
+                              <view class="dt">手机号: {{val.phone}} <text class="tag_add_icon"></text><text  class="span">姓名:{{val.name}}</text></view>
+                              <view class="dd"><text>开始时间</text>{{val.ordertimes}}</view>
+                              <view class="dd"><text>订单编号</text>{{val.order_code}}</view>
+                              <view class="dd"><text>顾问</text>{{val.adviser}}</view>
+                              <view class="dd"><text>理疗师</text>{{val.beautician}}</view>
+                              <view class="dd"><text>房间</text>{{val.s_name}}</view>
+                              <view class="dd"><text>状态</text>{{val.state}}</view>
+                          </view>
+                      </view>
+                    </view>
+                      
+                  </view>
+                </view>
+                <view wx:else>
+                    <view class="nothing_box" style="margin-top:65px;text-align: center;">
+                    <view>
+                    <image style="width:60%;height:50vw" src="http://public.ispa.cn/shop/img/nothing.png"></image>
+                    </view>
+                        <view class="nothing_txt" style="margin-top:70px;font-size:18px;color: #333;">找不到订单内容</view></view>
+                  </view>
+            </view>
+        </view>
+    </tab>
+    <tab title="充值订单">
+      <view>
+        <view class="weui-tab__content rechargelist">
+          <view class="con_box">
+            <form bindsubmit="formSubmit">
+              <view class="orderlist_date_select" hidden="{{dataStatus}}" style='background:url("../../image/icon/orderlist_date_select.png") no-repeat left center;'>
+                  <text class="time_icon"></text>
+                  <picker class="date_begin" mode="date" name='stime' value="{{trading_beginDate}}" start="2017-01-01" end="2028-12-13" bindchange="bindTradBeginDateChange">
+                      <view class="picker">
+                          {{trading_beginDate}}
+                      </view>
+
+                  </picker>
+                  <text class="interval">至</text>
+                  <picker mode="date" class="date_end" name='etime' value="{{trading_endDate}}" start="2017-01-01" end="2028-12-13" bindchange="bindTradEndDateChange">
+                      <view class="picker">
+                          {{trading_endDate}}
+                      </view>
+                  </picker>
+              </view>
+              <view class="btn-group">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-trading_slidownkey="{{trading_slidownKey}}" bindtap="tradToDropdown">
+                      <text class="date_txt">{{selected_info}}</text>
+                      <text class="caret"></text>
+                  </button>
+                  <view class="dropdown-menu {{slidownKey == 1 ? 'slidown' : 'slidup'}}" hidden="{{slidownKey == 1 ? false : true}}">
+                      <view class="li" data-selected_value="1" bindtap="selectTrue"><text class="a {{today_status ? 'curr' : ''}}" href="#" >今天</text></view>
+                      <view class="li" data-selected_value="2" bindtap="selectTrue"><text class="a {{week_status ? 'curr' : ''}}" href="#" >最近一周</text></view>
+                      <view class="li" data-selected_value="3" bindtap="selectTrue"><text class="a {{custom_status ? 'curr' : ''}}" href="#" >自定义时间</text></view>
+                  </view>
+                  <view class="orderlist_select_input">
+                      <input type="text" placeholder="订单号或手机号" placeholder-class="inputPla" id="condition1" name='condition'/>
+                      <button formType="submit" data-toggle='{{selected_info}}' data-bid="{{infoid}}" data-role="{{role}}" data-ordertype='2'>查询</button>
+                  </view>
+                
+              </view>
+            </form>
+          </view>
+          <view wx:if="{{order.charge}}">
+            <view class="order_list">
+                <view wx:key="key" wx:for="{{order.charge}}" wx:for-index="index1" wx:for-item="item">
+                  <view class="reservation_box" data-toggle="{{item.oid}}" bindtap="toOrderRecharge">   
+                    <view class="dl">
+                        <view class="dt">手机号:{{item.mobile}}
+                          <text class="tag_add_icon">
+                          </text><text  class="span">姓名:{{item.name}}</text>
+                        </view>
+                        <view class="dd"><text>订单编号</text>{{item.oid}}</view>
+                        <view class="dd"><text>会员卡号</text>{{item.ucard_no}}</view>
+                        <view class="dd"><text>会员卡名称</text>{{item.cardname}}</view>
+                        <view class="dd"><text>充值金额</text>{{item.money_true}}</view>
+                        <view class="dd"><text>订单时间</text>{{item.ordertimes}}</view>
+                    </view>
+                  </view>
+                </view> 
+            </view>
+          </view>
+            <view wx:else>
+              <view class="nothing_box" style="margin-top:65px;text-align: center;">
+                <view>
+                  <image style="width:60%;height:50vw" src="http://public.ispa.cn/shop/img/nothing.png"></image>
+                </view>
+                  <view class="nothing_txt" style="margin-top:70px;font-size:18px;color: #333;">找不到订单内容</view>
+              </view>
+            </view>
+        </view>
+      </view>
+    </tab>
+</tabs>

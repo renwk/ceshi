@@ -1,0 +1,18 @@
+<view  bindtap="powerDrawer" data-statu="open" data-title="收藏">点击</view>
+<view class="drawer_screen"  data-statu="close" wx:if="{{showModalStatus}}" catchtouchmove="ture"></view>
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+<view class='modal-body tag_select_box'>
+    <form bindsubmit="formSubmit">
+        <view class='remarks_pcon'>
+            <view class='h2'>{{currentTitle}}</view>
+            <view style="background:red">
+                <view>111111111111111111</view>
+            </view>
+        </view>
+        <view class="fun_btn_wrap" bindtap="powerDrawer" data-statu="close" data-title="" data-showtype='' data-text=''>
+            <button class="btn btn-default btn_white">取消</button>
+            <button class="btn btn-default" formType="submit" data-showtype='{{showtype}}' data-toggle='{{user.userid}}' data-upid='{{upid}}'>确定</button>
+        </view>
+    </form>
+</view>
+</view>

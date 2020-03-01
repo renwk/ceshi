@@ -1,0 +1,19 @@
+<view class="b-map-wrap">
+    <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="{{scale}}" markers="{{markers}}" bindmarkertap="markertap" style="width:100%; height:{{view.Height}}px;"></map>
+    <cover-view class="b-header">
+        <cover-view class="head-conter">
+            <cover-view class="head-img">
+                <cover-image class="center-block img-responsive" src="{{user.inspect_id == 'ispa' ? 'ispaIcon' : user.headimgurl}}"></cover-image>
+            </cover-view>
+            <cover-view class="user-info"> 记住，\r\n 你已经照顾了全世界，\r\n 别忘了照顾你自己~</cover-view>
+            <cover-view class="user-share">
+                <cover-view class="span"></cover-view><cover-image class="icon-share" src="{{icon_share}}" bindtap="share"></cover-image>
+            </cover-view>
+        </cover-view>
+    </cover-view>
+    <cover-view class="bg-share" hidden="{{sharemask}}">
+        <cover-image open-type="share" src="{{shareSrc}}" bindtap="closeShare"></cover-image>
+    </cover-view>
+</view>
+
+

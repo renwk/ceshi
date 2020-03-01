@@ -1,0 +1,110 @@
+<tabs id='tabs' bind:change="tabChange" infoid="{{uid}}">
+    <tab title="全部">
+      <view class="body">
+        <block wx:key="unique" wx:for="{{cardlist}}" wx:for-index="index" wx:for-item="val">
+            <view class="card" style="background: url(http://public.ispa.cn/user/images/card_bg_part.jpg) no-repeat bottom right #d4b98e;">
+                <view class="title">
+                    <image class="img" src="http://public.ispa.cn/user/images/card_ispa.png"></image><text>   储值卡</text>
+                    <text class="card_no">NO.{{val.ucard_no}}</text>
+                </view>
+                <view class='h3'>{{val.cardname}}</view>
+                <view class='card_info'>
+                  <view class='money' wx:if="{{val.accounts == 'balance'}}"><text>{{val.money_available}}\n</text>剩余余额</view>
+                  <view class='money' wx:else><text>{{val.left_nums}}/{{val.total_nums}}\n</text>剩余次数</view>
+                  <view class='discount'><text>iSpa折扣: {{val.serviceDiscountIspa}}% \n 隐逸折扣: {{val.serviceDiscountEasy}}%</text>
+                  </view>
+                </view>
+                <view class="time">有效期至: {{val.validity_time}}</view>
+                <view class="time" wx:if="{{val.store_type =='9202'}}">{{val.sname}}</view>
+                <block wx:elif="{{val.status == '6'}}">
+                    <view class='card_status status_fail' style="background: #bfbebe;">已失效</view>
+                </block>
+                <block wx:elif="{{val.status == '3'}}">
+                    <view class='card_status status_fail' style="background: #bfbebe;">已停用</view>
+                </block>
+                <block wx:elif="{{val.status == '2'}}">
+                    <view class='card_status status_freeze' style="background: #7a99f4;">冻结</view>
+                </block>
+                <block wx:elif="{{val.status == '0'}}">
+                    <view class='card_status status_ready' style="background: #f4887a;">待开卡</view>
+                </block>
+                <block wx:else>
+                    <view class='card_status' style="background: #79e294;">正常</view>
+                </block>
+            </view>
+        </block>
+      </view>
+    </tab>
+    <tab title="正常">
+      <view class='body'>
+          <block wx:key="unique" wx:for="{{cardlist}}" wx:for-index="index" wx:for-item="val">
+              <view class="card" style="background: url(http://public.ispa.cn/user/images/card_bg_part.jpg) no-repeat bottom right #d4b98e;">
+                  <view class="title">
+                      <image class="img" src="http://public.ispa.cn/user/images/card_ispa.png"></image><text>   储值卡</text>
+                      <text class="card_no">NO.{{val.ucard_no}}</text>
+                  </view>
+                  <view class='h3'>{{val.cardname}}</view>
+                  <view class='card_info'>
+                      <view class='money' wx:if="{{val.accounts == 'balance'}}"><text>{{val.money_available}}\n</text>剩余余额</view>
+                      <view class='money' wx:else><text>{{val.left_nums}}/{{val.total_nums}}\n</text>剩余次数</view>
+                      <view class='discount'><text>iSpa折扣: {{val.serviceDiscountIspa}}% \n 隐逸折扣: {{val.serviceDiscountEasy}}%</text>
+                      </view>
+                  </view>
+                  <view class="time">有效期至: {{val.validity_time}}</view>
+                  <view class="time" wx:if="{{val.store_type =='9202'}}">{{val.sname}}</view>
+                  <block wx:elif="{{val.status == '6'}}">
+                      <view class='card_status status_fail' style="background: #bfbebe;">已失效</view>
+                  </block>
+                  <block wx:elif="{{val.status == '3'}}">
+                      <view class='card_status status_fail' style="background: #bfbebe;">已停用</view>
+                  </block>
+                  <block wx:elif="{{val.status == '2'}}">
+                      <view class='card_status status_freeze' style="background: #7a99f4;">冻结</view>
+                  </block>
+                  <block wx:elif="{{val.status == '0'}}">
+                      <view class='card_status status_ready' style="background: #f4887a;">待开卡</view>
+                  </block>
+                  <block wx:else>
+                      <view class='card_status' style="background: #79e294;">正常</view>
+                  </block>
+              </view>
+          </block>
+      </view>
+    </tab>
+    <tab title="冻结">
+        <view class='body'>
+            <block wx:key="unique" wx:for="{{cardlist}}" wx:for-index="index" wx:for-item="val">
+                <view class="card" style="background: url(http://public.ispa.cn/user/images/card_bg_part.jpg) no-repeat bottom right #d4b98e;">
+                    <view class="title">
+                        <image class="img" src="http://public.ispa.cn/user/images/card_ispa.png"></image><text>   储值卡</text>
+                        <text class="card_no">NO.{{val.ucard_no}}</text>
+                    </view>
+                    <view class='h3'>{{val.cardname}}</view>
+                    <view class='card_info'>
+                        <view class='money' wx:if="{{val.accounts == 'balance'}}"><text>{{val.money_available}}\n</text>剩余余额</view>
+                        <view class='money' wx:else><text>{{val.left_nums}}/{{val.total_nums}}\n</text>剩余次数</view>
+                        <view class='discount'><text>iSpa折扣: {{val.serviceDiscountIspa}}% \n 隐逸折扣: {{val.serviceDiscountEasy}}%</text>
+                        </view>
+                    </view>
+                    <view class="time">有效期至: {{val.validity_time}}</view>
+                    <view class="time" wx:if="{{val.store_type =='9202'}}">{{val.sname}}</view>
+                    <block wx:elif="{{val.status == '6'}}">
+                        <view class='card_status status_fail' style="background: #bfbebe;">已失效</view>
+                    </block>
+                    <block wx:elif="{{val.status == '3'}}">
+                        <view class='card_status status_fail' style="background: #bfbebe;">已停用</view>
+                    </block>
+                    <block wx:elif="{{val.status == '2'}}">
+                        <view class='card_status status_freeze' style="background: #7a99f4;">冻结</view>
+                    </block>
+                    <block wx:elif="{{val.status == '0'}}">
+                        <view class='card_status status_ready' style="background: #f4887a;">待开卡</view>
+                    </block>
+                    <block wx:else>
+                        <view class='card_status' style="background: #79e294;">正常</view>
+                    </block>
+                </view>
+            </block>
+        </view>
+    </tab>
+</tabs>

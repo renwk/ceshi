@@ -1,0 +1,88 @@
+page{
+    background: #f9f9f9;
+}
+.body{
+    padding: 24rpx;
+}
+.con_box{
+    margin-bottom: 24rpx;
+    padding: 24rpx;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 20rpx;
+    background: #fff;
+}
+.box_title{
+    margin-bottom:20rpx;
+}
+.box_title .title_explain{
+    color:#666;
+}
+.card_img{
+    height:200rpx;
+    border-radius: 20rpx;
+    text-align:center;
+    line-height:200rpx;
+    color: #fff;
+}
+.card_money {
+    margin-left:9%;
+}
+.payment .lifting_self{
+    padding: 30rpx 24rpx;
+    height: 200rpx;
+    border: 2rpx solid #cfba93;
+    border-radius: 20rpx;
+    text-align: center;
+}
+.payment .lifting_self .span{
+    font-size: 24rpx;
+    color: #999;
+}
+.lifting_other{
+    padding: 30rpx 24rpx;
+    height: 200rpx;
+    border: 2rpx solid #cfba93;
+    border-radius: 20rpx;
+}
+.titleline{
+    margin-top: 16rpx;
+    margin-bottom: 10rpx;
+    font-weight: 500;
+}
+.lifting_other .span{
+    padding: 0 10rpx 2rpx;
+    border-radius: 6rpx;
+    font-size: 28rpx;
+    background: #f1eade;
+    color: #cfba93;
+}
+.lifting_other .address{
+    font-size: 28rpx;
+    color:#999;
+}
+.titleline .h2{
+    font-size: 46rpx;
+}
+.titleline .phone{
+    font-size: 32rpx;
+}
+.lifting_other .icon_payment_arrow {
+    position: absolute;
+    right: 28rpx;
+    top: calc(60% - 26rpx);
+    display: inline-block;
+    width: 40rpx;
+    height: 54rpx;
+
+}
+.btn {
+    display: block;
+    /*padding: 10rpx 20rpx;*/
+    /*border-radius: 12rpx;*/
+    text-align: center;
+    background: #cfba93;
+    box-sizing: border-box;
+    color: #fff;
+}
+

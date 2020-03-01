@@ -1,0 +1,92 @@
+/* miniprogram/pages/login/login.wxss */
+.login_page{
+    position: relative;
+    margin-top:125px;
+    margin-left:24px;
+    margin-right:24px;
+    padding-top:49px;
+    padding-left:12px;
+    padding-right:12px;
+    background: #fff;
+    border-radius:15px;
+    font-size:18px;
+    color: #666;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    box-shadow: 1px 12px 45px rgba(212,190,150,.5);
+}
+.login_page .head{
+    position: absolute;
+    left:calc(50% - 49px);
+    top:-49px;
+    width:98px;
+    height:98px;
+}
+.login_page .head image{
+    border-radius:50%;
+  
+    max-width:100%;
+    height:100%;
+}
+.login_page .line_row{
+    overflow: hidden;
+    margin-top:42.5px;
+}
+.login_page .line_row .line_name{
+    float: left;
+    width:27%;
+    text-align: right;
+}
+.login_page .line_row .line_input{
+    float: left;
+    padding-left:12px;
+    width:73%;
+    position: relative;
+    box-sizing:border-box;
+}
+.login_page .line_row input{
+    padding-left:12px;
+    padding-bottom:10px;
+    /* width:210rpx; */
+    border:none;
+    border-bottom:1px solid #e3e3e3;
+    outline:none;
+    font-size:30rpx;
+    color: #333;
+    float: left;
+}
+.input_min{
+    width:210rpx;
+    font-size:30rpx;
+}
+.btn_wrap{
+    padding-top: 50px;
+    padding-bottom: 37.5px;
+}
+.send_code{
+    /* position: absolute; */
+    float: right;
+    width:163rpx;
+    right:0;
+    top:0;
+    /* padding-left:12px; */
+    padding-bottom: 14px;
+    background: #fff;
+}
+.btn {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 6px;
+    text-align: center;
+    background: #cfba93;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+.btn_big {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+}

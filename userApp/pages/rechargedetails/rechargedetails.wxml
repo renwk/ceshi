@@ -1,0 +1,38 @@
+<!--pages/rechargedetails/rechargedetails.wxml-->
+<view class='body'>
+ <view class='con_box'>
+  <view class='title one_tit'><text class='tit_text'>订单号</text>{{orderdetails.oid}}</view>
+  <view class='title'><text class='tit_text'>充值门店</text>{{orderdetails.sname}}</view>
+  <view class='title'><text class='tit_text'>充值时间</text>{{orderdetails.time}}</view>
+  <view class='title'><text class='tit_text'>服务顾问</text>{{orderdetails.aid}}</view>
+  <view class='title'><text class='tit_text'>会员卡号</text>{{orderdetails.ucard_no}}</view>
+ </view>
+  <view class='con_box'>
+    <view class='title_d' wx:key="keys" wx:for="{{orderdetails.details}}" wx:for-index="index" wx:for-item="val">
+      <text class='t_det_content'>{{val.ucard_no}}</text>
+      <text class='t_det_money'>{{val.gift_money}}</text>
+    </view>
+  </view>
+  <view class='con_box'>
+    <view class='title_d tab_title'>
+      <text class='t_det_content settlement'>赠送信息</text>
+    </view>
+    <view class='title'><text class='tit_text'>赠送次数</text>{{orderdetails.free_num}}</view>
+  </view>
+  <view class='con_box'>
+    <view class='title_d tab_title'>
+      <text class='t_det_content settlement'>结算信息</text>
+      <text class='t_det_money dat' bindtap='settlement_info'>查看详情</text>
+    </view>
+    <view class='title'><text class='tit_text'>订单金额</text>{{orderdetails.money_full}}</view>
+    <!-- <view class='title' hidden="{{state}}"><text class='tit_text'>优惠金额</text>100</view> -->
+    <view class='title' hidden="{{state}}"><text class='tit_text'>手续费</text>{{orderdetails.cost}}</view>
+    <view class='title' hidden="{{state}}"><text class='tit_text'>实付金额</text>{{orderdetails.money_true}}</view>
+  </view>
+  <view class='con_box'>
+    <view class='title_d tab_title'>
+      <text class='t_det_content settlement'>支付信息</text>
+    </view>
+    <view class='title' wx:key="keys" wx:for="{{orderdetails.payment}}" wx:for-index="index" wx:for-item="val"><text class='tit_text'>{{val.pay}}</text>{{val.money}}</view>
+  </view>
+</view>

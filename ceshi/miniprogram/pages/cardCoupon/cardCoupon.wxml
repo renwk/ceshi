@@ -1,0 +1,76 @@
+<tabs>
+    <tab title="待使用">
+        <view>
+          <view class="weui-tab__content">
+            <view class="coupon" wx:if="{{coupon.num.on != 0}}" wx:key="keys" wx:for="{{coupon.on}}" wx:for-index="index" wx:for-item="val">
+                <view class="coupon_head">
+                    <i class="icon_border"></i>
+                    <text class='span'>优惠券 \n ¥{{val.money}}</text>
+                </view>
+                <view class="coupon_info">
+                    <i wx:if="{{val.show}}">快过期</i>
+                    <text class='h3'>{{val.couponname}}\n</text>
+                    <text class='p'>有效期：{{val.addtime}}-{{val.expiratime}}</text>
+                </view>
+            </view>
+            <view wx:if="{{coupon.num.on == 0}}">
+              <view class="nothing_box" style="margin-top:65px;text-align: center;">
+                <view>
+                <image style="width:60%;height:50vw" src="http://public.ispa.cn/shop/img/nothing.png"></image>
+                </view>
+                <view class="nothing_txt" style="margin-top:70px;font-size:18px;color: #333;">找不到内容</view>
+              </view>
+            </view>
+          </view>
+        </view>
+    </tab>
+    <tab title="使用记录">
+        <view>
+          <view class="weui-tab__content rechargelist">
+            <view class="coupon coupon_used"  wx:if="{{coupon.num.use != 0}}" wx:key="keys" wx:for="{{coupon.use}}" wx:for-index="index" wx:for-item="val">
+                <view class="coupon_head">
+                    <i class="icon_border"></i>
+                    <text class='span'>优惠券 \n ¥{{val.money}}</text>
+                </view>
+                <view class="coupon_info">
+                    <text class='h3'>{{val.couponname}}\n</text>
+                    <text class='p'>有效期：{{val.addtime}}-{{val.expiratime}}</text>
+                </view>
+            </view>
+            <view wx:if="{{coupon.num.use == 0}}">
+              <view class="nothing_box" style="margin-top:65px;text-align: center;">
+                <view>
+                <image style="width:60%;height:50vw" src="http://public.ispa.cn/shop/img/nothing.png"></image>
+                </view>
+                <view class="nothing_txt" style="margin-top:70px;font-size:18px;color: #333;">找不到内容</view>
+              </view>
+            </view>
+          </view>
+        </view>
+    </tab>
+    <tab title="已过期">
+        <view>
+          <view class="weui-tab__content rechargelist">
+            <view class="coupon coupon_used" wx:if="{{coupon.num.expired != 0}}" wx:key="keys" wx:for="{{coupon.expired}}" wx:for-index="index" wx:for-item="val">
+                <view class="coupon_head">
+                    <i class="icon_border"></i>
+                    <text class='span'>优惠券 \n ¥{{val.money}}</text>
+                </view>
+                <view class="coupon_info">
+                    <text class='h3'>{{val.couponname}}\n</text>
+                    <text class='p'>有效期：{{val.addtime}}-{{val.expiratime}}</text>
+                </view>
+            </view>
+            <view wx:if="{{coupon.num.expired == 0}}">
+              <view class="nothing_box" style="margin-top:65px;text-align: center;">
+                <view>
+                <image style="width:60%;height:50vw" src="http://public.ispa.cn/shop/img/nothing.png"></image>
+                </view>
+                <view class="nothing_txt" style="margin-top:70px;font-size:18px;color: #333;">找不到内容</view>
+              </view>
+            </view>
+          </view>
+        </view>
+    </tab>
+</tabs>
+

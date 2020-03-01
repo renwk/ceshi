@@ -1,0 +1,173 @@
+/* miniprogram/pages/login/login.wxss */
+.login_page{
+    position: relative;
+    margin-top:250rpx;
+    margin-left:48rpx;
+    margin-right:48rpx;
+    padding-top:98rpx;
+    padding-left:24rpx;
+    padding-right:24rpx;
+    background: #fff;
+    border-radius:30rpx;
+    font-size:36rpx;
+    color: #666;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    box-shadow: 1rpx 24rpx 90rpx rgba(212,190,150,.5);
+}
+.login_page .head{
+    position: absolute;
+    left:calc(50% - 98rpx);
+    top:-98rpx;
+    width:196rpx;
+    height:196px;
+}
+.login_page .head image{
+    border-radius:50%;
+  
+    max-width:100%;
+    height:50%;
+}
+.login_page .line_row{
+    overflow: hidden;
+    margin-top:85rpx;
+}
+.login_page .line_row .line_name{
+    float: left;
+    width:27%;
+    text-align: right;
+    font-size: 28rpx;
+}
+.login_page .line_row .line_input{
+    float: left;
+    padding-left:24rpx;
+    width:73%;
+    position: relative;
+    box-sizing:border-box;
+}
+.login_page .line_row input{
+    padding-left:24rpx;
+    padding-bottom:20rpx;
+    /* width:210rpx; */
+    border:none;
+    border-bottom:1rpx solid #e3e3e3;
+    outline:none;
+    font-size:30rpx;
+    color: #333;
+    float: left;
+}
+.input_min{
+    width:190rpx;
+    font-size:30rpx;
+}
+.btn_wrap{
+    padding-top: 50rpx;
+    padding-bottom: 75rpx;
+}
+.send_code{
+    /* position: absolute; */
+    float: right;
+    width:163rpx;
+    right:0;
+    top:0;
+    /* padding-left:12px; */
+    padding-bottom: 28rpx;
+    background: #fff;
+}
+.btn {
+
+    display: block;
+    padding: 10rpx 20rpx;
+    border-radius: 12rpx;
+    text-align: center;
+    background: #cfba93;
+    font-size: 24rpx;
+    box-sizing: border-box;
+}
+.btn_big {
+    width: 100%;
+    padding-top: 0rpx;
+    padding-bottom: 20rpx;
+    border-radius: 20rpx;
+    font-size: 36rpx;
+    height:100rpx;
+}
+.user_agree{
+     font-size: 26rpx;
+     padding-bottom: 20rpx;
+     padding-left: 20rpx;
+ }
+a{
+    color: #337ab7;
+}
+checkbox .wx-checkbox-input{
+    /*border-radius: 50%;!* 圆角 *!*/
+    width: 30rpx; /* 背景的宽 */
+    height: 30rpx; /* 背景的高 */
+}
+/* 选中后的 背景样式 （红色背景 无边框 ） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+    border: none;
+    background: #337ab7;
+}
+/* 选中后的 对勾样式 （白色对勾 ） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+    border-radius: 50%;/* 圆角 */
+    width: 30rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+    height: 30rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+    line-height: 30rpx;
+    text-align: center;
+    font-size:30rpx; /* 对勾大小 30rpx */
+    color:#fff; /* 对勾颜色 白色 */
+    background: transparent;
+    transform:translate(-50%, -50%) scale(1);
+    -webkit-transform:translate(-50%, -50%) scale(1);
+}
+/*mask*/
+.drawer_screen {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.5;
+    overflow: hidden;
+}
+/*content*/
+.drawer_box {
+    width: 95%;
+    position: fixed;
+    top: 2%;
+    left: 2.5%;
+    z-index: 1001;
+    overflow: hidden;
+    background: #ffffff;
+    border-radius: 30rpx;
+}
+.remarks_pcon {
+    padding-top:10rpx;
+    padding-bottom:10rpx;
+    overflow-y: scroll;
+}
+.remarks_pcon .h2{
+    margin: 0;
+    text-align: center;
+    font-size: 36rpx;
+    margin-bottom:20rpx;
+}
+.modal-body {
+    position: relative;
+    padding: 30rpx;
+}
+
+.btn_white{
+    width:200rpx;
+    float:right;
+    margin:20rpx;
+    color:#fff;
+}
+

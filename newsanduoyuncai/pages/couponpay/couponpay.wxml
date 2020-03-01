@@ -1,0 +1,119 @@
+<wxs module="filter" src="../../utils/numbertofix.wxs" />
+<view class='circleBar'>
+    <view class="mask_layer hidden_box"></view>
+    <view class="couponpay">
+        <view class="couponpay_con couponpay_info">
+            <text>爱自己，爱生活</text>
+            <image src="https://api.sanduoyuncai.com/public/wechartApp/image/img/coupon_pay_head.png"></image>
+        </view>
+        <view class="couponpay_con couponpay_pay">
+            <view class="c_money">检测费用<text id="def_money">{{testFee}}</text></view>
+            <view class="c_money">
+                代金券
+                <text wx:if="{{!vouchers_show}}">-{{vouchers_money}}</text>
+                <text wx:if="{{vouchers_show}}" class="" id="coupon_select" style="color:#666;" data-index="1" bindtap="onClickButton">我有代金券，去使用 > </text>
+            </view>
+
+            <view class="c_money" id="">
+                优惠券
+                <text wx:if="{{!couponTrueMoneyShow}}" data-index="0" bindtap="onClickButton">-{{couponTrueMoney}}</text>
+                <text style="color:#999;" wx:if="{{couponCount == 0 && couponTrueMoneyShow}}">无</text>
+                <text wx:if="{{couponCount > 0 && couponTrueMoneyShow}}" class="coupontrue_select" id="coupontrue_btn" style="color:#666;" data-index="0" bindtap="onClickButton">
+                    <text class="i_label">{{couponCount}}</text>
+                </text>
+            </view>
+            <view class="c_money_monster">
+                应付金额
+                <text id="over_money">{{actualCost}}</text>
+            </view>
+
+        </view>
+        <view class="c_btn">
+            <view href="javascript:;" class="coupon_pay_btn" bindtap="submitPay">支付</view>
+        </view>
+    </view>
+    <view class="common_foot">
+        三朵云彩@数字生命引擎
+    </view>
+
+    <view class="dialog {{ showDialog ? 'dialog_show' : '' }}">
+        <view class="dialog_mask" bindtap="onClickCouponTrueView" />
+        <view class="dialog_container">
+
+            <!--  //此区域自定义视图  -->
+            <view class="flex_Center" style="height:750rpx;background:#fcfaf7;">
+                <view style="color:#333;font-size:30rpx;">
+                    <view class="coupontrue_module">
+                        <view class="coupontrue_head" id="head">
+                            <view class="coupontrue_title">优惠券</view>
+                            <view class="coupontrue_close" bindtap="onClickCouponTrueView"><icon type="clear" size="16"></icon></view>
+                        </view>
+                        <scroll-view  style="height: 240px;" scroll-y="true" id="scroll_box">
+                            <view wx:for="{{couponTrueList}}" wx:key="*this" wx:if="{{item.status != 1 }}" class="coupon coupon_expired"><!--coupon start-->
+                                <view class="coupon_not_select"></view>
+                                <view class="coupon_head">
+                                    <text class="icon_border i_label"></text>
+                                    <view class="h3_label">
+                                        <text class="span_label">优惠券\r\n</text>
+                                        ¥{{filter.numberToFix(item.money / 100  )}}
+                                    </view>
+                                </view>
+                                <div class="coupon_info">
+                                    <text class="h3_label">免费复查体检券\r\n</text>
+                                    <text class="p_label">有效期：{{filter.dateFormat(filter.timeStamp(item.usetime),'yyyy-MM-dd')}} ~ {{filter.dateFormat(filter.timeStamp(item.expirytime),'yyyy-MM-dd')}}</text>
+                                </div>
+                            </view>
+                            <view wx:for="{{couponTrueList}}" wx:key="*this" wx:if="{{item.status == 1 }}" class="coupon {{item.curr ? 'curr' : ''}}" data-curr="{{item.curr}}" data-id="{{item.id}}" bindtap="selectedCouponTrue"><!--coupon start-->
+                                <view class="coupon_is  preferential_code_input" ></view>
+                                <view class="coupon_head">
+                                    <text class="icon_border i_label"></text>
+                                    <view class="h3_label">
+                                        <text class="span_label">优惠券\r\n</text>
+                                        ¥{{filter.numberToFix(item.money / 100  )}}
+                                    </view>
+                                </view>
+                                <view class="coupon_info">
+                                    <text class="h3_label">{{item.describes}}\r\n</text>
+                                    <text class="p_label">有效期：{{filter.dateFormat(filter.timeStamp(item.usetime),'yyyy-MM-dd')}} ~ {{filter.dateFormat(filter.timeStamp(item.expirytime),'yyyy-MM-dd')}}</text>
+                                </view>
+                            </view>
+                        </scroll-view>
+                        <view class="btn_wrap" id="preferential_code_btn">
+                            <view class="coupon_confirm" bindtap="submitCouponTrue">确定</view>
+                        </view>
+                    </view>
+
+                </view>
+            </view>
+
+        </view>
+    </view>
+    <!--<template is="diaCenterView" data="{{showCenterDialog:showCenterDialog}}" />-->
+    <view class="dialog {{ showCenterDialog ? 'dialog--show' : '' }}">
+        <view class="dialog__mask"/>
+        <!--bindtap='onClickdiaCenterView'-->
+        <view class="dialog__container" style="display:flex;align-items:center;justify-content:center;flex-direction:column;" >
+
+            <!--  //此区域自定义视图  -->
+            <view class="flex_Center" style="width:600rpx;height:200rpx;padding-bottom:20rpx;background:white;color:#333;font-size:30rpx;border-radius:20rpx;">
+                <view class="modal-content">
+                    <view class="modal-header">
+                        <view class="modal_title_box">
+                            <text class="modal-title text-center" id="">优惠码/代金券</text>
+                        </view>
+                        <view class="close" data-dismiss="modal" bindtap='onClickCouponView'><icon type="clear" size="16"></icon></view>
+                    </view>
+                    <view class="modal_body">
+                        <view class="modal_body_box">
+                            <view class="modal_body_input">
+                                <input type="text" bindblur="setCouponCode" value="{{couponCode}}"></input>
+                            </view>
+                            <button size="12" class="modal_body_btn" hover-class="btn_hover" bindtap="submitCouponCode">确定</button>
+                        </view>
+                    </view>
+                </view>
+            </view>
+
+        </view>
+    </view>
+</view>

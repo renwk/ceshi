@@ -1,0 +1,30 @@
+page {
+    display: block;
+    min-height: 100%;
+}
+.circleBar {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.list-block{
+    width: 100%;
+}
+
+.list-block .item-inner {
+    width: 100%;
+    height: 50rpx;
+    margin: 0 auto;
+    line-height: 50rpx;
+    padding-top: 16rpx;
+    padding-bottom: 16rpx;
+    font-size: 30rpx;
+    border-bottom:2rpx solid #e5e5e5;
+}
+.item-inner .item-time{
+    padding-left:16rpx;
+}
+.item-inner .item_score{
+padding-right: 16rpx;
+}

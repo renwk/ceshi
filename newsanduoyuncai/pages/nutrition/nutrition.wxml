@@ -1,0 +1,49 @@
+<wxs module="filter" src="../../utils/numbertofix.wxs" />
+<view class='circleBar'>
+    <view class="nutrition_main">
+        <view class="user_info" >
+            <view class="header_img">
+                <image src="{{userinfo.avatarUrl}}"></image>
+            </view>
+            <view class="header_detail">
+                <view class="h2"><text>Hello，\r\n</text>{{userinfo.nickName}}</view>
+                <view class="p">
+                    记住你已经照顾了全世界，别忘了照顾你自己。
+                </view>
+                <view class="history" bindtap="toHistory">历史报告</view>
+            </view>
+        </view>
+        <view class="nutrition_con">
+            <text class="index_title blue_title">
+                智能营养检测
+            </text>
+            <view wx:for="{{nutrition}}" wx:key="*this">
+                <view class="dt">
+                    {{item.inspect_name}}
+                    <text class="icon_round"><text class="b"></text></text>
+                </view>
+                <view class="dd open_detail" wx:for="{{item.sub}}" wx:for-item="val" wx:key="*this">
+                        <text class="span">{{val.inspect_name}}</text>
+                        <text class="a {{filter.getClassByInspectStandard(val.inspect_standard)}}">正常</text>
+                        <text class="i"></text>
+                </view>
+            </view>
+
+        </view>
+    </view>
+    <view class="common_foot">
+        三朵云彩@数字生命引擎
+    </view>
+    <view class="index_nutrition">
+        <view class="btBox">
+            <view class="image_box" data-inspectid="{{report_id}}" data-norecipe="{{noRecipe}}" bindtap="customIngredients">
+                <image src="https://api.sanduoyuncai.com/public/wechartApp/image/img/index_foot_fix_01.jpg" ></image>
+            </view>
+            <view class="partition"></view>
+            <view class="image_box" data-inspectid="{{report_id}}" data-trade_state="{{trade_state}}" bindtap="comprehensive">
+                <image src="https://api.sanduoyuncai.com/public/wechartApp/image/img/index_foot_fix_02.jpg" ></image>
+            </view>
+        </view>
+
+    </view>
+</view>

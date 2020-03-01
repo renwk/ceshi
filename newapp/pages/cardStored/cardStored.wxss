@@ -1,0 +1,72 @@
+page {
+    background: #f9f9f9;
+}
+.body {
+    padding: 24rpx;
+}
+.select_card_wrap {
+    position: relative;
+    margin-bottom: 20rpx;
+    background: #cfba93;
+    border-radius: 10rpx;
+}
+.select_card {
+    height:70rpx;
+    padding-left:12rpx;
+    width: 85%;
+    line-height: 72rpx;
+    border: none;
+    font-size: 32rpx;
+    color: #fff;
+}
+.arrow_down {
+    position: absolute;
+    right: 24rpx;
+    top: 28rpx;
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 12rpx solid transparent;
+    border-right: 12rpx solid transparent;
+    border-top: 12rpx solid #fff;
+}
+.con_box {
+    margin-bottom: 24rpx;
+    padding: 24rpx;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 20rpx;
+    background: #fff;
+    line-height:80rpx;
+}
+
+.me_list .row_title{
+  width: 230rpx;
+  margin-left:10rpx;
+  display: inline-block;
+}
+.menu_list{
+    overflow: hidden;
+    width: 100%;
+    padding-left: 16rpx;
+    padding-right: 16rpx;
+    padding-bottom: 0;
+}
+.menu_list .menu_one{
+    float: left;
+    display: block;
+    width: 21%;
+    margin: 0 2% 24rpx;
+    padding: 20rpx 0 20rpx;
+    text-align: center;
+    color: #333;
+    border-radius: 10rpx;
+    box-shadow: 0rpx 6rpx 20rpx rgba(0,0,0,.1);
+}
+.menu_one text{
+    font-size: 28rpx;
+}
+
+.table-tr .th2{
+  border-right: 1rpx solid #cfba93;
+}

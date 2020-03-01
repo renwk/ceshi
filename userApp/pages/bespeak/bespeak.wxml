@@ -1,0 +1,30 @@
+<!--pages/bespeak/bespeak.wxml-->
+<view class='body'>
+  <block wx:if="{{list}}">
+    <view class='con_box' wx:key="unique" wx:for="{{list}}" wx:for-index="index" wx:for-item="val">
+        <view class='title one_tit'>
+          <text class='tit_text'>预约时间</text>{{val.p_time}}
+        </view>
+        <view class='title'>
+          <text class='tit_text'>预约人数</text>{{val.service_number}}人
+        </view>
+        <view class='title'>
+          <text class='tit_text'>预约房间</text>{{val.house_num}}间
+        </view>
+        <view class='title'>
+          <text class='tit_text'>点钟理疗师</text>{{val.b_name}}
+        </view>
+        <view class='title'>
+          <text class='tit_text'>预约门店</text>{{val.store.sname}}
+        </view>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="nothing_box" style="margin-top:65px;text-align: center;">
+      <view>
+        <image style="width:60%;height:50vw" src="http://public.ispa.cn/shop/img/nothing.png"></image>
+      </view>
+      <view class="nothing_txt" style="margin-top:70px;font-size:18px;color: #333;">找不到订单内容</view>
+    </view>
+  </block>
+</view>

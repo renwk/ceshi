@@ -1,0 +1,238 @@
+/* pages/login/login.wxss */
+page{
+    color: #333;
+}
+.head_img{
+    padding-top: 37rpx;
+    text-align: center;
+}
+.head_img image{
+    display: inline-block;
+    width: 226rpx;
+    height:226rpx;
+    -webkit-border-radius:50% 50%;
+    -moz-border-radius:50% 50%;
+    border-radius:50% 50%;
+}
+.login_title{
+    padding-top:14rpx;
+    text-align: center;
+    font-size:36rpx;
+}
+.login_main{
+    margin-top: 62rpx;
+}
+.login_row{
+    overflow: hidden;
+    height:73rpx;
+    line-height:73rpx;
+    margin-bottom: 36rpx;
+    padding:0 48rpx;
+}
+.login_row input[type='text']{
+    float: right;
+    padding: 0 36rpx;
+    width: 67.8%;
+    height: 73rpx;
+    border:none;
+    border-bottom: 2rpx solid #999;
+    background: none;
+    font-size: 30rpx;
+    outline:none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius:0;
+    -moz-border-radius:0;
+    border-radius:0;
+}
+@media screen and (max-width: 330px) {
+    .login_row input[type='text']{
+        width: 65.8%;
+    }
+}
+.login_row .code_txt{
+    position: relative;
+}
+.login_row .code_send{
+    position: absolute;
+    top:0;
+    right:20rpx;
+    padding:0;
+    width: 180rpx;
+    height:64rpx;
+    border:none;
+    border-radius: 10rpx;
+    line-height: 64rpx;
+    color: #37bef0;
+    font-size: 34rpx;
+    z-index: 100;
+}
+.login_row input[type='radio'],
+.login_row text{
+    vertical-align: middle;
+}
+.login_row .sex_select_box{
+    float: right;
+    margin-top:3rpx;
+    width:71.8%;
+    height:64rpx;
+    line-height:64rpx;
+}
+.login_row .sex_select_box text{
+    float: left;
+    display: block;
+    width:50%;
+    height:64rpx;
+    line-height:62rpx;
+    text-align: center;
+    border:2rpx solid #37bef0;
+    background: #fff;
+    color: #333;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius:20rpx 0 0 20rpx;
+    -moz-border-radius:20rpx 0 0 20rpx;
+    border-radius:20rpx 0 0 20rpx;
+}
+.login_row .sex_select_box text:last-child{
+    -webkit-border-radius:0 20rpx 20rpx 0;
+    -moz-border-radius:0 20rpx 20rpx 0;
+    border-radius:0 20rpx 20rpx 0;
+}
+.login_row .sex_select_box text.curr{
+    background: #37bef0;
+    color: #fff;
+}
+.login_row .date_picker_box{
+    position: relative;
+}
+.login_row .date_picker_box text{
+    position: absolute;
+    right:20rpx;
+    top:0;
+    color: #333;
+    font-size:30rpx;
+    font-weight:bold;
+}
+picker{
+    float: right;
+    padding: 0 36rpx;
+    width: 67.8%;
+    height: 73rpx;
+    border:none;
+    border-bottom: 2rpx solid #999;
+    background: none;
+    font-size: 30rpx;
+    outline:none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius:0;
+    -moz-border-radius:0;
+    border-radius:0;
+}
+.login_row_btn{
+    overflow: hidden;
+    margin-top: 108rpx;
+    margin-bottom: 36rpx;
+    padding:0 48rpx;
+}
+.weui-btn{
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 14px;
+    padding-right: 14px;
+    box-sizing: border-box;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    line-height: 2.55555556;
+    border-radius: 5px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    overflow: hidden;
+}
+.weui-btn:after {
+    content: " ";
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid rgba(0,0,0,.2);
+    -webkit-transform: scale(.5);
+    transform: scale(.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.login_row_btn .weui-btn_primary{
+    line-height:2.1;
+    font-size:36rpx;
+    border-radius: 20rpx;
+    border-color: #1fb8df;
+    background: #1fb8df;
+    content: " ";
+    width: 90%;
+    margin: 0 auto;
+}
+.login_pact{
+    text-align: center;
+    font-size: 30rpx;
+    color: #666;
+}
+.login_pact .agreed{
+    margin-left:10rpx;
+    font-size: 30rpx;
+    color: #666;
+    vertical-align: middle;
+}
+.login_pact .instructions_show_btn{
+    font-size: 30rpx;
+    color: #333;
+    vertical-align: middle;
+}
+.instructions{
+    background: #fff;
+    color: #000;
+}
+.instructions .title{
+    text-align: center;
+}
+/*模态框*/
+.modals{
+    background-color:#ffffff;position:fixed; z-index: 10001; top:0; left: 0; right:0; bottom: 0;
+    font-size: 24rpx;
+    color: #6d6d72;
+}
+.bottom-dialog-body{width:90%;margin:0 auto;position:absolute; z-index:10001; bottom:0; left:0; right:0;  height:100vh; background-color: #fff;}
+/*动画前初始位置*/
+.bottom-pos{-webkit-transform:translateY(100%);transform:translateY(100%);}
+.btn_big {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+.btn_white {
+    display: inline-block;
+    padding: 7px 0 7px;
+    width: 100%;
+    border: 2px solid #fff;
+    text-align: center;
+    background: #fff;
+    font-size: 15px;
+    color: #29b5d6;
+    -webkit-border-radius: 25px 25px;
+    -moz-border-radius: 25px 25px;
+    border-radius: 25px 25px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}

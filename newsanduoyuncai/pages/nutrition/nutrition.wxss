@@ -1,0 +1,144 @@
+page{
+    background: #f0f0f0;
+}
+.index_title{
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 40rpx;
+    padding-left: 100rpx;
+    padding-right: 64rpx;
+    overflow: hidden;
+    text-align: center;
+    font-size: 46rpx;
+    color: #37bef0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.nutrition_con{
+    overflow: hidden;
+    padding-left: 0;
+    padding-right: 0;
+    background: #fff;
+    padding-top: 0;
+}
+.nutrition_con .dt,
+.nutrition_con .dd{
+    padding-left: 80rpx;
+    height: 84rpx;
+    line-height: 84rpx;
+    color: #626262;
+}
+.nutrition_con .dt{
+    position: relative;
+    font-size: 40rpx;
+    font-weight: bold;
+}
+.nutrition_con .icon_round{
+    position: absolute;
+    top: 28rpx;
+    left: 26rpx;
+}
+.nutrition_con .dd{
+    position: relative;
+    padding-left: 74rpx;
+    padding-right: 74rpx;
+    text-align: right;
+    color: #626262;
+}
+.nutrition_con .dd .span{
+    float: left;
+    font-size: 32rpx;
+}
+.nutrition_con .dd .a{
+    display: inline-block;
+    height: 36rpx;
+    line-height: 36rpx;
+    padding: 2rpx 20rpx 2rpx;
+    -webkit-border-radius:40rpx 40rpx;
+    -moz-border-radius:40rpx 40rpx;
+    border-radius:40rpx 40rpx;
+    font-size: 24rpx;
+    color: #fff;
+}
+.nutrition_con .dd .i{
+    position: absolute;
+    right:30rpx;
+    top:37rpx;
+    display: block;
+    width:20rpx;
+    height:20rpx;
+    border: 2rpx solid #999;
+    border-left:none;
+    border-bottom:none;
+    transform:rotate(45deg);
+    -ms-transform:rotate(45deg); 	/* IE 9 */
+    -moz-transform:rotate(45deg); 	/* Firefox */
+    -webkit-transform:rotate(45deg); /* Safari 和 Chrome */
+    -o-transform:rotate(45deg); 	/* Opera */
+}
+.nutrition_con .dd:active{
+    background: #37bef0;
+    color: #fff;
+
+}
+.nutrition_con .dd:active .a{
+    background: #fff;
+    color: #1fb8df;
+
+}
+.nutrition_con .dd:active .i{
+    border-color: #fff;
+}
+.nutrition_con{
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+.state_normal{
+    background: #1fb8df;
+}
+.state_high{
+    background: #ea5504;
+}
+.state_low{
+    background: #fdd000;
+}
+.index_nutrition{
+    overflow: hidden;
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    text-align: center;
+    /*height: ;*/
+    background: #fff;
+    font-size: 34rpx;
+    color: #fff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.btBox{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 144rpx;
+    align-items: center;
+}
+.index_nutrition .image_box{
+    width: 49.75%;
+    background-color: #1aad19;
+}
+.partition{
+    width: 0.5%;
+    background-color: #ffffff;
+}
+.index_nutrition image{
+    display: block;
+    width:100%;
+    height: 144rpx;
+    max-width:100%;
+}
+.common_foot{
+    margin-bottom: 156rpx;
+}
