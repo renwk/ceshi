@@ -9,10 +9,73 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NewMisApp/app.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="570">
+              <caret line="30" column="34" lean-forward="true" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/NewMisApp/pages/login/login.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="436">
+              <caret line="154" column="33" selection-start-line="154" selection-start-column="33" selection-end-line="154" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>app.ispa.cn</find>
+      <find>ap.ispa.cn</find>
+    </findStrings>
+    <dirStrings>
+      <dir>D:\PHPstudy\PHPTutorial\WWW\ceshi\newMis</dir>
+      <dir>D:\PHPstudy\PHPTutorial\WWW\ceshi\NewMisApp</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/NewMisApp/pages/historyGradeBeautician/historyGradeBeautician.js" />
+        <option value="$PROJECT_DIR$/NewMisApp/pages/reservationDetail/reservationDetail.js" />
+        <option value="$PROJECT_DIR$/NewMisApp/pages/myGradeBeautician/myGradeBeautician.js" />
+        <option value="$PROJECT_DIR$/NewMisApp/pages/historyGradeStaff/historyGradeStaff.js" />
+        <option value="$PROJECT_DIR$/NewMisApp/pages/Beauticiansort/scheduling.js" />
+        <option value="$PROJECT_DIR$/NewMisApp/pages/Beauticiansort/oneBidInfo.js" />
+        <option value="$PROJECT_DIR$/NewMisApp/pages/orderRecharge/orderRecharge.js" />
+        <option value="$PROJECT_DIR$/NewMisApp/pages/myReservation/myReservation.wxml" />
+        <option value="$PROJECT_DIR$/NewMisApp/pages/myReservation/myReservation.js" />
+        <option value="$PROJECT_DIR$/NewMisApp/pages/cardNostorage/cardNostorage.js" />
+        <option value="$PROJECT_DIR$/NewMisApp/pages/usercardinfo/usercardinfo.wxml" />
+        <option value="$PROJECT_DIR$/NewMisApp/pages/usercardinfo/usercardinfo.js" />
+        <option value="$PROJECT_DIR$/NewMisApp/pages/summaryNotes/summaryNotes.js" />
+        <option value="$PROJECT_DIR$/NewMisApp/pages/summaryNotes/readNotes.js" />
+        <option value="$PROJECT_DIR$/NewMisApp/pages/summaryNotes/summaryNotes.wxml" />
+        <option value="$PROJECT_DIR$/NewMisApp/pages/summaryNotes/readNotes.wxml" />
+        <option value="$PROJECT_DIR$/NewMisApp/pages/orderService/orderService.js" />
+        <option value="$PROJECT_DIR$/NewMisApp/pages/myGradeStaff/myGradeStaff.js" />
+        <option value="$PROJECT_DIR$/NewMisApp/pages/bidHoursSort/bidHoursSort.js" />
+        <option value="$PROJECT_DIR$/NewMisApp/pages/cardSpecial/cardSpecial.js" />
+        <option value="$PROJECT_DIR$/NewMisApp/pages/cardStored/cardStored.js" />
+        <option value="$PROJECT_DIR$/NewMisApp/pages/cardCoupon/cardCoupon.js" />
+        <option value="$PROJECT_DIR$/NewMisApp/pages/cardPower/cardPower.js" />
+        <option value="$PROJECT_DIR$/NewMisApp/pages/order/index.wxml" />
+        <option value="$PROJECT_DIR$/NewMisApp/pages/usercard/usercard.js" />
+        <option value="$PROJECT_DIR$/NewMisApp/pages/order/index.wxss" />
+        <option value="$PROJECT_DIR$/NewMisApp/pages/order/index.js" />
+        <option value="$PROJECT_DIR$/NewMisApp/pages/login/login.js" />
+      </list>
+    </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="95" />
@@ -37,6 +100,24 @@
               <item name="ceshi" type="b2602c69:ProjectViewProjectNode" />
               <item name="ceshi" type="462c0819:PsiDirectoryNode" />
               <item name="newMis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ceshi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ceshi" type="462c0819:PsiDirectoryNode" />
+              <item name="NewMisApp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ceshi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ceshi" type="462c0819:PsiDirectoryNode" />
+              <item name="NewMisApp" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ceshi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ceshi" type="462c0819:PsiDirectoryNode" />
+              <item name="NewMisApp" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -74,19 +155,21 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1583052569273</updated>
-      <workItem from="1583052570985" duration="302000" />
+      <workItem from="1583052570985" duration="918000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="302000" />
+    <option name="totallyTimeSpent" value="918000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24966533" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="找到" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" />
@@ -111,6 +194,20 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NewMisApp/app.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="30" column="34" lean-forward="true" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NewMisApp/pages/login/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="154" column="33" selection-start-line="154" selection-start-column="33" selection-end-line="154" selection-end-column="33" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">

@@ -190,7 +190,7 @@ page{
     padding-right: 78rpx;
 }
 .dropdown-menu>.li>.a.curr{
-    background:url("https://api.ispa.cn/public/img/yes_yellow_icon.png") no-repeat right 10px  top 8px; 
+    background:url("https:///public/img/yes_yellow_icon.png") no-repeat right 10px  top 8px;
     background: right 20rpx  top 16rpx;
     color: #cfba93;
 }

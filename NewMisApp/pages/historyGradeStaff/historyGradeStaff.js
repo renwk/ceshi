@@ -26,7 +26,7 @@ Page({
 
   getperformanceinfo: function (data) {
     var that = this;
-    var url = "https://api.ispa.cn/Performance/performanceInfo";
+    var url = "https:///Performance/performanceInfo";
     app.post(url, data).then((res) => {
       console.log(res);
       that.setData({

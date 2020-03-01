@@ -24,7 +24,7 @@ Page({
 
   gettitleCard: function (data) {
     var that = this;
-    var url = "https://api.ispa.cn/Usercard/titleCard";//我的会员
+    var url = "https:///Usercard/titleCard";//我的会员
     app.post(url, data).then((res) => {
       console.log(res);
       that.setData({

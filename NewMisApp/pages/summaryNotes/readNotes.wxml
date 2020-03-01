@@ -3,7 +3,7 @@
 
         <view class='h2'>
             标签
-            <a href="javascript:;" class="icon_add icon_add_btn" id="create_tag_btn" style='background:url("https://api.ispa.cn/public/img/add_icon.png") no-repeat center;background-size:100%;float:right' ></a>
+            <a href="javascript:;" class="icon_add icon_add_btn" id="create_tag_btn" style='background:url("https:///public/img/add_icon.png") no-repeat center;background-size:100%;float:right' ></a>
         </view>
         <view class="tag_con" id="tag_pool" >
             <a href="javascript:;" wx:key="unique" wx:for="{{usertag}}" wx:for-index="index" wx:for-item="val"><text >{{val.tag_name}}</text></a>
@@ -33,7 +33,7 @@
                             <view class="reservation_box" data-toggle="{{s}}1" >
                                 <view class="dl">
                                     <view class="dt"> {{user.sname}}
-                                        <a href="javascript:;" class="icon_add icon_add_btn" style='background:url("https://api.ispa.cn/public/img/edit_icon.png") no-repeat center;float:right' ></a>
+                                        <a href="javascript:;" class="icon_add icon_add_btn" style='background:url("https:///public/img/edit_icon.png") no-repeat center;float:right' ></a>
                                         <text>{{user.sttime}}
                                         </text>
                                     </view>
@@ -62,7 +62,7 @@
                             <view class="reservation_box" data-toggle="{{s}}1"  style="width: 83%;float:right;">
                                 <view class="dl">
                                     <view class="dt"><text style="width: 174rpx;float: left;font-size: 11px;">{{user.sname}}</text>
-                                        <a href="javascript:;" class="icon_add icon_add_btn" style='background:url("https://api.ispa.cn/public/img/edit_icon.png") no-repeat center;float:right'></a>
+                                        <a href="javascript:;" class="icon_add icon_add_btn" style='background:url("https:///public/img/edit_icon.png") no-repeat center;float:right'></a>
                                         <text>{{val.visit_time}}
                                         </text>
 

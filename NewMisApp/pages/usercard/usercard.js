@@ -78,7 +78,7 @@ Page({
   storelist:function () {
     var that = this;
     var data={};
-    var url = "https://api.ispa.cn/Usercard/storelist";//门店列表
+    var url = "https:///Usercard/storelist";//门店列表
     app.post(url, data).then((res) => {
       that.setData({
         stores:res
@@ -97,7 +97,7 @@ Page({
   userlist: function (data) {
     var that = this;
     console.log(data)
-    var url = "https://api.ispa.cn/Usercard/userlist";//我的会员
+    var url = "https:///Usercard/userlist";//我的会员
     app.post(url, data).then((res) => {
       that.setData({
         list:res

@@ -24,7 +24,7 @@ Page({
 
   chargeOrderDetail: function (data) {
     var that = this;
-    var url = "https://api.ispa.cn/order/chargeOrderDetail";//充值订单详情
+    var url = "https:///order/chargeOrderDetail";//充值订单详情
     app.post(url, data).then((res) => {
       console.log(res);
       that.setData({

@@ -3,7 +3,7 @@
 
     <view class='h2'>
         标签
-        <a href="javascript:;" class="icon_add icon_add_btn" id="create_tag_btn" style='background:url("https://api.ispa.cn/public/img/add_icon.png") no-repeat center;background-size:100%;float:right' bindtap="powerDrawer"  data-statu="open" data-title="会员标签" data-showtype='1' data-text='' data-upid=''></a>
+        <a href="javascript:;" class="icon_add icon_add_btn" id="create_tag_btn" style='background:url("https:///public/img/add_icon.png") no-repeat center;background-size:100%;float:right' bindtap="powerDrawer"  data-statu="open" data-title="会员标签" data-showtype='1' data-text='' data-upid=''></a>
     </view>
     <view class="tag_con" id="tag_pool" >
         <a href="javascript:;" wx:key="unique" wx:for="{{usertag}}" wx:for-index="index" wx:for-item="val"><text bindtap="doubleTap" bindtouchstart="touchStart" bindtouchend="touchEnd" data-cid='{{user.consultant_id}}' data-code='{{val.tag_code}}'>{{val.tag_name}}</text></a>
@@ -33,7 +33,7 @@
                     <view class="reservation_box" data-toggle="{{s}}1" >
                         <view class="dl">
                           <view class="dt"> {{user.sname}}
-              <a href="javascript:;" class="icon_add icon_add_btn" style='background:url("https://api.ispa.cn/public/img/edit_icon.png") no-repeat center;float:right' bindtap="powerDrawer"  data-statu="open" data-title="编辑护理汇总" data-showtype='2' data-text="{{user.remark}}" data-upid=''></a>
+              <a href="javascript:;" class="icon_add icon_add_btn" style='background:url("https:///public/img/edit_icon.png") no-repeat center;float:right' bindtap="powerDrawer"  data-statu="open" data-title="编辑护理汇总" data-showtype='2' data-text="{{user.remark}}" data-upid=''></a>
                               <text>{{user.sttime}}
                               </text>
                           </view>
@@ -51,7 +51,7 @@
               <view class="weui-tab__content rechargelist">
                 <!-- <view  style='text-align: center;'> -->
                   <view class='remarks_add' wx:if="{{loaddata.ordercode}}">
-    <a href="javascript:;" class="icon_add icon_add_btn"  bindtap="powerDrawer" style='background:url("https://api.ispa.cn/public/img/add_icon.png") no-repeat center;background-size:100%;'  data-statu="open" data-title="新增护理日志" data-showtype='3' data-upid='' data-text=''></a>
+    <a href="javascript:;" class="icon_add icon_add_btn"  bindtap="powerDrawer" style='background:url("https:///public/img/add_icon.png") no-repeat center;background-size:100%;'  data-statu="open" data-title="新增护理日志" data-showtype='3' data-upid='' data-text=''></a>
                   </view>
 
                 <view style="height: 184rpx;" wx:key="unique" wx:for="{{usercontent}}" wx:for-index="index" wx:for-item="val">
@@ -66,7 +66,7 @@
                   <view class="reservation_box" data-toggle="{{s}}1" bindtap="" style="width: 83%;float:right;">
                         <view class="dl">
                           <view class="dt"><text style="width: 174rpx;float: left;font-size: 11px;">{{user.sname}}</text>
-                          <a href="javascript:;" class="icon_add icon_add_btn" style='background:url("https://api.ispa.cn/public/img/edit_icon.png") no-repeat center;float:right'bindtap="powerDrawer"  data-statu="open"  data-title="编辑护理日志" data-showtype='4' data-text='{{val.content}}' data-upid='{{val.id}}'></a>
+                          <a href="javascript:;" class="icon_add icon_add_btn" style='background:url("https:///public/img/edit_icon.png") no-repeat center;float:right'bindtap="powerDrawer"  data-statu="open"  data-title="编辑护理日志" data-showtype='4' data-text='{{val.content}}' data-upid='{{val.id}}'></a>
                               <text>{{val.visit_time}}
                               </text>
 

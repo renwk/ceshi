@@ -24,7 +24,7 @@ Page({
 
   cashierOrderDetail: function (data) {
     var that = this;
-    var url = "https://api.ispa.cn/order/cashierOrderDetail";//消费订单详情
+    var url = "https:///order/cashierOrderDetail";//消费订单详情
     app.post(url, data).then((res) => {
       console.log(res);
       that.setData({

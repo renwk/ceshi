@@ -25,7 +25,7 @@ Page({
   },
   getbespeakorder:function (data) {
       var that=this;
-      var url = "https://api.ispa.cn/Bespeakorder/Bespeakorder";
+      var url = "https:///Bespeakorder/Bespeakorder";
       app.post(url, data).then((res) => {
         console.log(res);
         that.setData({

@@ -98,7 +98,7 @@ Page({
   },
   delTag:function (data) {
     var that = this;
-    var url = "https://api.ispa.cn/Usercard/delTag";
+    var url = "https:///Usercard/delTag";
     app.post(url, data).then((res) => {
       that.setData({
         msg:res
@@ -114,7 +114,7 @@ Page({
 
   mytaginfo:function (data) { //会员标签
     var that = this;
-    var url = "https://api.ispa.cn/Usercard/mytaginfo";
+    var url = "https:///Usercard/mytaginfo";
     app.post(url, data).then((res) => {
       that.setData({
         usertag: res.usertag,
@@ -216,7 +216,7 @@ Page({
   },
   addtag: function (data) { //添加护理日志
     var that = this;
-    var url = "https://api.ispa.cn/Usercard/addtag";
+    var url = "https:///Usercard/addtag";
     app.post(url, data).then((res) => {
       console.log(res)
       that.setData({
@@ -232,7 +232,7 @@ Page({
   },
   upContent: function (data) { //添加护理日志
     var that = this;
-    var url = "https://api.ispa.cn/Usercard/upContent";
+    var url = "https:///Usercard/upContent";
     app.post(url, data).then((res) => {
       that.setData({
         msg: res
@@ -247,7 +247,7 @@ Page({
   },
   upremark: function (data) { //护理汇总
     var that = this;
-    var url = "https://api.ispa.cn/Usercard/upremark";
+    var url = "https:///Usercard/upremark";
     app.post(url, data).then((res) => {
       that.setData({
         msg: res
@@ -262,7 +262,7 @@ Page({
   },
   gettag: function (data) { //会员标签
     var that = this;
-    var url = "https://api.ispa.cn/Usercard/gettag";
+    var url = "https:///Usercard/gettag";
     app.post(url, data).then((res) => {
       that.setData({
         tags:res

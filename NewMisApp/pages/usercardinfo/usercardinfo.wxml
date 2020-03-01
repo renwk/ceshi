@@ -41,31 +41,31 @@
   </view>
     <view class="con_box menu_list">
         <view  class="menu_one" data-toggle="{{userinfo.userid}}" bindtap="toorder">
-            <view class="s_icon icon_calendar" style='background:url("https://api.ispa.cn/public/img/m_record.png") no-repeat;'></view>
+            <view class="s_icon icon_calendar" style='background:url("https:///public/img/m_record.png") no-repeat;'></view>
             <text>消费记录</text>
         </view>
         <view class="menu_one" data-toggle="{{userinfo.userid}}"  bindtap="tocardStored">
-            <view class="s_icon icon_calendar" style='background:url("https://api.ispa.cn/public/img/m_storage.png") no-repeat;'></view>
+            <view class="s_icon icon_calendar" style='background:url("https:///public/img/m_storage.png") no-repeat;'></view>
             <text>储值卡</text>
         </view>
         <view class="menu_one" data-toggle="{{userinfo.userid}}" bindtap="tocardNostorage">
-            <view class="s_icon icon_calendar" style='background:url("https://api.ispa.cn/public/img/m_nostorage.png") no-repeat;'></view>
+            <view class="s_icon icon_calendar" style='background:url("https:///public/img/m_nostorage.png") no-repeat;'></view>
             <text>常规/疗程</text>
         </view>
         <view class="menu_one" data-toggle="{{userinfo.userid}}" bindtap="tocardPower">
-            <view class="s_icon icon_calendar" style='background:url("https://api.ispa.cn/public/img/m_power.png") no-repeat;'></view>
+            <view class="s_icon icon_calendar" style='background:url("https:///public/img/m_power.png") no-repeat;'></view>
             <text>资格卡</text>
         </view>
         <view class="menu_one" data-toggle="{{userinfo.userid}}" bindtap="tocardSpecial">
-            <view class="s_icon icon_calendar" style='background:url("https://api.ispa.cn/public/img/m_special.png") no-repeat;'></view>
+            <view class="s_icon icon_calendar" style='background:url("https:///public/img/m_special.png") no-repeat;'></view>
             <text>特殊礼遇</text>
         </view>
         <view class="menu_one" data-toggle="{{userinfo.userid}}" bindtap="tocardCoupon">
-            <view class="s_icon icon_calendar" style='background:url("https://api.ispa.cn/public/img/m_coupon.png") no-repeat;'></view>
+            <view class="s_icon icon_calendar" style='background:url("https:///public/img/m_coupon.png") no-repeat;'></view>
             <text>优惠券</text>
         </view>
         <view class="menu_one" data-toggle="{{userinfo.userid}}" bindtap="toSummaryNotes">
-            <view class="s_icon icon_calendar" style='background:url("https://api.ispa.cn/public/img/m_utag.png") no-repeat;'></view>
+            <view class="s_icon icon_calendar" style='background:url("https:///public/img/m_utag.png") no-repeat;'></view>
             <text>会员标签</text>
         </view>
         

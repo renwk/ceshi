@@ -17,7 +17,7 @@ Page({
   onLoad: function (options) {
 
     var that = this;
-    var url = "https://api.ispa.cn/Bespeakorder/bespeakInfo";
+    var url = "https:///Bespeakorder/bespeakInfo";
     var data = {
       ordercode: options.id,
     }

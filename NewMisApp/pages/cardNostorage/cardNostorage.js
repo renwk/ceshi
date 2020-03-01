@@ -42,7 +42,7 @@ Page({
 
   mycourse: function (data) {
     var that = this;
-    var url = "https://api.ispa.cn/Usercard/mycourse";//我的会员
+    var url = "https:///Usercard/mycourse";//我的会员
     app.post(url, data).then((res) => {
       console.log(res);
       that.setData({
@@ -57,7 +57,7 @@ Page({
   },
   courseinfo: function (data) {
     var that = this;
-    var url = "https://api.ispa.cn/Usercard/requestMycourse";//储值卡详情
+    var url = "https:///Usercard/requestMycourse";//储值卡详情
     app.post(url, data).then((res) => {
       console.log(res);
       that.setData({

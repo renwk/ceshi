@@ -25,7 +25,7 @@ Page({
   },
   mycoupon: function (data) {
     var that = this;
-    var url = "https://api.ispa.cn/Usercard/mycoupon";//礼券卡
+    var url = "https:///Usercard/mycoupon";//礼券卡
     app.post(url, data).then((res) => {
       console.log(res);
       that.setData({

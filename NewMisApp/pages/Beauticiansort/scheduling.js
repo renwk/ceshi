@@ -37,7 +37,7 @@ Page({
     },
     showscheduling: function (data) {
       var that = this;
-      var url = "https://api.ispa.cn/Beauticiansort/showscheduling";//排班
+      var url = "https:///Beauticiansort/showscheduling";//排班
       app.post(url, data).then((res) => {
         console.log(res);
         that.setData({

@@ -4,7 +4,7 @@
             <view class="weui-tab__content">
                 <view class="con_box">
                   <form bindsubmit="formSubmit">
-                    <view class="orderlist_date_select" hidden="{{dataStatus}}" style='background:url("https://api.ispa.cn/public/img/orderlist_date_select.png") no-repeat left center;'>
+                    <view class="orderlist_date_select" hidden="{{dataStatus}}" style='background:url("https:///public/img/orderlist_date_select.png") no-repeat left center;'>
                         <text class="time_icon"></text>
                         <picker class="date_begin" mode="date" name='stime' value="{{beginDate}}" start="2017-01-01" end="2028-12-31" bindchange="bindBeginDateChange">
                             <view class="picker">
@@ -71,7 +71,7 @@
         <view class="weui-tab__content rechargelist">
           <view class="con_box">
             <form bindsubmit="formSubmit">
-              <view class="orderlist_date_select" hidden="{{dataStatus}}" style='background:url("https://api.ispa.cn/public/img/orderlist_date_select.png") no-repeat left center;'>
+              <view class="orderlist_date_select" hidden="{{dataStatus}}" style='background:url("https:///public/img/orderlist_date_select.png") no-repeat left center;'>
                   <text class="time_icon"></text>
                   <picker class="date_begin" mode="date" name='stime' value="{{trading_beginDate}}" start="2017-01-01" end="2028-12-13" bindchange="bindTradBeginDateChange">
                       <view class="picker">

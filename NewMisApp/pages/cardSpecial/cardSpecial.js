@@ -22,7 +22,7 @@ Page({
   },
   giveInfo:function (data) {
     var that = this;
-    var url = "https://api.ispa.cn/Usercard/giveInfo";//特殊礼遇
+    var url = "https:///Usercard/giveInfo";//特殊礼遇
     app.post(url, data).then((res) => {
       console.log(res);
       that.setData({

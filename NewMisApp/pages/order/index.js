@@ -178,7 +178,7 @@ Page({
 
     getorderlist:function (data) {
       var that = this;
-      var url = "https://api.ispa.cn/order/orderList";//订单列表
+      var url = "https:///order/orderList";//订单列表
       app.post(url, data).then((res) => {
         console.log(res);
         that.setData({

@@ -71,7 +71,7 @@ Page({
     },
     requestBidOverTime:function (data){
       var that = this;
-      var url = "https://api.ispa.cn/Beauticiansort/requestBidInfo";//加班
+      var url = "https:///Beauticiansort/requestBidInfo";//加班
       app.post(url, data).then((res) => {
         console.log(res);
         that.setData({
@@ -86,7 +86,7 @@ Page({
     },
     requestBidLeaveTime: function (data) {
       var that = this;
-      var url = "https://api.ispa.cn/Beauticiansort/requestBidLeaveTime";//P/L
+      var url = "https:///Beauticiansort/requestBidLeaveTime";//P/L
       app.post(url, data).then((res) => {
         console.log(res);
         that.setData({

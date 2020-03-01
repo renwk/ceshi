@@ -23,7 +23,7 @@ Page({
   },
   bidtimesort: function (data) {
     var that = this;
-    var url = "https://api.ispa.cn/Beauticiansort/timesort";//工时排序
+    var url = "https:///Beauticiansort/timesort";//工时排序
     app.post(url, data).then((res) => {
       console.log(res);
       that.setData({

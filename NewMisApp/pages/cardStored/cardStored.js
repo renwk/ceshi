@@ -56,7 +56,7 @@ Page({
   },
   mycardinfo: function (data) {
     var that = this;
-    var url = "https://api.ispa.cn/Usercard/requestMycardinfo";//储值卡详情
+    var url = "https:///Usercard/requestMycardinfo";//储值卡详情
     app.post(url, data).then((res) => {
       console.log(res);
       that.setData({

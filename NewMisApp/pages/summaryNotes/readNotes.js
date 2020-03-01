@@ -31,7 +31,7 @@ Page({
 
     mytaginfo:function (data) { //会员标签
         var that = this;
-        var url = "https://api.ispa.cn/Usercard/mytaginfo";
+        var url = "https:///Usercard/mytaginfo";
         app.post(url, data).then((res) => {
             console.log(res);
         that.setData({
